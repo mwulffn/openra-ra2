@@ -250,3 +250,75 @@ sqd:
 	HitShape:
 	OwnerLostAction:
 		Action: Kill
+
+# [DRED] of rulesmd.ini. It does not pick targets itself (CanPassiveAquire=no) and fires in any direction (OmniFire).
+# Its missiles leave from PrimaryFireFLH 30,43,92, the second as far to the other side.
+dred:
+	Inherits: ^Ship
+	Inherits@MC: ^MindControllable
+	Buildable:
+		Queue: Ship
+		BuildPaletteOrder: 50
+		Prerequisites: natech, ~nayard
+		Description: actor-dred.description
+	Valued:
+		Cost: 2000
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Tooltip:
+		Name: actor-dred.name
+	Selectable:
+		Bounds: 1448, 3861, 0, -289
+	Health:
+		HP: 800
+	Armor:
+		Type: Heavy
+	Mobile:
+		TurnSpeed: 4
+		Speed: 60
+	RevealsShroud:
+		Range: 7c0
+	Armament@primary:
+		Weapon: DredLauncher
+		LocalOffset: 154,220,471, 154,-220,471
+	AttackFrontal:
+		Voice: Attack
+		FacingTolerance: 512
+	MissileSpawnerParent:
+		Actors: dmisl, dmisl
+		RespawnTicks: 80
+		LoadedCondition: loaded
+	FireWarheadsOnDeath:
+		Weapon: UnitExplode
+		EmptyWeapon: UnitExplode
+	WithVoxelBody:
+		RequiresCondition: loaded
+	WithVoxelBody@EMPTY:
+		Sequence: empty
+		RequiresCondition: !loaded
+	Voiced:
+		VoiceSet: SovietNavalVoice
+	RenderSprites:
+	HitShape:
+
+# [DMISL] of rulesmd.ini, flown with [General] DMisl*: speed 18% is 46 leptons a frame (x4), Altitude 768 and
+# BodyLength 128 leptons (x4), Acceleration 0.8 leptons a frame (x4), ROT 4 (x4).
+dmisl:
+	Inherits: v3rocket
+	Tooltip:
+		Name: actor-dmisl-name
+	Rocket:
+		PauseTicks: 20
+		TiltTicks: 60
+		PitchInitial: 0
+		PitchFinal: 0.5
+		TurnRate: 0.08
+		Acceleration: 3.2
+		Speed: 184
+		CruiseAltitude: 3c0
+		BodyLength: 512
+		LazyCurve: false
+		TurnSpeed: 16
+		Weapon: DredMissile
+		EliteWeapon: DredMissileE
+		TakeoffSounds: vdreatta.wav, vdreattb.wav

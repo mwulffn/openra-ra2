@@ -449,3 +449,105 @@ dtruck:
 	Voiced:
 		VoiceSet: DemolitionTruckVoice
 	HitShape:
+
+# [V3] of rulesmd.ini. It does not pick targets itself (CanPassiveAquire=no).
+v3:
+	Inherits: ^Vehicle
+	Inherits@MC: ^MindControllable
+	Valued:
+		Cost: 800
+	UpdatesPlayerStatistics:
+		AddToArmyValue: true
+	Tooltip:
+		Name: actor-v3.name
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 45
+		Prerequisites: naradr, ~naweap
+		Description: actor-v3.description
+	Mobile:
+		Speed: 60
+		TurnSpeed: 20
+		Locomotor: tracked
+	Health:
+		HP: 150
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 7c0
+	Armament@primary:
+		Weapon: V3Launcher
+		LocalOffset: -819,0,384
+	AttackFrontal:
+		Voice: Attack
+		FacingTolerance: 0
+	MissileSpawnerParent:
+		Actors: v3rocket
+		RespawnTicks: 400
+		LoadedCondition: loaded
+	RenderSprites:
+	Selectable:
+		Bounds: 1544, 2509, 0, -289
+	RenderVoxels:
+		NormalsPalette: ts-normals
+	WithVoxelBody:
+		RequiresCondition: loaded
+	WithVoxelBody@EMPTY:
+		Sequence: empty
+		RequiresCondition: !loaded
+	Voiced:
+		VoiceSet: V3Voice
+	ProducibleWithLevel:
+		Prerequisites: warfactory.infiltrated
+	HitShape:
+
+# [V3ROCKET] of rulesmd.ini, flown with [General] V3Rocket*: speed 15% is 38 leptons a frame (x4), Altitude 768 and
+# BodyLength 256 leptons (x4), Acceleration 0.4 leptons a frame (x4), ROT 3 (x4).
+v3rocket:
+	Interactable:
+	AppearsOnRadar:
+		UseLocation: true
+	CombatDebugOverlay:
+	RenderDebugState:
+	HiddenUnderFog:
+		Type: CenterPosition
+	Tooltip:
+		Name: actor-v3rocket-name
+	Health:
+		HP: 50
+	Armor:
+		Type: Rocket
+	Targetable:
+		TargetTypes: Air
+	HitShape:
+	BaseSpawnerChild:
+	Rocket:
+		PauseTicks: 0
+		TiltTicks: 60
+		PitchInitial: 0.21
+		PitchFinal: 0.5
+		TurnRate: 0.05
+		Acceleration: 1.6
+		Speed: 152
+		CruiseAltitude: 3c0
+		BodyLength: 1c0
+		LazyCurve: true
+		TurnSpeed: 12
+		Weapon: V3Rocket
+		EliteWeapon: V3RocketE
+		EffectImage: v3effects
+		TakeoffSequence: takeoff
+		TrailSequence: trail
+		TakeoffSounds: vv3latta.wav, vv3lattb.wav
+	BodyOrientation:
+		QuantizedFacings: 0
+		CameraPitch: 85
+		UseClassicPerspectiveFudge: false
+	RenderVoxels:
+		Scale: 11.7
+		LightYaw: 800
+		LightPitch: 150
+		LightAmbientColor: -0.5,-0.5,-0.5
+		LightDiffuseColor: 1.4,1.4,1.4
+	WithVoxelBody:
+	RenderSprites:
