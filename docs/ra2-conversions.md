@@ -101,3 +101,9 @@ original). Prefer verified rules for new work.
 - `MapSnapshot` (world trait) renders a whole map to a PNG and quits when
   `OPENRA_MAP_SNAPSHOT` names the file: the quickest way to check an
   imported map by eye.
+- Units cross a high bridge on OpenRA's elevated bridge layer, which a map
+  must declare: `ElevatedBridgeLayer` and an `ElevatedBridgePlaceholder`
+  for each bridge. The importer makes one for each run of deck overlays:
+  three cells wide, from the ramp cell before the run to the one after it
+  (`Length` the run plus one), `Height` the terrain height of that ramp
+  cell. A bridge with no deck (destroyed in the original) gets none.

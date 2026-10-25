@@ -156,6 +156,15 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 			{ 0xF2, "crate" }, // wcrate (water crate)
 		};
 
+		// The decks of high bridges: one overlay a cell along the bridge's middle
+		static readonly Dictionary<byte, ElevatedBridgePlaceholderOrientation> ElevatedBridgeOverlays = new()
+		{
+			{ 0x18, ElevatedBridgePlaceholderOrientation.X }, // bridge1
+			{ 0x19, ElevatedBridgePlaceholderOrientation.Y }, // bridge2
+			{ 0xED, ElevatedBridgePlaceholderOrientation.X }, // bridgeb1
+			{ 0xEE, ElevatedBridgePlaceholderOrientation.Y }, // bridgeb2
+		};
+
 		static readonly Dictionary<byte, Size> OverlayShapes = new()
 		{
 			{ 0x4A, new Size(1, 3) },
@@ -382,7 +391,8 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 			ReadActors(map, file, "Infantry", fullSize);
 			ReadTerrainActors(map, file, fullSize);
 			ReadWaypoints(map, file, fullSize);
-			ReadOverlay(map, file, fullSize);
+			var bridgeDecks = ReadOverlay(map, file, fullSize);
+			AddElevatedBridges(map, bridgeDecks);
 			ReadLighting(map, file);
 			ReadLamps(map, file);
 
@@ -472,7 +482,7 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 			}
 		}
 
-		static void ReadOverlay(Map map, IniFile file, int2 fullSize)
+		static Dictionary<CPos, ElevatedBridgePlaceholderOrientation> ReadOverlay(Map map, IniFile file, int2 fullSize)
 		{
 			var overlaySection = file.GetSection("OverlayPack");
 			var overlayCompressed = Convert.FromBase64String(string.Concat(overlaySection.Select(kvp => kvp.Value)));
@@ -506,11 +516,15 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 				}
 			}
 
+			var bridgeDecks = new Dictionary<CPos, ElevatedBridgePlaceholderOrientation>();
 			foreach (var cell in map.AllCells)
 			{
 				var overlayType = overlayPack[overlayIndex[cell]];
 				if (overlayType == 0xFF)
 					continue;
+
+				if (ElevatedBridgeOverlays.TryGetValue(overlayType, out var orientation))
+					bridgeDecks[cell] = orientation;
 
 				if (OverlayToActor.TryGetValue(overlayType, out var actorType))
 				{
@@ -567,6 +581,46 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 
 				Console.WriteLine($"{cell} unknown overlay {overlayType}");
 			}
+
+			return bridgeDecks;
+		}
+
+		// A high bridge is a run of deck overlays along its middle, three cells wide, between the ramps a cell
+		// beyond either end of the run. Units can only cross it on the elevated bridge layer, set up for each bridge.
+		static void AddElevatedBridges(Map map, Dictionary<CPos, ElevatedBridgePlaceholderOrientation> decks)
+		{
+			var nodes = new List<MiniYamlNode>();
+			foreach (var (cell, orientation) in decks)
+			{
+				var along = orientation == ElevatedBridgePlaceholderOrientation.X ? new CVec(1, 0) : new CVec(0, 1);
+				var across = new CVec(along.Y, along.X);
+
+				// Start from the first deck of each run
+				if (decks.TryGetValue(cell - along, out var o) && o == orientation)
+					continue;
+
+				var length = 1;
+				while (decks.TryGetValue(cell + along * length, out o) && o == orientation)
+					length++;
+
+				var end = cell - along;
+				nodes.Add(new MiniYamlNode($"ElevatedBridgePlaceholder@{nodes.Count + 1}", new MiniYaml("",
+				[
+					new MiniYamlNode("Location", FieldSaver.FormatValue(end - across)),
+					new MiniYamlNode("Orientation", FieldSaver.FormatValue(orientation)),
+					new MiniYamlNode("Length", FieldSaver.FormatValue(length + 1)),
+					new MiniYamlNode("Height", FieldSaver.FormatValue(map.Height[end]))
+				])));
+			}
+
+			if (nodes.Count == 0)
+				return;
+
+			nodes.Insert(0, new MiniYamlNode("ElevatedBridgeLayer", ""));
+			map.RuleDefinitions = map.RuleDefinitions.WithNodesAppended(new[]
+			{
+				new MiniYamlNode("World", new MiniYaml("", nodes))
+			});
 		}
 
 		static void ReadWaypoints(Map map, IniFile file, int2 fullSize)
