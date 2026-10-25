@@ -13,7 +13,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.RA2.Traits
@@ -48,7 +47,7 @@ namespace OpenRA.Mods.RA2.Traits
 
 		[Desc("Name of the armaments that grants the LaunchingCondition.",
 		"The rate of fire of the dummy weapon determines the launch cycle as each shot.")]
-		public readonly HashSet<string> ArmamentNames = new() { "primary" };
+		public readonly HashSet<string> ArmamentNames = ["primary"];
 
 		[Desc("What happens to the children when the parent is killed?")]
 		public readonly SpawnerChildDisposal ChildDisposalOnKill = SpawnerChildDisposal.KillChildren;
@@ -155,7 +154,7 @@ namespace OpenRA.Mods.RA2.Traits
 
 			// Some members are missing. Create a new one.
 			var child = self.World.CreateActor(false, entry.ActorName,
-				new TypeDictionary { new OwnerInit(self.Owner) });
+				[new OwnerInit(self.Owner)]);
 
 			InitializeChildEntry(child, entry);
 			entry.SpawnerChild.LinkParent(entry.Actor, self, this);

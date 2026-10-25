@@ -10,7 +10,6 @@
 #endregion
 
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Primitives;
@@ -53,7 +52,7 @@ namespace OpenRA.Mods.RA2.Traits
 			var buildingInfo = self.Info.TraitInfoOrDefault<BuildingInfo>();
 			var eligibleLocations = buildingInfo != null
 				? buildingInfo.Tiles(self.Location).ToList()
-				: new List<CPos>() { self.World.Map.CellContaining(self.CenterPosition) };
+				: [self.World.Map.CellContaining(self.CenterPosition)];
 
 			self.World.AddFrameEndTask(w =>
 			{

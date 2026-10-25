@@ -168,7 +168,7 @@ function CheckForDotnet
 {
 	if ((Get-Command "dotnet" -ErrorAction SilentlyContinue) -eq $null)
 	{
-		Write-Host "The 'dotnet' tool is required to compile OpenRA. Please install the .NET 6.0 SDK and try again. https://dotnet.microsoft.com/download/dotnet/6.0" -ForegroundColor Red
+		Write-Host "The 'dotnet' tool is required to compile OpenRA. Please install the .NET 10.0 SDK and try again. https://dotnet.microsoft.com/download/dotnet/10.0" -ForegroundColor Red
 		return 1
 	}
 

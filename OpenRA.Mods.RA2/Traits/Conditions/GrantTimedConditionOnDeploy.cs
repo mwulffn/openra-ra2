@@ -89,7 +89,7 @@ namespace OpenRA.Mods.RA2.Traits
 		WithSpriteBody[] wsbs;
 		TimedDeployState deployState;
 
-		[Sync]
+		[VerifySync]
 		int ticks;
 
 		public GrantTimedConditionOnDeploy(ActorInitializer init, GrantTimedConditionOnDeployInfo info)

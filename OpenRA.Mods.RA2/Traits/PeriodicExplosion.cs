@@ -55,7 +55,7 @@ namespace OpenRA.Mods.RA2.Traits
 		readonly PeriodicExplosionInfo info;
 		readonly WeaponInfo weapon;
 		readonly BodyOrientation body;
-		readonly List<(int Ticks, Action Action)> delayedActions = new();
+		readonly List<(int Ticks, Action Action)> delayedActions = [];
 
 		int fireDelay;
 		int burst;

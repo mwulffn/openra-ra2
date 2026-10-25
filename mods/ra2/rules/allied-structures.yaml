@@ -1139,31 +1139,26 @@ atesla:
 		Type: prismcannon
 
 power:
-	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: actor-power-name
 
 refinery:
-	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: actor-refinery-name
 
 barracks:
-	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: actor-barracks-name
 
 radar:
-	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: actor-radar-name
 
 repairpad:
-	AlwaysVisible:
 	Interactable:
 	Tooltip:
 		Name: actor-repairpad-name

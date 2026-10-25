@@ -11,6 +11,7 @@
 
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using OpenRA.Effects;
 using OpenRA.Graphics;
 using OpenRA.Mods.RA2.Traits;
@@ -56,7 +57,7 @@ namespace OpenRA.Mods.RA2.Graphics
 		IFinalizedRenderable IRenderable.PrepareRender(WorldRenderer wr) { return this; }
 
 		bool firstTime = true;
-		float3[] screen;
+		Vector3[] screen;
 		int alpha;
 		public void Render(WorldRenderer wr)
 		{

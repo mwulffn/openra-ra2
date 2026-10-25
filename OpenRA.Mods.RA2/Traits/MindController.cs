@@ -20,7 +20,7 @@ namespace OpenRA.Mods.RA2.Traits
 	public class MindControllerInfo : PausableConditionalTraitInfo, Requires<ArmamentInfo>, Requires<HealthInfo>
 	{
 		[Desc("Name of the armaments that grant this condition.")]
-		public readonly HashSet<string> ArmamentNames = new() { "primary" };
+		public readonly HashSet<string> ArmamentNames = ["primary"];
 
 		[Desc("Up to how many units can this unit control?",
 			"Use 0 or negative numbers for infinite.")]
@@ -43,7 +43,7 @@ namespace OpenRA.Mods.RA2.Traits
 
 	public class MindController : PausableConditionalTrait<MindControllerInfo>, INotifyAttack, INotifyKilled, INotifyActorDisposing
 	{
-		readonly List<Actor> slaves = new();
+		readonly List<Actor> slaves = [];
 
 		readonly Stack<int> controllingTokens = new();
 
