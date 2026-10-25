@@ -5,13 +5,13 @@ lcrf:
 		Queue: Ship
 		BuildPaletteOrder: 10
 		Prerequisites: ~gayard
-		Description: General-purpose naval transport.\nCan carry infantry and vehicles.\n  Unarmed
+		Description: actor-lcrf.description
 	Valued:
 		Cost: 900
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Amphibious Transport
+		Name: actor-lcrf.name
 	Selectable:
 		Bounds: 1448, 3861, 0, -289
 	Health:
@@ -58,13 +58,13 @@ dest:
 		Queue: Ship
 		BuildPaletteOrder: 20
 		Prerequisites: ~gayard
-		Description: Allied Main Battle Ship armed with cannons and\n an Osprey helicopter.\nCan detect submarines and sea animals.\n  Strong vs Naval units\n  Weak vs Ground units, Aircraft
+		Description: actor-dest.description
 	Valued:
 		Cost: 1000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Destroyer
+		Name: actor-dest.name
 	Health:
 		HP: 600
 	Armor:
@@ -136,13 +136,13 @@ aegis:
 		Queue: Ship
 		BuildPaletteOrder: 30
 		Prerequisites: radar, ~gayard
-		Description: Anti-Air naval unit.\n  Strong vs Aircraft\n  Grounds units, Ships
+		Description: actor-aegis.description
 	Valued:
 		Cost: 1200
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Aegis Cruiser
+		Name: actor-aegis.name
 	Selectable:
 		Bounds: 1448, 3861, 0, -289
 	Health:
@@ -179,13 +179,13 @@ dlph:
 		Queue: Ship
 		BuildPaletteOrder: 40
 		Prerequisites: gatech, ~gayard
-		Description: Trained dolphin\narmed with sonic beams.\n  Strong vs Ships
+		Description: actor-dlph.description
 	Valued:
 		Cost: 500
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Dolphin
+		Name: actor-dlph.name
 	Armor:
 		Type: Light
 	Health:
@@ -263,13 +263,13 @@ carrier:
 		Queue: Ship
 		BuildPaletteOrder: 60
 		Prerequisites: gatech, ~gayard
-		Description: Aircraft carrier ship.\n  Strong vs Tanks, Structures\n  Weak vs Infantry
+		Description: actor-carrier.description
 	Valued:
 		Cost: 2000
 	UpdatesPlayerStatistics:
 		AddToArmyValue: true
 	Tooltip:
-		Name: Aircraft Carrier
+		Name: actor-carrier.name
 	Health:
 		HP: 800
 	Armor:
