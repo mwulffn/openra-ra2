@@ -204,6 +204,7 @@ FluentMessages:
 	common|fluent/hotkeys.ftl
 	common|fluent/rules.ftl
 	ra2|fluent/ra2.ftl
+	ra2|fluent/chrome.ftl
 	ra2|fluent/rules.ftl
 
 Hotkeys:
