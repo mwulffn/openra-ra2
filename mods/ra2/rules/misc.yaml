@@ -6,7 +6,6 @@ mpspawn:
 		OccupiesSpace: false
 	BodyOrientation:
 		QuantizedFacings: 1
-	AlwaysVisible:
 	RenderSpritesEditorOnly:
 	WithSpriteBody:
 	MapEditorData:
@@ -22,7 +21,6 @@ waypoint:
 		OccupiesSpace: false
 	BodyOrientation:
 		QuantizedFacings: 1
-	AlwaysVisible:
 	RenderSpritesEditorOnly:
 	WithSpriteBody:
 	MapEditorData:
@@ -99,7 +97,6 @@ TROCK05:
 	Inherits: ^Rock
 
 CAMERA:
-	AlwaysVisible:
 	Interactable:
 	Immobile:
 		OccupiesSpace: false
@@ -145,7 +142,6 @@ INGALITE:
 	Interactable:
 	EditorOnlyTooltip:
 		Name: actor-ingalite-name
-	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
 	RenderSpritesEditorOnly:

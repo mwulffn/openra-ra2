@@ -1,6 +1,5 @@
 ^BaseWorld:
 	Inherits: ^Palettes
-	AlwaysVisible:
 	MusicPlaylist:
 		VictoryMusic: score
 		DefeatMusic: score

@@ -19,7 +19,6 @@ cabhut:
 	Interactable:
 
 ^LowBridgeRamp:
-	AlwaysVisible:
 	RenderSprites:
 		Palette: terrain
 	WithSpriteBody:
@@ -299,7 +298,6 @@ lobrdg_r_sw:
 		Name: actor-lobrdg-r-sw-name
 
 ^ElevatedBridgePlaceholder:
-	AlwaysVisible:
 	RenderSprites:
 		Palette: terrain
 	WithSpriteBody:
