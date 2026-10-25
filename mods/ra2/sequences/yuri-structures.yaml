@@ -1,0 +1,13 @@
+gafwll:
+	Inherits: ^Wall
+	Defaults:
+		TilesetFilenames:
+			TEMPERATE: ggfwll.shp
+			SNOW: gafwll.shp
+			URBAN: ggfwll.shp
+			NEWURBAN: ggfwll.shp
+			DESERT: ggfwll.shp
+			LUNAR: ggfwll.shp
+	icon:
+		Filename: citwicon.shp
+		TilesetFilenames:

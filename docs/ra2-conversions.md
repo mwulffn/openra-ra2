@@ -83,3 +83,27 @@ original). Prefer verified rules for new work.
 - Depth follows the world's Y and the screen's height Y less Z: moving a
   renderable by (0, d, d) brings it nearer by d without moving it on the
   screen.
+
+## Bridges (verified)
+
+- A low bridge piece (`LOBRDG`, `LOBRDB`) is its overlay on three cells
+  across the bridge, the overlay data 0 to 2 saying which; only the middle
+  one (1) is drawn, its art being frame 1 of the file (frames 0 and 2 are
+  empty). The importer makes one actor per middle cell. Some multiplayer
+  maps (South Pacific) hold edge cells with no middle: the original shows
+  nothing there.
+- A high bridge's deck (`BRIDGE1`/`BRIDGE2`, the wooden `BRIDGEB1`/`B2` as
+  overlays 237 and 238) is drawn flat like the ground, 16 pixels up the
+  screen (31 along y), and 4 levels plus 2 rows nearer: the sequence
+  `Offset` is `0, -16, 62` (`0, -31, 62`). Less lets the ramp tile at the
+  bridge's upper end cut into the deck. Checked against the original's
+  screenshots of both ends of `all03u`'s bridge.
+- `MapSnapshot` (world trait) renders a whole map to a PNG and quits when
+  `OPENRA_MAP_SNAPSHOT` names the file: the quickest way to check an
+  imported map by eye.
+- Units cross a high bridge on OpenRA's elevated bridge layer, which a map
+  must declare: `ElevatedBridgeLayer` and an `ElevatedBridgePlaceholder`
+  for each bridge. The importer makes one for each run of deck overlays:
+  three cells wide, from the ramp cell before the run to the one after it
+  (`Length` the run plus one), `Height` the terrain height of that ramp
+  cell. A bridge with no deck (destroyed in the original) gets none.

@@ -31,8 +31,8 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 
 		static readonly Dictionary<byte, string> OverlayToActor = new()
 		{
-			{ 0x01, "gasand" },
-			{ 0x03, "gawall" },
+			{ 0x00, "gasand" },
+			{ 0x02, "gawall" },
 			{ 0x18, "bridge1" },
 			{ 0x19, "bridge2" },
 			{ 0x1A, "nawall" },
@@ -149,9 +149,28 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 			{ 0xEC, "lobrdb_r_sw" }, // lobrdb4
 
 			// Others
+			{ 0xED, "bridgb1" }, // wooden high bridge
+			{ 0xEE, "bridgb2" },
+			{ 0xEF, "rubble" }, // left by a building with LeaveRubble
 			{ 0xF0, "cakrmw" }, // Kremlin walls
 			{ 0xF1, "cafncp" }, // prison camp fence
 			{ 0xF2, "crate" }, // wcrate (water crate)
+			{ 0xF3, "gafwll" }, // Yuri citadel wall
+			{ 0xF4, "lunrk1" },
+			{ 0xF5, "lunrk2" },
+			{ 0xF6, "lunrk3" },
+			{ 0xF7, "lunrk4" },
+			{ 0xF8, "lunrk5" },
+			{ 0xF9, "lunrk6" },
+		};
+
+		// The decks of high bridges: one overlay a cell along the bridge's middle
+		static readonly Dictionary<byte, ElevatedBridgePlaceholderOrientation> ElevatedBridgeOverlays = new()
+		{
+			{ 0x18, ElevatedBridgePlaceholderOrientation.X }, // bridge1
+			{ 0x19, ElevatedBridgePlaceholderOrientation.Y }, // bridge2
+			{ 0xED, ElevatedBridgePlaceholderOrientation.X }, // bridgeb1
+			{ 0xEE, ElevatedBridgePlaceholderOrientation.Y }, // bridgeb2
 		};
 
 		static readonly Dictionary<byte, Size> OverlayShapes = new()
@@ -342,6 +361,9 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 			"INYELWLAMP", "PURPLAMP", "INPURPLAMP", "INORANLAMP", "INGRNLMP", "INREDLMP", "INBLULMP"
 		};
 
+		// Unfinished maps left in maps01.mix that no campaign plays; they predate the final tilesets
+		static readonly string[] LeftoverMaps = ["e31", "e32", "sov1u"];
+
 		static readonly Dictionary<string, string> ReplaceActors = new()
 		{
 			{ "adog", "dog" }
@@ -354,6 +376,12 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 			Game.ModData = utility.ModData;
 
 			var filename = args[1];
+			if (LeftoverMaps.Contains(Path.GetFileNameWithoutExtension(filename).ToLowerInvariant()))
+			{
+				Console.WriteLine($"{filename} skipped: an unfinished map no campaign plays");
+				return;
+			}
+
 			var file = new IniFile(File.Open(args[1], FileMode.Open));
 			var basic = file.GetSection("Basic");
 			var mapSection = file.GetSection("Map");
@@ -375,12 +403,19 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 
 			var fullSize = new int2(iniSize[2], iniSize[3]);
 			ReadTiles(map, file, fullSize);
+
+			// Some maps' bounds reach below the last row their cells project to (dustbowl, trn01t), which leaves
+			// no valid boundary to save the preview with. Bring the bottom up until it is valid, as the engine's
+			// importer for Tiberian Sun does.
+			while (map.GetCellSpaceBounds() is var (top, bottom) && (top == int.MaxValue || bottom == int.MinValue))
+				map.SetBounds(new PPos(map.Bounds.Left, map.Bounds.Top), new PPos(map.Bounds.Right - 1, map.Bounds.Bottom - 2));
 			ReadActors(map, file, "Structures", fullSize);
 			ReadActors(map, file, "Units", fullSize);
 			ReadActors(map, file, "Infantry", fullSize);
 			ReadTerrainActors(map, file, fullSize);
 			ReadWaypoints(map, file, fullSize);
-			ReadOverlay(map, file, fullSize);
+			var bridgeDecks = ReadOverlay(map, file, fullSize);
+			AddElevatedBridges(map, bridgeDecks);
 			ReadLighting(map, file);
 			ReadLamps(map, file);
 
@@ -395,6 +430,19 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 
 		static void AddActor(Map map, ActorReference ar)
 		{
+			// The original keeps things on high ground at the map's top edge that project above it and are never
+			// drawn. The engine refuses an actor that freezes under fog with no cell on the map to freeze on.
+			var location = ar.Get<LocationInit>().Value;
+			var info = map.Rules.Actors.GetValueOrDefault(ar.Type);
+			var size = info?.TraitInfoOrDefault<BuildingInfo>()?.Dimensions ?? new CVec(1, 1);
+			var cells = Enumerable.Range(0, size.X * size.Y).Select(i => location + new CVec(i % size.X, i / size.X));
+			if (info != null && info.HasTraitInfo<FrozenUnderFogInfo>() &&
+				cells.All(c => map.ProjectedCellsCovering(c.ToMPos(map)).Length == 0))
+			{
+				Console.WriteLine($"{location} skipped {ar.Type}: it projects outside the map");
+				return;
+			}
+
 			var node = new MiniYamlNode("Actor" + map.ActorDefinitions.Count, ar.Save());
 			map.ActorDefinitions = map.ActorDefinitions.Append(node).ToArray();
 		}
@@ -461,8 +509,14 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 
 				if (map.Tiles.Contains(cell))
 				{
-					if (!terrainInfo.Templates.ContainsKey(tilenum))
+					// Tiles the tileset does not have become clear ground
+					if (!terrainInfo.Templates.TryGetValue(tilenum, out var template) || !template.Contains(subtile) || template[subtile] == null)
+					{
+						if (tilenum != ushort.MaxValue)
+							Console.WriteLine($"{cell} unknown tile {tilenum}.{subtile}");
+
 						tilenum = subtile = 0;
+					}
 
 					map.Tiles[cell] = new TerrainTile(tilenum, subtile);
 					map.Height[cell] = z;
@@ -470,7 +524,7 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 			}
 		}
 
-		static void ReadOverlay(Map map, IniFile file, int2 fullSize)
+		static Dictionary<CPos, ElevatedBridgePlaceholderOrientation> ReadOverlay(Map map, IniFile file, int2 fullSize)
 		{
 			var overlaySection = file.GetSection("OverlayPack");
 			var overlayCompressed = Convert.FromBase64String(string.Concat(overlaySection.Select(kvp => kvp.Value)));
@@ -504,35 +558,36 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 				}
 			}
 
+			var bridgeDecks = new Dictionary<CPos, ElevatedBridgePlaceholderOrientation>();
 			foreach (var cell in map.AllCells)
 			{
 				var overlayType = overlayPack[overlayIndex[cell]];
 				if (overlayType == 0xFF)
 					continue;
 
+				if (ElevatedBridgeOverlays.TryGetValue(overlayType, out var orientation))
+					bridgeDecks[cell] = orientation;
+
 				if (OverlayToActor.TryGetValue(overlayType, out var actorType))
 				{
 					if (string.IsNullOrEmpty(actorType))
 						continue;
 
-					var shape = new Size(1, 1);
-					if (OverlayShapes.TryGetValue(overlayType, out shape))
+					var location = cell;
+					if (OverlayShapes.TryGetValue(overlayType, out var shape))
 					{
-						// Only import the top-left cell of multi-celled overlays
-						var aboveType = overlayPack[overlayIndex[cell - new CVec(1, 0)]];
-						if (shape.Width > 1 && aboveType != 0xFF)
-							if (OverlayToActor.TryGetValue(aboveType, out var a) && a == actorType)
-								continue;
+						// A low bridge piece is its overlay on three cells across the bridge, numbered 0 to 2 by the
+						// overlay data. Only the middle one is drawn (its art is frame 1; frames 0 and 2 are empty), so
+						// import the piece there and ignore cells left without a middle, which the original shows nothing for.
+						if (overlayDataPack[overlayIndex[cell]] != 1)
+							continue;
 
-						var leftType = overlayPack[overlayIndex[cell - new CVec(0, 1)]];
-						if (shape.Height > 1 && leftType != 0xFF)
-							if (OverlayToActor.TryGetValue(leftType, out var a) && a == actorType)
-								continue;
+						location -= new CVec(shape.Width / 2, shape.Height / 2);
 					}
 
 					var ar = new ActorReference(actorType)
 					{
-						new LocationInit(cell),
+						new LocationInit(location),
 						new OwnerInit("Neutral")
 					};
 
@@ -568,6 +623,54 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 
 				Console.WriteLine($"{cell} unknown overlay {overlayType}");
 			}
+
+			return bridgeDecks;
+		}
+
+		// A high bridge is a run of deck overlays along its middle, three cells wide, between the ramps a cell
+		// beyond either end of the run. Units can only cross it on the elevated bridge layer, set up for each bridge.
+		static void AddElevatedBridges(Map map, Dictionary<CPos, ElevatedBridgePlaceholderOrientation> decks)
+		{
+			var nodes = new List<MiniYamlNode>();
+			foreach (var (cell, orientation) in decks)
+			{
+				var along = orientation == ElevatedBridgePlaceholderOrientation.X ? new CVec(1, 0) : new CVec(0, 1);
+				var across = new CVec(along.Y, along.X);
+
+				// Start from the first deck of each run
+				if (decks.TryGetValue(cell - along, out var o) && o == orientation)
+					continue;
+
+				var length = 1;
+				while (decks.TryGetValue(cell + along * length, out o) && o == orientation)
+					length++;
+
+				// The engine's layer covers every cell of the bridge's footprint, which must all be on the map
+				var end = cell - along;
+				var footprint = Enumerable.Range(0, length + 2).SelectMany(i => new[] { -1, 0, 1 }.Select(j => end + along * i + across * j));
+				if (!footprint.All(map.Height.Contains))
+				{
+					Console.WriteLine($"{cell} skipped elevated bridge: it reaches past the map's edge");
+					continue;
+				}
+
+				nodes.Add(new MiniYamlNode($"ElevatedBridgePlaceholder@{nodes.Count + 1}", new MiniYaml("",
+				[
+					new MiniYamlNode("Location", FieldSaver.FormatValue(end - across)),
+					new MiniYamlNode("Orientation", FieldSaver.FormatValue(orientation)),
+					new MiniYamlNode("Length", FieldSaver.FormatValue(length + 1)),
+					new MiniYamlNode("Height", FieldSaver.FormatValue(map.Height[end]))
+				])));
+			}
+
+			if (nodes.Count == 0)
+				return;
+
+			nodes.Insert(0, new MiniYamlNode("ElevatedBridgeLayer", ""));
+			map.RuleDefinitions = map.RuleDefinitions.WithNodesAppended(new[]
+			{
+				new MiniYamlNode("World", new MiniYaml("", nodes))
+			});
 		}
 
 		static void ReadWaypoints(Map map, IniFile file, int2 fullSize)

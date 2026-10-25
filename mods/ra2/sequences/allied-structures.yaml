@@ -12,6 +12,9 @@ gacnst:
 			TEMPERATE: gtcnstmk.shp
 			SNOW: gacnstmk.shp
 			URBAN: gucnstmk.shp
+			NEWURBAN: gncnstmk.shp
+			DESERT: gdcnstmk.shp
+			LUNAR: glcnstmk.shp
 		Length: 29
 		ShadowStart: 29
 	damaged-idle:
@@ -87,6 +90,9 @@ gapowr:
 			TEMPERATE: gtpowrmk.shp
 			SNOW: gapowrmk.shp
 			URBAN: gupowrmk.shp
+			NEWURBAN: gnpowrmk.shp
+			DESERT: gdpowrmk.shp
+			LUNAR: glpowrmk.shp
 	icon:
 		Filename: powricon.shp
 
@@ -128,6 +134,9 @@ gapile:
 			TEMPERATE: gtpilemk.shp
 			SNOW: gapilemk.shp
 			URBAN: gupilemk.shp
+			NEWURBAN: gnpilemk.shp
+			DESERT: gdpilemk.shp
+			LUNAR: glpilemk.shp
 	icon:
 		Filename: brrkicon.shp
 
@@ -149,6 +158,9 @@ garefn:
 			TEMPERATE: gtrefnmk.shp
 			SNOW: garefnmk.shp
 			URBAN: gurefnmk.shp
+			NEWURBAN: gnrefnmk.shp
+			DESERT: gdrefnmk.shp
+			LUNAR: glrefnmk.shp
 	idle-drill:
 		Filename: ggrefnl1.shp
 		TilesetFilenames:
@@ -272,6 +284,9 @@ gaairc:
 			TEMPERATE: gtaircmk.shp
 			SNOW: gaaircmk.shp
 			URBAN: guaircmk.shp
+			NEWURBAN: gnaircmk.shp
+			DESERT: gdaircmk.shp
+			LUNAR: glaircmk.shp
 	icon:
 		Filename: heliicon.shp
 
@@ -385,6 +400,9 @@ gaweap:
 			TEMPERATE: gtweapmk.shp
 			SNOW: gaweapmk.shp
 			URBAN: guweapmk.shp
+			NEWURBAN: gnweapmk.shp
+			DESERT: gdweapmk.shp
+			LUNAR: glweapmk.shp
 	icon:
 		Filename: gwepicon.shp
 
@@ -439,6 +457,9 @@ gayard:
 			TEMPERATE: gtyardmk.shp
 			SNOW: gayardmk.shp
 			URBAN: guyardmk.shp
+			NEWURBAN: gnyardmk.shp
+			DESERT: gdyardmk.shp
+			LUNAR: glyardmk.shp
 	repair:
 		Filename: ggyard_s.shp
 		TilesetFilenames:
@@ -496,6 +517,9 @@ gadept:
 			TEMPERATE: gtdeptmk.shp
 			SNOW: gadeptmk.shp
 			URBAN: gudeptmk.shp
+			NEWURBAN: gndeptmk.shp
+			DESERT: gddeptmk.shp
+			LUNAR: gldeptmk.shp
 	repair:
 		Filename: ggdept_c.shp
 		TilesetFilenames:
@@ -545,6 +569,9 @@ gatech:
 			TEMPERATE: gttechmk.shp
 			SNOW: gatechmk.shp
 			URBAN: gutechmk.shp
+			NEWURBAN: gntechmk.shp
+			DESERT: gdtechmk.shp
+			LUNAR: gltechmk.shp
 	icon:
 		Filename: techicon.shp
 
@@ -581,6 +608,9 @@ gaorep:
 			TEMPERATE: gtorepmk.shp
 			SNOW: gaorepmk.shp
 			URBAN: guorepmk.shp
+			NEWURBAN: gnorepmk.shp
+			DESERT: gdorepmk.shp
+			LUNAR: glorepmk.shp
 	icon:
 		Filename: gorep.shp
 
@@ -591,6 +621,9 @@ gawall:
 			TEMPERATE: gtwall.shp
 			SNOW: gawall.shp
 			URBAN: guwall.shp
+			NEWURBAN: gnwall.shp
+			DESERT: gdwall.shp
+			LUNAR: glwall.shp
 	icon:
 		Filename: wallicon.shp
 		TilesetFilenames:
@@ -622,6 +655,9 @@ gapill:
 			TEMPERATE: gtpillmk.shp
 			SNOW: gapillmk.shp
 			URBAN: gupillmk.shp
+			NEWURBAN: gnpillmk.shp
+			DESERT: gdpillmk.shp
+			LUNAR: glpillmk.shp
 		Length: 8
 		ShadowStart: 8
 	icon:
@@ -653,6 +689,9 @@ nasam:
 			TEMPERATE: ntsammk.shp
 			SNOW: nasammk.shp
 			URBAN: nusammk.shp
+			NEWURBAN: nnsammk.shp
+			DESERT: ndsammk.shp
+			LUNAR: nlsammk.shp
 		Length: 8
 		ShadowStart: 8
 		ZOffset: 0
@@ -685,6 +724,9 @@ gtgcan:
 			TEMPERATE: gtgcanmk.shp
 			SNOW: gagcanmk.shp
 			URBAN: gugcanmk.shp
+			NEWURBAN: gngcanmk.shp
+			DESERT: gdgcanmk.shp
+			LUNAR: glgcanmk.shp
 		Length: 12
 		ShadowStart: 12
 		ZOffset: 0
@@ -728,6 +770,9 @@ gaspysat:
 			TEMPERATE: gtspstmk.shp
 			SNOW: gaspstmk.shp
 			URBAN: guspstmk.shp
+			NEWURBAN: gnspstmk.shp
+			DESERT: gdspstmk.shp
+			LUNAR: glspstmk.shp
 		Tick: 90
 	icon:
 		Filename: asaticon.shp
@@ -753,6 +798,9 @@ gagap:
 			TEMPERATE: gtgapmk.shp
 			SNOW: gagapmk.shp
 			URBAN: gugapmk.shp
+			NEWURBAN: gngapmk.shp
+			DESERT: gdgapmk.shp
+			LUNAR: glgapmk.shp
 		Length: 9
 		ShadowStart: 9
 		Tick: 90
@@ -777,6 +825,9 @@ gaweat:
 			TEMPERATE: gtwethmk.shp
 			SNOW: gawethmk.shp
 			URBAN: guwethmk.shp
+			NEWURBAN: gnwethmk.shp
+			DESERT: gdwethmk.shp
+			LUNAR: glwethmk.shp
 	icon:
 		Filename: wethicon.shp
 
@@ -817,6 +868,9 @@ gacsph:
 			TEMPERATE: gtcsphmk.shp
 			SNOW: gacsphmk.shp
 			URBAN: gucsphmk.shp
+			NEWURBAN: gncsphmk.shp
+			DESERT: gdcsphmk.shp
+			LUNAR: glcsphmk.shp
 	icon:
 		Filename: csphicon.shp
 
@@ -878,6 +932,9 @@ atesla:
 			TEMPERATE: gtprismk.shp
 			SNOW: gaprismk.shp
 			URBAN: guprismk.shp
+			NEWURBAN: gnprismk.shp
+			DESERT: gdprismk.shp
+			LUNAR: glprismk.shp
 		Length: 8
 		ShadowStart: 8
 		Tick: 160

@@ -4,7 +4,7 @@ General:
 	TileSize: 60, 30
 	Extensions: .sno, .shp
 	HeightDebugColors: 00000080, 00004480, 00008880, 0000CC80, 0000FF80, 4400CC80, 88008880, CC004480, FF110080, FF550080, FF990080, FFDD0080, DDFF0080, 99FF0080, 55FF0080, 11FF0080
-	EditorTemplateOrder: LAT Snow, ZMM Ramps, ZMM Height Pieces, Ramps, Cliff Set, Shore Pieces, LAT Grass, Clear/Rough LAT, Cliff/Water pieces, DirtRoadsBendy, DirtRoadsJunctions, DirtRoadsStraight, Bridges, Paved Roads, Water, ZMM Cliff Set, DirtRoadSlopes, ZMM DirtRoadSlopes, Ramps Big, ZMM Slope Set Pieces, Obsolete Height Pieces, Waterfalls-A, Waterfalls-B, Waterfalls-C, Waterfalls-D, Paved Road Ends, Farmland, Ramp edge fixup, ZMM Ramp edge fixup, Paved Road Slopes, ZMM Height Pieces, Tunnels, Tunnel Side, ZMM DirtRoadsBendy, ZMM DirtRoadJunctions, ZMM DirtRoadsStraight, ZMM Shore Pieces, ZMM Waterfalls-A, ZMM Waterfalls-B, ZMM Waterfalls-C, ZMM Waterfalls-D, ZMM Cliff/Water pieces, ZMM Water, Destroyable Cliffs, LAT SnowyRock, Rock/Clear LAT, LAT Icy, Grey/Clear LAT, DirtTunnel Floor, LAT Pavement, Pavement Detail, Pavement/Clear LAT, Paved road bits, Water bridge, Wood Bridges, Plane downed
+	EditorTemplateOrder: LAT Snow, ZMM Ramps, ZMM Height Pieces, Ramps, Cliff Set, Shore Pieces, LAT Grass, Clear/Rough LAT, Cliff/Water pieces, DirtRoadsBendy, DirtRoadsJunctions, DirtRoadsStraight, Bridges, Paved Roads, Water, ZMM Cliff Set, DirtRoadSlopes, ZMM DirtRoadSlopes, Ramps Big, ZMM Slope Set Pieces, Obsolete Height Pieces, Waterfalls-A, Waterfalls-B, Waterfalls-C, Waterfalls-D, Paved Road Ends, Farmland, Ramp edge fixup, ZMM Ramp edge fixup, Paved Road Slopes, ZMM Height Pieces, Tunnels, Tunnel Side, ZMM DirtRoadsBendy, ZMM DirtRoadJunctions, ZMM DirtRoadsStraight, ZMM Shore Pieces, ZMM Waterfalls-A, ZMM Waterfalls-B, ZMM Waterfalls-C, ZMM Waterfalls-D, ZMM Cliff/Water pieces, ZMM Water, Destroyable Cliffs, LAT SnowyRock, Rock/Clear LAT, LAT Icy, Grey/Clear LAT, DirtTunnel Floor, LAT Pavement, Pavement Detail, Pavement/Clear LAT, Paved road bits, Water bridge, Wood Bridges, Plane downed, Cliff Ice Set, Ramps Ice Big, Cliff Ice/Water pieces, Ice Crevas, Cliff Ice LowPatch
 	SheetSize: 4096
 	EnableDepth: true
 
@@ -16007,5 +16007,2361 @@ Templates:
 			34: Cliff
 				MinColor: DCEAED
 				MaxColor: DEEAED
+				ZOffset: -15
+				ZRamp: 0
+	Template@798:
+		Categories: Cliff Ice Set
+		Id: 798
+		Images: clifx01.sno
+		Size: 2, 3
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 4C6270
+				MaxColor: 76878F
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 93A9B4
+				MaxColor: 6A8A9C
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				Height: 4
+				MinColor: 36536A
+				MaxColor: 5F7480
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: D3E1E4
+				MaxColor: 8A9FAA
+				ZOffset: -15
+				ZRamp: 0
+	Template@799:
+		Categories: Cliff Ice Set
+		Id: 799
+		Images: clifx02.sno
+		Size: 1, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 526872
+				MaxColor: 6F8189
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 87A2AE
+				MaxColor: 65899A
+				ZOffset: -15
+				ZRamp: 0
+	Template@800:
+		Categories: Cliff Ice Set
+		Id: 800
+		Images: clifx03.sno
+		Size: 2, 3
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 687881
+				MaxColor: 9CA7AA
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 97ADB8
+				MaxColor: 587D97
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				Height: 4
+				MinColor: 3F5A70
+				MaxColor: 556B79
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: BAC9CD
+				MaxColor: 688593
+				ZOffset: -15
+				ZRamp: 0
+	Template@801:
+		Categories: Cliff Ice Set
+		Id: 801
+		Images: clifx04.sno
+		Size: 2, 3
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 677881
+				MaxColor: 8B999F
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: A3B7C0
+				MaxColor: 7E97A7
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				Height: 4
+				MinColor: 586A75
+				MaxColor: 6E7E88
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: B5C9D2
+				MaxColor: 728C9C
+				ZOffset: -15
+				ZRamp: 0
+	Template@802:
+		Categories: Cliff Ice Set
+		Id: 802
+		Images: clifx05.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 6B7C85
+				MaxColor: 88959B
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				Height: 4
+				MinColor: 607480
+				MaxColor: 85939A
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: ACC2CC
+				MaxColor: 7291A4
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: B0C4CD
+				MaxColor: 537890
+				ZOffset: -15
+				ZRamp: 0
+	Template@803:
+		Categories: Cliff Ice Set
+		Id: 803
+		Images: clifx06.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 71828C
+				MaxColor: 929DA2
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				Height: 4
+				MinColor: 62747F
+				MaxColor: 849298
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: AEC1CA
+				MaxColor: 6D8B9D
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: A4B7BE
+				MaxColor: 5E7E8F
+				ZOffset: -15
+				ZRamp: 0
+	Template@804:
+		Categories: Cliff Ice Set
+		Id: 804
+		Images: clifx07.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 6D7F8A
+				MaxColor: 819099
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				Height: 4
+				MinColor: 637683
+				MaxColor: 85949B
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: A5BCC8
+				MaxColor: 67889D
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: A9BDC7
+				MaxColor: 66879D
+				ZOffset: -15
+				ZRamp: 0
+	Template@805:
+		Categories: Cliff Ice Set
+		Id: 805
+		Images: clifx08.sno
+		Size: 1, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 6B7A81
+				MaxColor: 8D9AA0
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 9DB1BA
+				MaxColor: 6C8998
+				ZOffset: -15
+				ZRamp: 0
+	Template@806:
+		Categories: Cliff Ice Set
+		Id: 806
+		Images: clifx09.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 99A6A9
+				MaxColor: 99A6A9
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: A0B6C0
+				MaxColor: 638294
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 7593A7
+				MaxColor: 547589
+				ZOffset: -15
+				ZRamp: 0
+	Template@807:
+		Categories: Cliff Ice Set
+		Id: 807
+		Images: clifx10.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 8B999F
+				MaxColor: 909DA3
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 93ACB9
+				MaxColor: 5E8093
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 7694A4
+				MaxColor: 66879B
+				ZOffset: -15
+				ZRamp: 0
+	Template@808:
+		Categories: Cliff Ice Set
+		Id: 808
+		Images: clifx11.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 8C989B
+				MaxColor: 8E999D
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 96ABB4
+				MaxColor: 557687
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 6B838E
+				MaxColor: 758E97
+				ZOffset: -15
+				ZRamp: 0
+	Template@809:
+		Categories: Cliff Ice Set
+		Id: 809
+		Images: clifx12.sno
+		Size: 1, 1
+		Tiles:
+			0: Cliff
+				MinColor: 658393
+				MaxColor: 688695
+				ZOffset: -15
+				ZRamp: 0
+	Template@810:
+		Categories: Cliff Ice Set
+		Id: 810
+		Images: clifx13.sno
+		Size: 1, 1
+		Tiles:
+			0: Cliff
+				MinColor: 728E9B
+				MaxColor: 819BAA
+				ZOffset: -15
+				ZRamp: 0
+	Template@811:
+		Categories: Cliff Ice Set
+		Id: 811
+		Images: clifx14.sno
+		Size: 1, 1
+		Tiles:
+			0: Cliff
+				MinColor: 74909F
+				MaxColor: 6D8A9C
+				ZOffset: -15
+				ZRamp: 0
+	Template@812:
+		Categories: Cliff Ice Set
+		Id: 812
+		Images: clifx15.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 859398
+				MaxColor: 617580
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 98ADB6
+				MaxColor: 698897
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				Height: 4
+				MinColor: 76878F
+				MaxColor: 67777F
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: 9CB2BC
+				MaxColor: 738F9F
+				ZOffset: -15
+				ZRamp: 0
+	Template@813:
+		Categories: Cliff Ice Set
+		Id: 813
+		Images: clifx16.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 97A5A8
+				MaxColor: 75848A
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 8398A0
+				MaxColor: 748F9D
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				Height: 4
+				MinColor: 818F95
+				MaxColor: 738287
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: 90A4AC
+				MaxColor: 86A0AD
+				ZOffset: -15
+				ZRamp: 0
+	Template@814:
+		Categories: Cliff Ice Set
+		Id: 814
+		Images: clifx17.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 7E8E96
+				MaxColor: 718188
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 90AAB9
+				MaxColor: 728C9E
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				Height: 4
+				MinColor: 808E94
+				MaxColor: 536874
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: 96AFBC
+				MaxColor: 5D7988
+				ZOffset: -15
+				ZRamp: 0
+	Template@815:
+		Categories: Cliff Ice Set
+		Id: 815
+		Images: clifx18.sno
+		Size: 2, 1
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 7B898D
+				MaxColor: 526468
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 839CA9
+				MaxColor: 63818F
+				ZOffset: -15
+				ZRamp: 0
+	Template@816:
+		Categories: Cliff Ice Set
+		Id: 816
+		Images: clifx19.sno
+		Size: 3, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: A2ACAF
+				MaxColor: 819096
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 718B9A
+				MaxColor: 7A95A4
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				Height: 4
+				MinColor: 788890
+				MaxColor: 4E6370
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 97ABB4
+				MaxColor: A8BDC6
+				ZOffset: -15
+				ZRamp: 0
+	Template@817:
+		Categories: Cliff Ice Set
+		Id: 817
+		Images: clifx20.sno
+		Size: 3, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 97A4A8
+				MaxColor: 74868F
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 65899F
+				MaxColor: 5E8094
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				Height: 4
+				MinColor: 718189
+				MaxColor: 40596C
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 91A9B5
+				MaxColor: A0B8C2
+				ZOffset: -15
+				ZRamp: 0
+	Template@818:
+		Categories: Cliff Ice Set
+		Id: 818
+		Images: clifx21.sno
+		Size: 3, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 7E8B90
+				MaxColor: 485C67
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 314F60
+				MaxColor: 496673
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				Height: 4
+				MinColor: 728288
+				MaxColor: 2D4652
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 9BADB4
+				MaxColor: 9DB0B8
+				ZOffset: -15
+				ZRamp: 0
+	Template@819:
+		Categories: Cliff Ice Set
+		Id: 819
+		Images: clifx22.sno
+		Size: 2, 1
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 697A83
+				MaxColor: 435A66
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 7792A0
+				MaxColor: 678698
+				ZOffset: -15
+				ZRamp: 0
+	Template@820:
+		Categories: Cliff Ice Set
+		Id: 820
+		Images: clifx23.sno
+		Size: 2, 1
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 7A8A91
+				MaxColor: 526671
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				Height: 4
+				MinColor: 607682
+				MaxColor: 415969
+				ZOffset: -15
+				ZRamp: 0
+	Template@821:
+		Categories: Cliff Ice Set
+		Id: 821
+		Images: clifx24.sno
+		Size: 2, 1
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 7D8C94
+				MaxColor: 405A6B
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				Height: 4
+				MinColor: 788B94
+				MaxColor: 4C616D
+				ZOffset: -15
+				ZRamp: 0
+	Template@822:
+		Categories: Cliff Ice Set
+		Id: 822
+		Images: clifx25.sno
+		Size: 2, 1
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 788A93
+				MaxColor: 495D6A
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				Height: 4
+				MinColor: 697B84
+				MaxColor: 556873
+				ZOffset: -15
+				ZRamp: 0
+	Template@823:
+		Categories: Cliff Ice Set
+		Id: 823
+		Images: clifx26.sno
+		Size: 1, 1
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 84949B
+				MaxColor: 526671
+				ZOffset: -15
+				ZRamp: 0
+	Template@824:
+		Categories: Cliff Ice Set
+		Id: 824
+		Images: clifx27.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 526773
+				MaxColor: 2E4A5C
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				Height: 4
+				MinColor: 6A7E8A
+				MaxColor: 526775
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				Height: 4
+				MinColor: 435B6B
+				MaxColor: 5A707B
+				ZOffset: -15
+				ZRamp: 0
+	Template@825:
+		Categories: Cliff Ice Set
+		Id: 825
+		Images: clifx28.sno
+		Size: 2, 2
+		Tiles:
+			1: Cliff
+				Height: 4
+				MinColor: 4D626C
+				MaxColor: 4F636D
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				Height: 4
+				MinColor: 5D707A
+				MaxColor: 546770
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				Height: 4
+				MinColor: 819096
+				MaxColor: 768892
+				ZOffset: -15
+				ZRamp: 0
+	Template@826:
+		Categories: Cliff Ice Set
+		Id: 826
+		Images: clifx29.sno
+		Size: 1, 1
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 4E636C
+				MaxColor: 556973
+				ZOffset: -15
+				ZRamp: 0
+	Template@827:
+		Categories: Cliff Ice Set
+		Id: 827
+		Images: clifx30.sno
+		Size: 1, 1
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 607179
+				MaxColor: 6C7D87
+				ZOffset: -15
+				ZRamp: 0
+	Template@828:
+		Categories: Cliff Ice Set
+		Id: 828
+		Images: clifx31.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 566A77
+				MaxColor: 475D6B
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				Height: 4
+				MinColor: 778992
+				MaxColor: 8B989E
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				Height: 4
+				MinColor: 88969A
+				MaxColor: 75868F
+				ZOffset: -15
+				ZRamp: 0
+	Template@829:
+		Categories: Cliff Ice Set
+		Id: 829
+		Images: clifx32.sno
+		Size: 2, 2
+		Tiles:
+			1: Cliff
+				Height: 4
+				MinColor: 465D6A
+				MaxColor: 5D707B
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				Height: 4
+				MinColor: 7A8B91
+				MaxColor: 465C69
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				Height: 4
+				MinColor: 94A1A6
+				MaxColor: 8E9BA0
+				ZOffset: -15
+				ZRamp: 0
+	Template@830:
+		Categories: Cliff Ice Set
+		Id: 830
+		Images: clifx33.sno, clifx33a.sno
+		Size: 1, 1
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 929FA4
+				MaxColor: 929FA4
+				ZOffset: -15
+				ZRamp: 0
+	Template@831:
+		Categories: Cliff Ice Set
+		Id: 831
+		Images: clifx34.sno, clifx34a.sno
+		Size: 1, 1
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 8D9BA1
+				MaxColor: 94A0A5
+				ZOffset: -15
+				ZRamp: 0
+	Template@832:
+		Categories: Cliff Ice Set
+		Id: 832
+		Images: clifx35.sno
+		Size: 1, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 6B7C85
+				MaxColor: 7F8E97
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				Height: 4
+				MinColor: 657780
+				MaxColor: 939FA3
+				ZOffset: -15
+				ZRamp: 0
+	Template@833:
+		Categories: Cliff Ice Set
+		Id: 833
+		Images: clifx36.sno
+		Size: 1, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 5B707D
+				MaxColor: 73838B
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				Height: 4
+				MinColor: 586D78
+				MaxColor: 839299
+				ZOffset: -15
+				ZRamp: 0
+	Template@834:
+		Categories: Cliff Ice Set
+		Id: 834
+		Images: clifx37.sno
+		Size: 1, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 6A7C85
+				MaxColor: 76868E
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				Height: 4
+				MinColor: 536773
+				MaxColor: 8A999F
+				ZOffset: -15
+				ZRamp: 0
+	Template@835:
+		Categories: Cliff Ice Set
+		Id: 835
+		Images: clifx38.sno
+		Size: 1, 1
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 4A5F6B
+				MaxColor: 7F8E95
+				ZOffset: -15
+				ZRamp: 0
+	Template@836:
+		Categories: Cliff Ice Set
+		Id: 836
+		Images: clifx39.sno
+		Size: 1, 1
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 788890
+				MaxColor: A2ADAF
+				ZOffset: -15
+				ZRamp: 0
+	Template@837:
+		Categories: Cliff Ice Set
+		Id: 837
+		Images: clifx40.sno
+		Size: 1, 1
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: A2ADB0
+				MaxColor: 7B8B92
+				ZOffset: -15
+				ZRamp: 0
+	Template@878:
+		Categories: Ramps Ice Big
+		Id: 878
+		Images: rmpx01.sno
+		Size: 3, 4
+		Tiles:
+			1: Clear
+				Height: 3
+				RampType: 11
+				MinColor: C2D2D8
+				MaxColor: D8E5E9
+				ZOffset: -15
+				ZRamp: 0
+			2: Clear
+				Height: 3
+				RampType: 4
+				MinColor: CDDBE0
+				MaxColor: E4EDF1
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				Height: 4
+				MinColor: 71828C
+				MaxColor: 929DA2
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				Height: 3
+				RampType: 3
+				MinColor: 416881
+				MaxColor: 7B94A2
+				ZOffset: -15
+				ZRamp: 0
+			5: Clear
+				Height: 2
+				RampType: 4
+				MinColor: CEDDE2
+				MaxColor: B3C5CE
+				ZOffset: -15
+				ZRamp: 0
+			6: Cliff
+				MinColor: AEC1CA
+				MaxColor: 6D8B9D
+				ZOffset: -15
+				ZRamp: 0
+			7: Cliff
+				RampType: 1
+				MinColor: A7B9C0
+				MaxColor: A8BBC0
+				ZOffset: -15
+				ZRamp: 0
+			8: Clear
+				Height: 1
+				RampType: 4
+				MinColor: BDCDD2
+				MaxColor: 86A0AD
+				ZOffset: -15
+				ZRamp: 0
+			10: Clear
+				RampType: 8
+				MinColor: DDEAED
+				MaxColor: DEEAEE
+				ZOffset: -15
+				ZRamp: 0
+			11: Clear
+				RampType: 4
+				MinColor: E3EDF0
+				MaxColor: E4EDF0
+				ZOffset: -15
+				ZRamp: 0
+	Template@879:
+		Categories: Ramps Ice Big
+		Id: 879
+		Images: rmpx02.sno
+		Size: 3, 4
+		Tiles:
+			0: Clear
+				Height: 3
+				RampType: 4
+				MinColor: E4EDF0
+				MaxColor: E1ECEF
+				ZOffset: -15
+				ZRamp: 0
+			1: Clear
+				Height: 3
+				RampType: 12
+				MinColor: CBD9DE
+				MaxColor: DAE8EB
+				ZOffset: -15
+				ZRamp: 0
+			3: Clear
+				Height: 2
+				RampType: 4
+				MinColor: B6C9D4
+				MaxColor: 98AFBE
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				Height: 3
+				RampType: 1
+				MinColor: 7590A2
+				MaxColor: A0B4BF
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				Height: 4
+				MinColor: 62747F
+				MaxColor: 849298
+				ZOffset: -15
+				ZRamp: 0
+			6: Clear
+				Height: 1
+				RampType: 4
+				MinColor: DFEAED
+				MaxColor: ABBFC8
+				ZOffset: -15
+				ZRamp: 0
+			7: Cliff
+				RampType: 3
+				MinColor: AEC1CA
+				MaxColor: 6D8B9C
+				ZOffset: -15
+				ZRamp: 0
+			8: Cliff
+				MinColor: A4B7BE
+				MaxColor: 5D7D8F
+				ZOffset: -15
+				ZRamp: 0
+			9: Clear
+				RampType: 4
+				MinColor: E3EDF0
+				MaxColor: DCE8EB
+				ZOffset: -15
+				ZRamp: 0
+			10: Clear
+				RampType: 7
+				MinColor: DEE9EE
+				MaxColor: DEEAEE
+				ZOffset: -15
+				ZRamp: 0
+	Template@880:
+		Categories: Ramps Ice Big
+		Id: 880
+		Images: rmpx03.sno
+		Size: 4, 3
+		Tiles:
+			0: Clear
+				Height: 3
+				RampType: 3
+				MinColor: D9E8EB
+				MaxColor: D3E3E9
+				ZOffset: -15
+				ZRamp: 0
+			1: Clear
+				Height: 2
+				RampType: 3
+				MinColor: 6F8A98
+				MaxColor: C1D4DD
+				ZOffset: -15
+				ZRamp: 0
+			2: Clear
+				Height: 1
+				RampType: 3
+				MinColor: 91A9B7
+				MaxColor: BCD1DA
+				ZOffset: -15
+				ZRamp: 0
+			3: Clear
+				RampType: 3
+				MinColor: D8E7EC
+				MaxColor: D5E5EA
+				ZOffset: -15
+				ZRamp: 0
+			4: Clear
+				Height: 3
+				RampType: 10
+				MinColor: DAE7EB
+				MaxColor: D6E5E9
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				Height: 3
+				RampType: 2
+				MinColor: 9DB2BB
+				MaxColor: 92A9B4
+				ZOffset: -15
+				ZRamp: 0
+			6: Cliff
+				RampType: 4
+				MinColor: 8398A0
+				MaxColor: 809AA7
+				ZOffset: -15
+				ZRamp: 0
+			7: Clear
+				RampType: 7
+				MinColor: DCE9ED
+				MaxColor: DDEAED
+				ZOffset: -15
+				ZRamp: 0
+			9: Cliff
+				Height: 4
+				MinColor: 818F95
+				MaxColor: 738287
+				ZOffset: -15
+				ZRamp: 0
+			10: Cliff
+				MinColor: 90A4AC
+				MaxColor: 869FAC
+				ZOffset: -15
+				ZRamp: 0
+	Template@881:
+		Categories: Ramps Ice Big
+		Id: 881
+		Images: rmpx04.sno
+		Size: 4, 3
+		Tiles:
+			1: Cliff
+				Height: 4
+				MinColor: 859398
+				MaxColor: 617580
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 98ADB6
+				MaxColor: 698897
+				ZOffset: -15
+				ZRamp: 0
+			4: Clear
+				Height: 3
+				RampType: 11
+				MinColor: DBE9EC
+				MaxColor: D2E0E5
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				Height: 3
+				RampType: 4
+				MinColor: 78919F
+				MaxColor: 6F8A96
+				ZOffset: -15
+				ZRamp: 0
+			6: Cliff
+				RampType: 2
+				MinColor: A9BEC7
+				MaxColor: C7D7DB
+				ZOffset: -15
+				ZRamp: 0
+			7: Clear
+				RampType: 6
+				MinColor: DAE8EC
+				MaxColor: DBE8EC
+				ZOffset: -15
+				ZRamp: 0
+			8: Clear
+				Height: 3
+				RampType: 3
+				MinColor: D4E4EA
+				MaxColor: D4E5EA
+				ZOffset: -15
+				ZRamp: 0
+			9: Clear
+				Height: 2
+				RampType: 3
+				MinColor: CCDEE5
+				MaxColor: 809BA9
+				ZOffset: -15
+				ZRamp: 0
+			10: Clear
+				Height: 1
+				RampType: 3
+				MinColor: B9CDD6
+				MaxColor: 7995A5
+				ZOffset: -15
+				ZRamp: 0
+			11: Clear
+				RampType: 3
+				MinColor: D4E5EA
+				MaxColor: D7E6EB
+				ZOffset: -15
+				ZRamp: 0
+	Template@882:
+		Categories: Ramps Ice Big
+		Id: 882
+		Images: rmpx05.sno
+		Size: 3, 4
+		Tiles:
+			1: Clear
+				RampType: 5
+				MinColor: C4D7DE
+				MaxColor: ACC1CC
+				ZOffset: -15
+				ZRamp: 0
+			2: Clear
+				RampType: 2
+				MinColor: C6DCE6
+				MaxColor: C8DDE6
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: 9BAFB8
+				MaxColor: 6D8794
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				MinColor: B9D1DD
+				MaxColor: B7CEDA
+				ZOffset: -15
+				ZRamp: 0
+			5: Clear
+				Height: 1
+				RampType: 2
+				MinColor: C1D8E4
+				MaxColor: BBD2DE
+				ZOffset: -15
+				ZRamp: 0
+			6: Clear
+				Height: 4
+				MinColor: 7A8A91
+				MaxColor: 526570
+				ZOffset: -15
+				ZRamp: 0
+			7: Clear
+				Height: 3
+				RampType: 3
+				MinColor: BECDD3
+				MaxColor: 698594
+				ZOffset: -15
+				ZRamp: 0
+			8: Clear
+				Height: 2
+				RampType: 2
+				MinColor: B9D1DD
+				MaxColor: 7C97A4
+				ZOffset: -15
+				ZRamp: 0
+			10: Clear
+				Height: 3
+				RampType: 10
+				MinColor: DDE9ED
+				MaxColor: BBCCD1
+				ZOffset: -15
+				ZRamp: 0
+			11: Clear
+				Height: 3
+				RampType: 2
+				MinColor: 7D94A2
+				MaxColor: A7C0CC
+				ZOffset: -15
+				ZRamp: 0
+	Template@883:
+		Categories: Ramps Ice Big
+		Id: 883
+		Images: rmpx06.sno
+		Size: 3, 4
+		Tiles:
+			0: Clear
+				RampType: 2
+				MinColor: C3D8E1
+				MaxColor: BFD5DE
+				ZOffset: -15
+				ZRamp: 0
+			1: Clear
+				MinColor: B3CAD4
+				MaxColor: D3E3E8
+				ZOffset: -15
+				ZRamp: 0
+			3: Clear
+				Height: 1
+				RampType: 2
+				MinColor: C0D7E2
+				MaxColor: C2D8E2
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				RampType: 3
+				MinColor: CDE1E8
+				MaxColor: CBE0E6
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: DAE8EC
+				MaxColor: DBE8EC
+				ZOffset: -15
+				ZRamp: 0
+			6: Clear
+				Height: 2
+				RampType: 2
+				MinColor: C3D9E4
+				MaxColor: C0D7E2
+				ZOffset: -15
+				ZRamp: 0
+			9: Clear
+				Height: 3
+				RampType: 2
+				MinColor: D2E3E8
+				MaxColor: C1D8E4
+				ZOffset: -15
+				ZRamp: 0
+	Template@884:
+		Categories: Ramps Ice Big
+		Id: 884
+		Images: rmpx07.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 3
+				RampType: 1
+				MinColor: D1E1E8
+				MaxColor: BFD4DC
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				Height: 4
+				MinColor: 87969D
+				MaxColor: 657882
+				ZOffset: -15
+				ZRamp: 0
+			2: Clear
+				Height: 3
+				RampType: 9
+				MinColor: DDEAED
+				MaxColor: DDE9ED
+				ZOffset: -15
+				ZRamp: 0
+	Template@885:
+		Categories: Ramps Ice Big
+		Id: 885
+		Images: rmpx08.sno
+		Size: 4, 3
+		Tiles:
+			1: Cliff
+				MinColor: 849EB1
+				MaxColor: DCE8ED
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				Height: 4
+				MinColor: 6D7C85
+				MaxColor: 828F97
+				ZOffset: -15
+				ZRamp: 0
+			4: Clear
+				RampType: 5
+				MinColor: E2EDF2
+				MaxColor: BCCDD6
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: E4EFF3
+				MaxColor: E5EFF3
+				ZOffset: -15
+				ZRamp: 0
+			6: Cliff
+				Height: 3
+				RampType: 4
+				MinColor: 627F91
+				MaxColor: A6B9C4
+				ZOffset: -15
+				ZRamp: 0
+			7: Clear
+				Height: 3
+				RampType: 12
+				MinColor: DEEAEF
+				MaxColor: E0EBF0
+				ZOffset: -15
+				ZRamp: 0
+			8: Clear
+				RampType: 1
+				MinColor: E5EFF3
+				MaxColor: E4EEF3
+				ZOffset: -15
+				ZRamp: 0
+			9: Clear
+				Height: 1
+				RampType: 1
+				MinColor: E5EFF3
+				MaxColor: E4EEF3
+				ZOffset: -15
+				ZRamp: 0
+			10: Clear
+				Height: 2
+				RampType: 1
+				MinColor: E4EFF3
+				MaxColor: ABBFCD
+				ZOffset: -15
+				ZRamp: 0
+			11: Clear
+				Height: 3
+				RampType: 1
+				MinColor: DEEAEF
+				MaxColor: DEEAEF
+				ZOffset: -15
+				ZRamp: 0
+	Template@886:
+		Categories: Ramps Ice Big
+		Id: 886
+		Images: rmpx09.sno
+		Size: 4, 3
+		Tiles:
+			0: Clear
+				RampType: 1
+				MinColor: E2ECEF
+				MaxColor: E3EDF0
+				ZOffset: -15
+				ZRamp: 0
+			1: Clear
+				Height: 1
+				RampType: 1
+				MinColor: E5EEF0
+				MaxColor: DFEBEF
+				ZOffset: -15
+				ZRamp: 0
+			2: Clear
+				Height: 2
+				RampType: 1
+				MinColor: DEEAEE
+				MaxColor: E0EBEF
+				ZOffset: -15
+				ZRamp: 0
+			3: Clear
+				Height: 3
+				RampType: 1
+				MinColor: DDEAEE
+				MaxColor: E1ECEF
+				ZOffset: -15
+				ZRamp: 0
+			4: Clear
+				RampType: 8
+				MinColor: DDE9ED
+				MaxColor: DEEAED
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: DCE9ED
+				MaxColor: E4EDF1
+				ZOffset: -15
+				ZRamp: 0
+			9: Cliff
+				MinColor: DAE8EC
+				MaxColor: DBE8EC
+				ZOffset: -15
+				ZRamp: 0
+	Template@887:
+		Categories: Ramps Ice Big
+		Id: 887
+		Images: rmpx10.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 3
+				RampType: 2
+				MinColor: D5E2E7
+				MaxColor: E0EBF0
+				ZOffset: -15
+				ZRamp: 0
+			1: Clear
+				Height: 3
+				RampType: 9
+				MinColor: DEEAF0
+				MaxColor: E4EEF2
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				Height: 4
+				MinColor: 66777F
+				MaxColor: 849096
+				ZOffset: -15
+				ZRamp: 0
+	Template@898:
+		Categories: Cliff Ice/Water pieces
+		Id: 898
+		Images: wclifx01.sno
+		Size: 2, 3
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 4C6371
+				MaxColor: 788890
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 7790A1
+				MaxColor: 6A899D
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				Height: 4
+				MinColor: 37546B
+				MaxColor: 607481
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 22476A
+				MaxColor: 688293
+				ZOffset: -15
+				ZRamp: 0
+	Template@899:
+		Categories: Cliff Ice/Water pieces
+		Id: 899
+		Images: wclifx02.sno
+		Size: 1, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 516672
+				MaxColor: 687A81
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 6B8A9B
+				MaxColor: 5D8294
+				ZOffset: -15
+				ZRamp: 0
+	Template@900:
+		Categories: Cliff Ice/Water pieces
+		Id: 900
+		Images: wclifx03.sno
+		Size: 2, 3
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 687881
+				MaxColor: 9CA7AA
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 3D5E7B
+				MaxColor: 587D97
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				Height: 4
+				MinColor: 3F5A70
+				MaxColor: 556B79
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 23496B
+				MaxColor: 557486
+				ZOffset: -15
+				ZRamp: 0
+	Template@901:
+		Categories: Cliff Ice/Water pieces
+		Id: 901
+		Images: wclifx04.sno
+		Size: 2, 3
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 677881
+				MaxColor: 8B999F
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 44627C
+				MaxColor: 7D97A7
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				Height: 4
+				MinColor: 586A75
+				MaxColor: 6E7E88
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 21476B
+				MaxColor: 5C788C
+				ZOffset: -15
+				ZRamp: 0
+	Template@902:
+		Categories: Cliff Ice/Water pieces
+		Id: 902
+		Images: wclifx05.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 6B7C85
+				MaxColor: 88959B
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				Height: 4
+				MinColor: 607480
+				MaxColor: 85939A
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 2E5272
+				MaxColor: 6C8DA0
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: 4F6F8A
+				MaxColor: 4B718A
+				ZOffset: -15
+				ZRamp: 0
+	Template@903:
+		Categories: Cliff Ice/Water pieces
+		Id: 903
+		Images: wclifx06.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 71828C
+				MaxColor: 929DA2
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				Height: 4
+				MinColor: 62747F
+				MaxColor: 849298
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 2F5375
+				MaxColor: 69889A
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: 42627C
+				MaxColor: 57788B
+				ZOffset: -15
+				ZRamp: 0
+	Template@904:
+		Categories: Cliff Ice/Water pieces
+		Id: 904
+		Images: wclifx07.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 6D7F8A
+				MaxColor: 819099
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				Height: 4
+				MinColor: 637683
+				MaxColor: 85949B
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 264B6E
+				MaxColor: 608298
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: 446682
+				MaxColor: 608299
+				ZOffset: -15
+				ZRamp: 0
+	Template@905:
+		Categories: Cliff Ice/Water pieces
+		Id: 905
+		Images: wclifx08.sno
+		Size: 1, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 6B7A81
+				MaxColor: 8D9AA0
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 688295
+				MaxColor: 638192
+				ZOffset: -15
+				ZRamp: 0
+	Template@906:
+		Categories: Cliff Ice/Water pieces
+		Id: 906
+		Images: wclifx09.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 99A6A9
+				MaxColor: 99A6A9
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 56758E
+				MaxColor: 5D7D90
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 6D8BA1
+				MaxColor: 44677E
+				ZOffset: -15
+				ZRamp: 0
+	Template@907:
+		Categories: Cliff Ice/Water pieces
+		Id: 907
+		Images: wclifx10.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 8B999F
+				MaxColor: 909DA3
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 5E7D94
+				MaxColor: 5A7C91
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 6D8B9D
+				MaxColor: 5B7E93
+				ZOffset: -15
+				ZRamp: 0
+	Template@908:
+		Categories: Cliff Ice/Water pieces
+		Id: 908
+		Images: wclifx11.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 8C989B
+				MaxColor: 8E999D
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 587589
+				MaxColor: 507183
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 617B88
+				MaxColor: 68838F
+				ZOffset: -15
+				ZRamp: 0
+	Template@909:
+		Categories: Cliff Ice/Water pieces
+		Id: 909
+		Images: wclifx12.sno
+		Size: 1, 1
+		Tiles:
+			0: Cliff
+				MinColor: 5B7A8C
+				MaxColor: 5D7C8E
+				ZOffset: -15
+				ZRamp: 0
+	Template@910:
+		Categories: Cliff Ice/Water pieces
+		Id: 910
+		Images: wclifx13.sno
+		Size: 1, 1
+		Tiles:
+			0: Cliff
+				MinColor: 6B8796
+				MaxColor: 7893A4
+				ZOffset: -15
+				ZRamp: 0
+	Template@911:
+		Categories: Cliff Ice/Water pieces
+		Id: 911
+		Images: wclifx14.sno
+		Size: 1, 1
+		Tiles:
+			0: Cliff
+				MinColor: 6B8899
+				MaxColor: 658397
+				ZOffset: -15
+				ZRamp: 0
+	Template@912:
+		Categories: Cliff Ice/Water pieces
+		Id: 912
+		Images: wclifx15.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 859398
+				MaxColor: 617580
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 5D798E
+				MaxColor: 466A7F
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				Height: 4
+				MinColor: 76878F
+				MaxColor: 67777F
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: 4B6C86
+				MaxColor: 537489
+				ZOffset: -15
+				ZRamp: 0
+	Template@913:
+		Categories: Cliff Ice/Water pieces
+		Id: 913
+		Images: wclifx16.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 97A5A8
+				MaxColor: 75848A
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 4D697D
+				MaxColor: 537387
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				Height: 4
+				MinColor: 818F95
+				MaxColor: 738287
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: 335573
+				MaxColor: 688598
+				ZOffset: -15
+				ZRamp: 0
+	Template@914:
+		Categories: Cliff Ice/Water pieces
+		Id: 914
+		Images: wclifx17.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 7E8E96
+				MaxColor: 718188
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 64839A
+				MaxColor: 55748A
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				Height: 4
+				MinColor: 808E94
+				MaxColor: 536874
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: 507089
+				MaxColor: 436276
+				ZOffset: -15
+				ZRamp: 0
+	Template@915:
+		Categories: Cliff Ice/Water pieces
+		Id: 915
+		Images: wclifx18.sno
+		Size: 2, 1
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 7B898D
+				MaxColor: 526468
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 456783
+				MaxColor: 557586
+				ZOffset: -15
+				ZRamp: 0
+	Template@916:
+		Categories: Cliff Ice/Water pieces
+		Id: 916
+		Images: wclifx19.sno
+		Size: 3, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: A2ACAF
+				MaxColor: 819096
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 718B99
+				MaxColor: 57768C
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				Height: 4
+				MinColor: 788890
+				MaxColor: 4E6370
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 5B778C
+				MaxColor: 55748C
+				ZOffset: -15
+				ZRamp: 0
+	Template@917:
+		Categories: Cliff Ice/Water pieces
+		Id: 917
+		Images: wclifx20.sno
+		Size: 3, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 97A4A8
+				MaxColor: 74868F
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 63879E
+				MaxColor: 335A76
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				Height: 4
+				MinColor: 718189
+				MaxColor: 40596C
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 446784
+				MaxColor: 456884
+				ZOffset: -15
+				ZRamp: 0
+	Template@918:
+		Categories: Cliff Ice/Water pieces
+		Id: 918
+		Images: wclifx21.sno
+		Size: 3, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 7E8B90
+				MaxColor: 485C67
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 314F60
+				MaxColor: 3C5B6A
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				Height: 4
+				MinColor: 728288
+				MaxColor: 2D4652
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 5F798D
+				MaxColor: 47647C
+				ZOffset: -15
+				ZRamp: 0
+	Template@919:
+		Categories: Cliff Ice/Water pieces
+		Id: 919
+		Images: wclifx22.sno
+		Size: 2, 1
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 6A7B83
+				MaxColor: 49606A
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 3E607B
+				MaxColor: 5F7F92
+				ZOffset: -15
+				ZRamp: 0
+	Template@920:
+		Categories: Cliff Ice/Water pieces
+		Id: 920
+		Images: wclifx23.sno
+		Size: 2, 3
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 4C6371
+				MaxColor: 77878F
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 839EB2
+				MaxColor: 7492A5
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				Height: 4
+				MinColor: 37546B
+				MaxColor: 607481
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				MinColor: 21486E
+				MaxColor: 537799
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 6384A0
+				MaxColor: 688293
+				ZOffset: -15
+				ZRamp: 0
+	Template@921:
+		Categories: Cliff Ice/Water pieces
+		Id: 921
+		Images: wclifx24.sno
+		Size: 1, 3
+		Tiles:
+			0: Cliff
+				MinColor: 859EAC
+				MaxColor: 7A95A3
+				ZOffset: -15
+				ZRamp: 0
+			1: Water
+				MinColor: 587C9D
+				MaxColor: A3BFD4
+				ZOffset: -15
+				ZRamp: 0
+			2: Water
+				MinColor: 173D63
+				MaxColor: 3C6389
+				ZOffset: -15
+				ZRamp: 0
+	Template@922:
+		Categories: Cliff Ice/Water pieces
+		Id: 922
+		Images: wclifx25.sno
+		Size: 3, 1
+		Tiles:
+			0: Cliff
+				MinColor: 7692A1
+				MaxColor: 6F8C9E
+				ZOffset: -15
+				ZRamp: 0
+			1: Water
+				MinColor: A8C3D5
+				MaxColor: 567999
+				ZOffset: -15
+				ZRamp: 0
+			2: Water
+				MinColor: 476E95
+				MaxColor: 194167
+				ZOffset: -15
+				ZRamp: 0
+	Template@923:
+		Categories: Cliff Ice/Water pieces
+		Id: 923
+		Images: wclifx26.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 657780
+				MaxColor: 596D79
+				ZOffset: -15
+				ZRamp: 0
+			1: Rough
+				MinColor: A9C6DB
+				MaxColor: 87A2B1
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 1B4268
+				MaxColor: 6F8EA1
+				ZOffset: -15
+				ZRamp: 0
+			3: Water
+				MinColor: 6F92AE
+				MaxColor: 587EA2
+				ZOffset: -15
+				ZRamp: 0
+	Template@924:
+		Categories: Cliff Ice/Water pieces
+		Id: 924
+		Images: wclifx27.sno
+		Size: 2, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 5A6F79
+				MaxColor: 627682
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 56799A
+				MaxColor: 6D8A9E
+				ZOffset: -15
+				ZRamp: 0
+			2: Rough
+				MinColor: D4E5EA
+				MaxColor: 8AA3AE
+				ZOffset: -15
+				ZRamp: 0
+			3: Water
+				MinColor: 7398B9
+				MaxColor: 4B7195
+				ZOffset: -15
+				ZRamp: 0
+	Template@925:
+		Categories: Cliff Ice/Water pieces
+		Id: 925
+		Images: wclifx28.sno
+		Size: 3, 2
+		Tiles:
+			0: Cliff
+				Height: 4
+				MinColor: 7E8B90
+				MaxColor: 485C67
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 314F60
+				MaxColor: 466573
+				ZOffset: -15
+				ZRamp: 0
+			2: Water
+				MinColor: 94B2CB
+				MaxColor: 32577B
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				Height: 4
+				MinColor: 728288
+				MaxColor: 2D4652
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 5F798D
+				MaxColor: 57758C
+				ZOffset: -15
+				ZRamp: 0
+	Template@954:
+		Categories: Ice Crevas
+		Id: 954
+		Images: crevas01.sno
+		Size: 3, 2
+		Tiles:
+			0: Cliff
+				MinColor: A2AFB7
+				MaxColor: C7D5DB
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 8A9DA9
+				MaxColor: B6C5CE
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 8897A0
+				MaxColor: CAD5DB
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: D0DBE1
+				MaxColor: 98A8B1
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				MinColor: 828F96
+				MaxColor: 56656F
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: BEC9CF
+				MaxColor: C7D2D7
+				ZOffset: -15
+				ZRamp: 0
+	Template@955:
+		Categories: Ice Crevas
+		Id: 955
+		Images: crevas02.sno
+		Size: 2, 3
+		Tiles:
+			0: Cliff
+				MinColor: AEBBC3
+				MaxColor: C6D1D7
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 8DA0AB
+				MaxColor: C3D0D6
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: B2BFC7
+				MaxColor: 80939F
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: 525D65
+				MaxColor: 8A969D
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				MinColor: D7E1E6
+				MaxColor: A2B1BA
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 9EA7AC
+				MaxColor: C7D3D9
+				ZOffset: -15
+				ZRamp: 0
+	Template@956:
+		Categories: Ice Crevas
+		Id: 956
+		Images: crevas03.sno
+		Size: 2, 4
+		Tiles:
+			0: Cliff
+				MinColor: BAC6CC
+				MaxColor: D2DDE2
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: A0B0B9
+				MaxColor: C9D5DC
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: A0AFB9
+				MaxColor: 738692
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: 657077
+				MaxColor: 8E9BA2
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				MinColor: D1DCE2
+				MaxColor: 81939F
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 505B63
+				MaxColor: A8B1B5
+				ZOffset: -15
+				ZRamp: 0
+			6: Cliff
+				MinColor: DEE7EB
+				MaxColor: A8B7C0
+				ZOffset: -15
+				ZRamp: 0
+			7: Cliff
+				MinColor: A1ACB3
+				MaxColor: 848D91
+				ZOffset: -15
+				ZRamp: 0
+	Template@957:
+		Categories: Ice Crevas
+		Id: 957
+		Images: crevas04.sno
+		Size: 4, 2
+		Tiles:
+			0: Cliff
+				MinColor: 91A0A9
+				MaxColor: A5B2BA
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 8F9FA8
+				MaxColor: BEC9CE
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 7C8D98
+				MaxColor: 9BA9B1
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: 92A1A9
+				MaxColor: D9E3E7
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				MinColor: D0DCE1
+				MaxColor: A8B7C0
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: CAD4D8
+				MaxColor: 8E989E
+				ZOffset: -15
+				ZRamp: 0
+			6: Cliff
+				MinColor: BDC9D0
+				MaxColor: 89949B
+				ZOffset: -15
+				ZRamp: 0
+			7: Cliff
+				MinColor: DAE3E7
+				MaxColor: AFBAC0
+				ZOffset: -15
+				ZRamp: 0
+	Template@958:
+		Categories: Ice Crevas
+		Id: 958
+		Images: crevas05.sno
+		Size: 5, 2
+		Tiles:
+			0: Cliff
+				MinColor: ACBAC2
+				MaxColor: C4D1D7
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 8698A3
+				MaxColor: DDE5EA
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: A4B3BB
+				MaxColor: B7C3CA
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: 7C8E98
+				MaxColor: CED9DF
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				MinColor: BAC7CF
+				MaxColor: D7E1E5
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: C2CFD6
+				MaxColor: 7D8B93
+				ZOffset: -15
+				ZRamp: 0
+			6: Cliff
+				MinColor: BCC7CC
+				MaxColor: 67767F
+				ZOffset: -15
+				ZRamp: 0
+			7: Cliff
+				MinColor: 95A0A7
+				MaxColor: 48545B
+				ZOffset: -15
+				ZRamp: 0
+			8: Cliff
+				MinColor: BCC7CD
+				MaxColor: 535D64
+				ZOffset: -15
+				ZRamp: 0
+			9: Cliff
+				MinColor: A8B2B8
+				MaxColor: D7E1E6
+				ZOffset: -15
+				ZRamp: 0
+	Template@959:
+		Categories: Ice Crevas
+		Id: 959
+		Images: crevas06.sno
+		Size: 2, 5
+		Tiles:
+			0: Cliff
+				MinColor: C1CDD4
+				MaxColor: A2AFB6
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: A9BAC3
+				MaxColor: D8E3E7
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 8E9DA5
+				MaxColor: 8497A3
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: 6B7880
+				MaxColor: 95A1A7
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				MinColor: C1CED5
+				MaxColor: 9CABB4
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 54636D
+				MaxColor: C1CCD2
+				ZOffset: -15
+				ZRamp: 0
+			6: Cliff
+				MinColor: B8C7CF
+				MaxColor: 9BABB5
+				ZOffset: -15
+				ZRamp: 0
+			7: Cliff
+				MinColor: 4E5E68
+				MaxColor: 839097
+				ZOffset: -15
+				ZRamp: 0
+			8: Cliff
+				MinColor: CFDBE0
+				MaxColor: 7C8A93
+				ZOffset: -15
+				ZRamp: 0
+			9: Cliff
+				MinColor: D2DCE2
+				MaxColor: 94A2AA
+				ZOffset: -15
+				ZRamp: 0
+	Template@960:
+		Categories: Cliff Ice LowPatch
+		Id: 960
+		Images: clifxl01.sno
+		Size: 1, 1
+		Tiles:
+			0: Cliff
+				MinColor: DCE8ED
+				MaxColor: A7B9C3
+				ZOffset: -15
+				ZRamp: 0
+	Template@961:
+		Categories: Cliff Ice LowPatch
+		Id: 961
+		Images: clifxl02.sno
+		Size: 1, 1
+		Tiles:
+			0: Cliff
+				MinColor: A3B6C0
+				MaxColor: DCE8EC
+				ZOffset: -15
+				ZRamp: 0
+	Template@962:
+		Categories: Cliff Ice LowPatch
+		Id: 962
+		Images: clifxl03.sno, clifxl03a.sno
+		Size: 1, 1
+		Tiles:
+			0: Cliff
+				MinColor: BFD0D8
+				MaxColor: C9D7DE
+				ZOffset: -15
+				ZRamp: 0
+	Template@963:
+		Categories: Cliff Ice LowPatch
+		Id: 963
+		Images: clifxl04.sno, clifxl04a.sno
+		Size: 1, 1
+		Tiles:
+			0: Cliff
+				MinColor: C7D6DC
+				MaxColor: C6D6DC
 				ZOffset: -15
 				ZRamp: 0

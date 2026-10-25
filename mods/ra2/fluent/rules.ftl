@@ -551,6 +551,7 @@ meta-streetsign-name = Street Sign
 meta-trafficlight-name = Traffic Light
 meta-streetlight-name = Street Light
 meta-rock-name = Rock
+meta-rubble-name = Rubble
 
 meta-crate =
     .name = Crate
@@ -847,6 +848,10 @@ actor-caairp =
 actor-cahosp-name = Civilian Hospital
 actor-cathosp-name = Tech Hospital
 actor-caoutp-name = Tech Outpost
+
+## yuri-structures.yaml
+actor-gafwll =
+    .name = Citadel Wall
 
 ## world.yaml
 meta-baseworld =

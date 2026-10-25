@@ -5,6 +5,9 @@ hdstn01:
 			TEMPERATE: hdstn01.tem
 			SNOW: hdstn01.sno
 			URBAN: hdstn01.urb
+			NEWURBAN: hdstn01.ubn
+			DESERT: hdstn01.des
+			LUNAR: hdstn01.lun
 
 lt_gen01:
 	Inherits: ^Pole
@@ -13,6 +16,9 @@ lt_gen01:
 			TEMPERATE: lt_gen01.tem
 			SNOW: lt_gen01.sno
 			URBAN: lt_gen01.urb
+			NEWURBAN: lt_gen01.ubn
+			DESERT: lt_gen01.des
+			LUNAR: lt_gen01.lun
 
 lt_gen02:
 	Inherits: ^Pole
@@ -21,6 +27,9 @@ lt_gen02:
 			TEMPERATE: lt_gen02.tem
 			SNOW: lt_gen02.sno
 			URBAN: lt_gen02.urb
+			NEWURBAN: lt_gen02.ubn
+			DESERT: lt_gen02.des
+			LUNAR: lt_gen02.lun
 
 lt_gen03:
 	Inherits: ^Pole
@@ -29,6 +38,9 @@ lt_gen03:
 			TEMPERATE: lt_gen03.tem
 			SNOW: lt_gen03.sno
 			URBAN: lt_gen03.urb
+			NEWURBAN: lt_gen03.ubn
+			DESERT: lt_gen03.des
+			LUNAR: lt_gen03.lun
 
 lt_gen04:
 	Inherits: ^Pole
@@ -37,6 +49,9 @@ lt_gen04:
 			TEMPERATE: lt_gen04.tem
 			SNOW: lt_gen04.sno
 			URBAN: lt_gen04.urb
+			NEWURBAN: lt_gen04.ubn
+			DESERT: lt_gen04.des
+			LUNAR: lt_gen04.lun
 
 lt_sgn01:
 	Inherits: ^Pole
@@ -45,6 +60,9 @@ lt_sgn01:
 			TEMPERATE: lt_sgn01.tem
 			SNOW: lt_sgn01.sno
 			URBAN: lt_sgn01.urb
+			NEWURBAN: lt_sgn01.ubn
+			DESERT: lt_sgn01.des
+			LUNAR: lt_sgn01.lun
 
 lt_sgn02:
 	Inherits: ^Pole
@@ -53,6 +71,9 @@ lt_sgn02:
 			TEMPERATE: lt_sgn02.tem
 			SNOW: lt_sgn02.sno
 			URBAN: lt_sgn02.urb
+			NEWURBAN: lt_sgn02.ubn
+			DESERT: lt_sgn02.des
+			LUNAR: lt_sgn02.lun
 
 lt_sgn03:
 	Inherits: ^Pole
@@ -61,6 +82,9 @@ lt_sgn03:
 			TEMPERATE: lt_sgn03.tem
 			SNOW: lt_sgn03.sno
 			URBAN: lt_sgn03.urb
+			NEWURBAN: lt_sgn03.ubn
+			DESERT: lt_sgn03.des
+			LUNAR: lt_sgn03.lun
 
 lt_sgn04:
 	Inherits: ^Pole
@@ -69,6 +93,9 @@ lt_sgn04:
 			TEMPERATE: lt_sgn04.tem
 			SNOW: lt_sgn04.sno
 			URBAN: lt_sgn04.urb
+			NEWURBAN: lt_sgn04.ubn
+			DESERT: lt_sgn04.des
+			LUNAR: lt_sgn04.lun
 		ShadowStart: -1
 
 lt_eur01:
@@ -78,6 +105,9 @@ lt_eur01:
 			TEMPERATE: lt_eur01.tem
 			SNOW: lt_eur01.sno
 			URBAN: lt_eur01.urb
+			NEWURBAN: lt_eur01.ubn
+			DESERT: lt_eur01.des
+			LUNAR: lt_eur01.lun
 
 lt_eur02:
 	Inherits: ^Pole
@@ -86,6 +116,9 @@ lt_eur02:
 			TEMPERATE: lt_eur02.tem
 			SNOW: lt_eur02.sno
 			URBAN: lt_eur02.urb
+			NEWURBAN: lt_eur02.ubn
+			DESERT: lt_eur02.des
+			LUNAR: lt_eur02.lun
 
 pole01:
 	Inherits: ^Pole
@@ -94,6 +127,9 @@ pole01:
 			TEMPERATE: pole01.tem
 			SNOW: pole01.sno
 			URBAN: pole01.urb
+			NEWURBAN: pole01.ubn
+			DESERT: pole01.des
+			LUNAR: pole01.lun
 
 pole02:
 	Inherits: ^Pole
@@ -102,6 +138,9 @@ pole02:
 			TEMPERATE: pole02.tem
 			SNOW: pole02.sno
 			URBAN: pole02.urb
+			NEWURBAN: pole02.ubn
+			DESERT: pole02.des
+			LUNAR: pole02.lun
 
 sign01:
 	Inherits: ^Pole
@@ -110,6 +149,9 @@ sign01:
 			TEMPERATE: sign01.tem
 			SNOW: sign01.sno
 			URBAN: sign01.urb
+			NEWURBAN: sign01.ubn
+			DESERT: sign01.des
+			LUNAR: sign01.lun
 
 sign02:
 	Inherits: ^Pole
@@ -118,6 +160,9 @@ sign02:
 			TEMPERATE: sign02.tem
 			SNOW: sign02.sno
 			URBAN: sign02.urb
+			NEWURBAN: sign02.ubn
+			DESERT: sign02.des
+			LUNAR: sign02.lun
 
 sign03:
 	Inherits: ^Pole
@@ -126,6 +171,9 @@ sign03:
 			TEMPERATE: sign03.tem
 			SNOW: sign03.sno
 			URBAN: sign03.urb
+			NEWURBAN: sign03.ubn
+			DESERT: sign03.des
+			LUNAR: sign03.lun
 		ShadowStart: -1
 
 sign04:
@@ -135,6 +183,9 @@ sign04:
 			TEMPERATE: sign04.tem
 			SNOW: sign04.sno
 			URBAN: sign04.urb
+			NEWURBAN: sign04.ubn
+			DESERT: sign04.des
+			LUNAR: sign04.lun
 
 sign05:
 	Inherits: ^Pole
@@ -143,6 +194,9 @@ sign05:
 			TEMPERATE: sign05.tem
 			SNOW: sign05.sno
 			URBAN: sign05.urb
+			NEWURBAN: sign05.ubn
+			DESERT: sign05.des
+			LUNAR: sign05.lun
 
 sign06:
 	Inherits: ^Pole
@@ -151,6 +205,9 @@ sign06:
 			TEMPERATE: sign06.tem
 			SNOW: sign06.sno
 			URBAN: sign06.urb
+			NEWURBAN: sign06.ubn
+			DESERT: sign06.des
+			LUNAR: sign06.lun
 
 trff01:
 	Inherits: ^Pole
@@ -159,6 +216,9 @@ trff01:
 			TEMPERATE: trff01.tem
 			SNOW: trff01.sno
 			URBAN: trff01.urb
+			NEWURBAN: trff01.ubn
+			DESERT: trff01.des
+			LUNAR: trff01.lun
 
 camsc01:
 	Inherits: ^Prop
@@ -167,6 +227,9 @@ camsc01:
 			TEMPERATE: ctmsc01.shp
 			SNOW: camsc01.shp
 			URBAN: cumsc01.shp
+			NEWURBAN: cnmsc01.shp
+			DESERT: cdmsc01.shp
+			LUNAR: clmsc01.shp
 
 camsc02:
 	Inherits: ^Prop
@@ -175,6 +238,9 @@ camsc02:
 			TEMPERATE: ctmsc02.shp
 			SNOW: camsc02.shp
 			URBAN: cumsc02.shp
+			NEWURBAN: cnmsc02.shp
+			DESERT: cdmsc02.shp
+			LUNAR: clmsc02.shp
 
 camsc03:
 	Inherits: ^Prop
@@ -183,6 +249,9 @@ camsc03:
 			TEMPERATE: ctmsc03.shp
 			SNOW: camsc03.shp
 			URBAN: cumsc03.shp
+			NEWURBAN: cnmsc03.shp
+			DESERT: cdmsc03.shp
+			LUNAR: clmsc03.shp
 
 camsc04:
 	Inherits: ^Prop
@@ -191,6 +260,9 @@ camsc04:
 			TEMPERATE: ctmsc04.shp
 			SNOW: camsc04.shp
 			URBAN: cumsc04.shp
+			NEWURBAN: cnmsc04.shp
+			DESERT: cdmsc04.shp
+			LUNAR: clmsc04.shp
 
 camsc05:
 	Inherits: ^Prop
@@ -199,6 +271,9 @@ camsc05:
 			TEMPERATE: ctmsc05.shp
 			SNOW: camsc05.shp
 			URBAN: cumsc05.shp
+			NEWURBAN: cnmsc05.shp
+			DESERT: cdmsc05.shp
+			LUNAR: clmsc05.shp
 
 camsc06:
 	Inherits: ^Prop
@@ -207,6 +282,9 @@ camsc06:
 			TEMPERATE: ctmsc06a.shp
 			SNOW: camsc06a.shp
 			URBAN: cumsc06a.shp
+			NEWURBAN: cnmsc06a.shp
+			DESERT: cdmsc06a.shp
+			LUNAR: clmsc06a.shp
 		Length: 4
 		ShadowStart: 4
 		Tick: 80
@@ -215,6 +293,9 @@ camsc06:
 			TEMPERATE: ctmsc06.shp
 			SNOW: camsc06.shp
 			URBAN: cumsc06.shp
+			NEWURBAN: cnmsc06.shp
+			DESERT: cdmsc06.shp
+			LUNAR: clmsc06.shp
 
 camsc11:
 	Inherits: ^Prop
@@ -223,6 +304,9 @@ camsc11:
 			TEMPERATE: ctmsc11.shp
 			SNOW: camsc11.shp
 			URBAN: cumsc11.shp
+			NEWURBAN: cnmsc11.shp
+			DESERT: cdmsc11.shp
+			LUNAR: clmsc11.shp
 
 camsc12:
 	Inherits: ^Prop
@@ -231,6 +315,9 @@ camsc12:
 			TEMPERATE: ctmsc12.shp
 			SNOW: camsc12.shp
 			URBAN: cumsc12.shp
+			NEWURBAN: cnmsc12.shp
+			DESERT: cdmsc12.shp
+			LUNAR: clmsc12.shp
 
 camsc13:
 	Inherits: ^Prop
@@ -239,6 +326,9 @@ camsc13:
 			TEMPERATE: ctmsc13.shp
 			SNOW: camsc13.shp
 			URBAN: cumsc13.shp
+			NEWURBAN: cnmsc13.shp
+			DESERT: cdmsc13.shp
+			LUNAR: clmsc13.shp
 
 trff02:
 	Inherits: ^Pole
@@ -247,6 +337,9 @@ trff02:
 			TEMPERATE: trff02.tem
 			SNOW: trff02.sno
 			URBAN: trff02.urb
+			NEWURBAN: trff02.ubn
+			DESERT: trff02.des
+			LUNAR: trff02.lun
 
 trff03:
 	Inherits: ^Pole
@@ -255,6 +348,9 @@ trff03:
 			TEMPERATE: trff03.tem
 			SNOW: trff03.sno
 			URBAN: trff03.urb
+			NEWURBAN: trff03.ubn
+			DESERT: trff03.des
+			LUNAR: trff03.lun
 
 trff04:
 	Inherits: ^Pole
@@ -263,6 +359,9 @@ trff04:
 			TEMPERATE: trff04.tem
 			SNOW: trff04.sno
 			URBAN: trff04.urb
+			NEWURBAN: trff04.ubn
+			DESERT: trff04.des
+			LUNAR: trff04.lun
 
 camisc01:
 	Inherits: ^Prop
@@ -271,6 +370,9 @@ camisc01:
 			TEMPERATE: ctmisc01.shp
 			SNOW: camisc01.shp
 			URBAN: cumisc01.shp
+			NEWURBAN: cnmisc01.shp
+			DESERT: cdmisc01.shp
+			LUNAR: clmisc01.shp
 
 camisc02:
 	Inherits: ^Prop
@@ -279,6 +381,9 @@ camisc02:
 			TEMPERATE: ctmisc02.shp
 			SNOW: camisc02.shp
 			URBAN: cumisc02.shp
+			NEWURBAN: cnmisc02.shp
+			DESERT: cdmisc02.shp
+			LUNAR: clmisc02.shp
 		ShadowStart: -1
 
 camisc03:
@@ -288,6 +393,9 @@ camisc03:
 			TEMPERATE: ctmisc03.shp
 			SNOW: camisc03.shp
 			URBAN: cumisc03.shp
+			NEWURBAN: cnmisc03.shp
+			DESERT: cdmisc03.shp
+			LUNAR: clmisc03.shp
 
 camisc04:
 	Inherits: ^Prop
@@ -296,6 +404,9 @@ camisc04:
 			TEMPERATE: ctmisc04.shp
 			SNOW: camisc04.shp
 			URBAN: cumisc04.shp
+			NEWURBAN: cnmisc04.shp
+			DESERT: cdmisc04.shp
+			LUNAR: clmisc04.shp
 
 camisc05:
 	Inherits: ^Prop
@@ -304,6 +415,9 @@ camisc05:
 			TEMPERATE: ctmisc05.shp
 			SNOW: camisc05.shp
 			URBAN: cumisc05.shp
+			NEWURBAN: cnmisc05.shp
+			DESERT: cdmisc05.shp
+			LUNAR: clmisc05.shp
 
 camisc06:
 	Inherits: ^Prop
@@ -312,6 +426,9 @@ camisc06:
 			TEMPERATE: ctmisc06.shp
 			SNOW: camisc06.shp
 			URBAN: cumisc06.shp
+			NEWURBAN: cnmisc06.shp
+			DESERT: cdmisc06.shp
+			LUNAR: clmisc06.shp
 
 caeuro05:
 	Inherits: ^CivStructureNoRubble
@@ -320,6 +437,9 @@ caeuro05:
 			TEMPERATE: cteuro05.shp
 			SNOW: caeuro05.shp
 			URBAN: cueuro05.shp
+			NEWURBAN: cneuro05.shp
+			DESERT: cdeuro05.shp
+			LUNAR: cleuro05.shp
 		Offset: 0, -30, 30
 
 capark01:
@@ -329,6 +449,9 @@ capark01:
 			TEMPERATE: ctpark01.shp
 			SNOW: capark01.shp
 			URBAN: cupark01.shp
+			NEWURBAN: ctpark01.shp
+			DESERT: cdpark01.shp
+			LUNAR: clpark01.shp
 
 capark02:
 	Inherits: ^Prop
@@ -337,6 +460,9 @@ capark02:
 			TEMPERATE: ctpark02.shp
 			SNOW: capark02.shp
 			URBAN: cupark02.shp
+			NEWURBAN: ctpark02.shp
+			DESERT: cdpark02.shp
+			LUNAR: clpark02.shp
 		Offset: -15, -22, 22
 
 capark03:
@@ -346,6 +472,9 @@ capark03:
 			TEMPERATE: ctpark03.shp
 			SNOW: capark03.shp
 			URBAN: cupark03.shp
+			NEWURBAN: cnpark03.shp
+			DESERT: cdpark03.shp
+			LUNAR: clpark03.shp
 		Offset: 0, -30, 30
 
 ammo01:
@@ -367,6 +496,9 @@ gagate_a:
 			TEMPERATE: gtgate_a.shp
 			SNOW: gagate_a.shp
 			URBAN: gugate_a.shp
+			NEWURBAN: gngate_a.shp
+			DESERT: gdgate_a.shp
+			LUNAR: glgate_a.shp
 		Offset: 0, -15
 	idle:
 		Length: 10
@@ -376,6 +508,9 @@ gagate_a:
 			TEMPERATE: gtgate_a.shp
 			SNOW: gagate_a.shp
 			URBAN: gugate_a.shp
+			NEWURBAN: gngate_a.shp
+			DESERT: gdgate_a.shp
+			LUNAR: glgate_a.shp
 		#ShadowStart: 30
 		Frames: 9, 8, 7, 6, 5, 4, 3, 2, 1, 0
 

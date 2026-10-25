@@ -22,6 +22,9 @@ nacnst:
 			TEMPERATE: ntcnstmk.shp
 			SNOW: nacnstmk.shp
 			URBAN: nucnstmk.shp
+			NEWURBAN: nncnstmk.shp
+			DESERT: ndcnstmk.shp
+			LUNAR: nlcnstmk.shp
 		Length: 31
 		ShadowStart: 31
 	idle-top:
@@ -115,6 +118,9 @@ napowr:
 			TEMPERATE: ntpowrmk.shp
 			SNOW: napowrmk.shp
 			URBAN: nupowrmk.shp
+			NEWURBAN: nnpowrmk.shp
+			DESERT: ndpowrmk.shp
+			LUNAR: nlpowrmk.shp
 		Length: 26
 		ShadowStart: 26
 	icon:
@@ -144,6 +150,9 @@ nahand:
 			TEMPERATE: nthandmk.shp
 			SNOW: nahandmk.shp
 			URBAN: nuhandmk.shp
+			NEWURBAN: nnhandmk.shp
+			DESERT: ndhandmk.shp
+			LUNAR: nlhandmk.shp
 	icon:
 		Filename: handicon.shp
 
@@ -165,6 +174,9 @@ narefn:
 			TEMPERATE: ntrefnmk.shp
 			SNOW: narefnmk.shp
 			URBAN: nurefnmk.shp
+			NEWURBAN: nnrefnmk.shp
+			DESERT: ndrefnmk.shp
+			LUNAR: nlrefnmk.shp
 		Length: 26
 		ShadowStart: 26
 	idle-drill:
@@ -234,6 +246,9 @@ naradr:
 			TEMPERATE: ntradrmk.shp
 			SNOW: naradrmk.shp
 			URBAN: nuradrmk.shp
+			NEWURBAN: nnradrmk.shp
+			DESERT: ndradrmk.shp
+			LUNAR: nlradrmk.shp
 		Length: 30
 		ShadowStart: 30
 	icon:
@@ -334,6 +349,9 @@ naweap:
 			TEMPERATE: ntweapmk.shp
 			SNOW: naweapmk.shp
 			URBAN: nuweapmk.shp
+			NEWURBAN: nnweapmk.shp
+			DESERT: ndweapmk.shp
+			LUNAR: nlweapmk.shp
 	icon:
 		Filename: nwepicon.shp
 
@@ -401,6 +419,9 @@ nayard:
 			TEMPERATE: ntyardmk.shp
 			SNOW: nayardmk.shp
 			URBAN: nuyardmk.shp
+			NEWURBAN: nnyardmk.shp
+			DESERT: ndyardmk.shp
+			LUNAR: nlyardmk.shp
 	repair:
 		Filename: ngyard_s.shp
 		TilesetFilenames:
@@ -471,6 +492,9 @@ nadept:
 			TEMPERATE: ntdeptmk.shp
 			SNOW: nadeptmk.shp
 			URBAN: nudeptmk.shp
+			NEWURBAN: nndeptmk.shp
+			DESERT: nddeptmk.shp
+			LUNAR: nldeptmk.shp
 	repair:
 		Filename: ngdept_c.shp
 		TilesetFilenames:
@@ -533,6 +557,9 @@ nanrct:
 			TEMPERATE: ntnrctmk.shp
 			SNOW: nanrctmk.shp
 			URBAN: nunrctmk.shp
+			NEWURBAN: nnnrctmk.shp
+			DESERT: ndnrctmk.shp
+			LUNAR: nlnrctmk.shp
 	icon:
 		Filename: nrcticon.shp
 
@@ -560,6 +587,9 @@ natech:
 			TEMPERATE: nttechmk.shp
 			SNOW: natechmk.shp
 			URBAN: nutechmk.shp
+			NEWURBAN: nntechmk.shp
+			DESERT: ndtechmk.shp
+			LUNAR: nltechmk.shp
 	icon:
 		Filename: ntchicon.shp
 
@@ -594,6 +624,9 @@ naclon:
 			TEMPERATE: ntclonmk.shp
 			SNOW: naclonmk.shp
 			URBAN: nuclonmk.shp
+			NEWURBAN: nnclonmk.shp
+			DESERT: ndclonmk.shp
+			LUNAR: nlclonmk.shp
 	icon:
 		Filename: clonicon.shp
 
@@ -636,6 +669,9 @@ napsis:
 			TEMPERATE: ntpsismk.shp
 			SNOW: napsismk.shp
 			URBAN: nupsismk.shp
+			NEWURBAN: nnpsismk.shp
+			DESERT: ndpsismk.shp
+			LUNAR: nlpsismk.shp
 		Length: 24
 		ShadowStart: 24
 	icon:
@@ -673,6 +709,9 @@ namisl:
 			TEMPERATE: ntmislmk.shp
 			SNOW: namislmk.shp
 			URBAN: numislmk.shp
+			NEWURBAN: nnmislmk.shp
+			DESERT: ndmislmk.shp
+			LUNAR: nlmislmk.shp
 		Length: 26
 		ShadowStart: 26
 	icon:
@@ -714,6 +753,9 @@ nairon:
 			TEMPERATE: ntironmk.shp
 			SNOW: naironmk.shp
 			URBAN: nuironmk.shp
+			NEWURBAN: nnironmk.shp
+			DESERT: ndironmk.shp
+			LUNAR: nlironmk.shp
 	icon:
 		Filename: ironicon.shp
 
@@ -724,6 +766,9 @@ nawall:
 			TEMPERATE: ntwall.shp
 			SNOW: nawall.shp
 			URBAN: nuwall.shp
+			NEWURBAN: nnwall.shp
+			DESERT: ndwall.shp
+			LUNAR: nlwall.shp
 	icon:
 		Filename: nwalicon.shp
 		TilesetFilenames:
@@ -755,6 +800,9 @@ nalasr:
 			TEMPERATE: ntlasrmk.shp
 			SNOW: nalasrmk.shp
 			URBAN: nulasrmk.shp
+			NEWURBAN: nnlasrmk.shp
+			DESERT: ndlasrmk.shp
+			LUNAR: nllasrmk.shp
 		Length: 12
 		ShadowStart: 12
 		ZOffset: 0
@@ -819,6 +867,9 @@ tesla:
 			TEMPERATE: nttslamk.shp
 			SNOW: natslamk.shp
 			URBAN: nutslamk.shp
+			NEWURBAN: nntslamk.shp
+			DESERT: ndtslamk.shp
+			LUNAR: nltslamk.shp
 	icon:
 		Filename: tslaicon.shp
 
@@ -850,6 +901,9 @@ naflak:
 			TEMPERATE: ntflakmk.shp
 			SNOW: naflakmk.shp
 			URBAN: nuflakmk.shp
+			NEWURBAN: nnflakmk.shp
+			DESERT: ndflakmk.shp
+			LUNAR: nlflakmk.shp
 		Length: 9
 		ShadowStart: 9
 		ZOffset: 0

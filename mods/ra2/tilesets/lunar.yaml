@@ -1,0 +1,2583 @@
+General:
+	Name: tileset-lunar
+	Id: LUNAR
+	TileSize: 60, 30
+	Extensions: .lun, .shp
+	HeightDebugColors: 00000080, 00004480, 00008880, 0000CC80, 0000FF80, 4400CC80, 88008880, CC004480, FF110080, FF550080, FF990080, FFDD0080, DDFF0080, 99FF0080, 55FF0080, 11FF0080
+	EditorTemplateOrder: Lat Moon Dirt, Blank, ZMM Ramps, Ramps, LAT Moon Dirt Dark, Moon Dirt Dark Individual, LAT Grass Rough, GrassRough Individual, Pavement Individual, LAT Moon Dirt Light, Moon Dirt Light Individual, Ramp edge fixup, LAT Pavement, Sand (beach), Sand (beach) Transitions, Craters, LunarLander, Lunar Crevas
+	SheetSize: 4096
+	EnableDepth: true
+
+Terrain:
+	TerrainType@Clear:
+		Type: Clear
+		AcceptsSmudgeType: SmallCrater, MediumCrater, LargeCrater, SmallScorch, MediumScorch, LargeScorch
+		Color: 745537
+		TargetTypes: Ground
+	TerrainType@Road:
+		Type: Road
+		AcceptsSmudgeType: SmallScorch, MediumScorch, LargeScorch
+		Color: 745537
+		TargetTypes: Ground
+	TerrainType@Bridge:
+		Type: Bridge
+		Color: 403C34
+		TargetTypes: Ground
+	TerrainType@Rail:
+		Type: Rail
+		AcceptsSmudgeType: SmallScorch, MediumScorch, LargeScorch
+		Color: 745537
+		TargetTypes: Ground
+	TerrainType@Impassable:
+		Type: Impassable
+		Color: 745537
+		TargetTypes: Ground
+	TerrainType@Water:
+		Type: Water
+		Color: 745537
+		TargetTypes: Water
+	TerrainType@DirtRoad:
+		Type: DirtRoad
+		AcceptsSmudgeType: SmallCrater, MediumCrater, LargeCrater, SmallScorch, MediumScorch, LargeScorch
+		Color: 745537
+		TargetTypes: Ground
+	TerrainType@Rough:
+		Type: Rough
+		AcceptsSmudgeType: SmallCrater, MediumCrater, LargeCrater, SmallScorch, MediumScorch, LargeScorch
+		Color: 745537
+		TargetTypes: Ground
+	TerrainType@Cliff:
+		Type: Cliff
+		Color: 745537
+		TargetTypes: Ground
+	TerrainType@Ore:
+		Type: Ore
+		AcceptsSmudgeType: SmallCrater, MediumCrater, LargeCrater, SmallScorch, MediumScorch, LargeScorch
+		Color: 948060
+		TargetTypes: Ground
+	TerrainType@Gems:
+		Type: Gems
+		AcceptsSmudgeType: SmallCrater, MediumCrater, LargeCrater, SmallScorch, MediumScorch, LargeScorch
+		Color: 8470FF
+		TargetTypes: Ground
+
+Templates:
+	Template@0:
+		Categories: Lat Moon Dirt
+		Id: 0
+		Images: clear01.lun, clear01a.lun, clear01b.lun, clear01c.lun, clear01d.lun, clear01e.lun, clear01f.lun, clear01g.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: A0A4AD
+				MaxColor: A4A8B1
+				ZOffset: -15
+				ZRamp: 0
+	Template@1:
+		Categories: Blank
+		Id: 1
+		Images: blank01.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: D2D2DC
+				MaxColor: D0D0DA
+				ZOffset: -15
+				ZRamp: 0
+	Template@2:
+		Categories: ZMM Ramps
+		Id: 2
+		Images: mslop01.lun, mslop01a.lun, mslop01b.lun, mslop01c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 1
+				MinColor: 935B98
+				MaxColor: 935C99
+				ZOffset: -15
+				ZRamp: 0
+	Template@3:
+		Categories: ZMM Ramps
+		Id: 3
+		Images: mslop02.lun, mslop02a.lun, mslop02b.lun, mslop02c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 2
+				MinColor: 5F586E
+				MaxColor: 5F576D
+				ZOffset: -15
+				ZRamp: 0
+	Template@4:
+		Categories: ZMM Ramps
+		Id: 4
+		Images: mslop03.lun, mslop03a.lun, mslop03b.lun, mslop03c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 3
+				MinColor: 4D735A
+				MaxColor: 526E60
+				ZOffset: -15
+				ZRamp: 0
+	Template@5:
+		Categories: ZMM Ramps
+		Id: 5
+		Images: mslop04.lun, mslop04a.lun, mslop04b.lun, mslop04c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 4
+				MinColor: 837186
+				MaxColor: 7B797E
+				ZOffset: -15
+				ZRamp: 0
+	Template@6:
+		Categories: ZMM Ramps
+		Id: 6
+		Images: mslop05.lun, mslop05a.lun, mslop05b.lun, mslop05c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 5
+				MinColor: 2ED72E
+				MaxColor: 2ED72E
+				ZOffset: -15
+				ZRamp: 0
+	Template@7:
+		Categories: ZMM Ramps
+		Id: 7
+		Images: mslop06.lun, mslop06a.lun, mslop06b.lun, mslop06c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 6
+				MinColor: 615970
+				MaxColor: 0DF90D
+				ZOffset: -15
+				ZRamp: 0
+	Template@8:
+		Categories: ZMM Ramps
+		Id: 8
+		Images: mslop07.lun, mslop07a.lun, mslop07b.lun, mslop07c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 7
+				MinColor: 389F41
+				MaxColor: 389F41
+				ZOffset: -15
+				ZRamp: 0
+	Template@9:
+		Categories: ZMM Ramps
+		Id: 9
+		Images: mslop08.lun, mslop08a.lun, mslop08b.lun, mslop08c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 8
+				MinColor: 0DF90D
+				MaxColor: 99589D
+				ZOffset: -15
+				ZRamp: 0
+	Template@10:
+		Categories: ZMM Ramps
+		Id: 10
+		Images: mslop09.lun, mslop09a.lun, mslop09b.lun, mslop09c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 9
+				MinColor: 0FF70F
+				MaxColor: 0FF70F
+				ZOffset: -15
+				ZRamp: 0
+	Template@11:
+		Categories: ZMM Ramps
+		Id: 11
+		Images: mslop10.lun, mslop10a.lun, mslop10b.lun, mslop10c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 10
+				MinColor: 0DF90D
+				MaxColor: 615970
+				ZOffset: -15
+				ZRamp: 0
+	Template@12:
+		Categories: ZMM Ramps
+		Id: 12
+		Images: mslop11.lun, mslop11a.lun, mslop11b.lun, mslop11c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 11
+				MinColor: 389F41
+				MaxColor: 389F41
+				ZOffset: -15
+				ZRamp: 0
+	Template@13:
+		Categories: ZMM Ramps
+		Id: 13
+		Images: mslop12.lun, mslop12a.lun, mslop12b.lun, mslop12c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 12
+				MinColor: 99589D
+				MaxColor: 0DF90D
+				ZOffset: -15
+				ZRamp: 0
+	Template@15:
+		Categories: ZMM Ramps
+		Id: 15
+		Images: mslop14.lun, mslop14a.lun, mslop14b.lun, mslop14c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 14
+				MinColor: 625B72
+				MaxColor: 625B72
+				ZOffset: -15
+				ZRamp: 0
+	Template@16:
+		Categories: ZMM Ramps
+		Id: 16
+		Images: mslop15.lun, mslop15a.lun, mslop15b.lun, mslop15c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 15
+				MinColor: 546D63
+				MaxColor: 546D63
+				ZOffset: -15
+				ZRamp: 0
+	Template@17:
+		Categories: ZMM Ramps
+		Id: 17
+		Images: mslop16.lun, mslop16a.lun, mslop16b.lun, mslop16c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 16
+				MinColor: 9D56A0
+				MaxColor: 9D56A0
+				ZOffset: -15
+				ZRamp: 0
+	Template@18:
+		Categories: ZMM Ramps
+		Id: 18
+		Images: mslop17.lun, mslop17a.lun, mslop17b.lun, mslop17c.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				RampType: 17
+				MinColor: 615970
+				MaxColor: 99589D
+				ZOffset: -15
+				ZRamp: 0
+	Template@19:
+		Categories: ZMM Ramps
+		Id: 19
+		Images: mslop18.lun, mslop18a.lun, mslop18b.lun, mslop18c.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				RampType: 18
+				MinColor: 99589D
+				MaxColor: 615970
+				ZOffset: -15
+				ZRamp: 0
+	Template@20:
+		Categories: ZMM Ramps
+		Id: 20
+		Images: mslop19.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				RampType: 19
+				MinColor: 40734D
+				MaxColor: 837476
+				ZOffset: -15
+				ZRamp: 0
+	Template@21:
+		Categories: ZMM Ramps
+		Id: 21
+		Images: mslop20.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				RampType: 20
+				MinColor: 59486F
+				MaxColor: 5F876A
+				ZOffset: -15
+				ZRamp: 0
+	Template@29:
+		Categories: Ramps
+		Id: 29
+		Images: slope01.lun, slope01a.lun, slope01b.lun, slope01c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 1
+				MinColor: 848894
+				MaxColor: 838793
+				ZOffset: -15
+				ZRamp: 0
+	Template@30:
+		Categories: Ramps
+		Id: 30
+		Images: slope02.lun, slope02a.lun, slope02b.lun, slope02c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 2
+				MinColor: 7B808C
+				MaxColor: 787C88
+				ZOffset: -15
+				ZRamp: 0
+	Template@31:
+		Categories: Ramps
+		Id: 31
+		Images: slope03.lun, slope03a.lun, slope03b.lun, slope03c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 3
+				MinColor: A2A6AE
+				MaxColor: A2A6AE
+				ZOffset: -15
+				ZRamp: 0
+	Template@32:
+		Categories: Ramps
+		Id: 32
+		Images: slope04.lun, slope04a.lun, slope04b.lun, slope04c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 4
+				MinColor: B2B5BD
+				MaxColor: B8BAC1
+				ZOffset: -15
+				ZRamp: 0
+	Template@33:
+		Categories: Ramps
+		Id: 33
+		Images: slope05.lun, slope05a.lun, slope05b.lun, slope05c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 5
+				MinColor: 848893
+				MaxColor: 787D89
+				ZOffset: -15
+				ZRamp: 0
+	Template@34:
+		Categories: Ramps
+		Id: 34
+		Images: slope06.lun, slope06a.lun, slope06b.lun, slope06c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 6
+				MinColor: 818591
+				MaxColor: 9FA3AC
+				ZOffset: -15
+				ZRamp: 0
+	Template@35:
+		Categories: Ramps
+		Id: 35
+		Images: slope07.lun, slope07a.lun, slope07b.lun, slope07c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 7
+				MinColor: B5B8BF
+				MaxColor: A4A7B0
+				ZOffset: -15
+				ZRamp: 0
+	Template@36:
+		Categories: Ramps
+		Id: 36
+		Images: slope08.lun, slope08a.lun, slope08b.lun, slope08c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 8
+				MinColor: A4A8B0
+				MaxColor: A7AAB3
+				ZOffset: -15
+				ZRamp: 0
+	Template@37:
+		Categories: Ramps
+		Id: 37
+		Images: slope09.lun, slope09a.lun, slope09b.lun, slope09c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 9
+				MinColor: A3A7AF
+				MaxColor: A7ABB3
+				ZOffset: -15
+				ZRamp: 0
+	Template@38:
+		Categories: Ramps
+		Id: 38
+		Images: slope10.lun, slope10a.lun, slope10b.lun, slope10c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 10
+				MinColor: 9CA0A9
+				MaxColor: 7D818D
+				ZOffset: -15
+				ZRamp: 0
+	Template@39:
+		Categories: Ramps
+		Id: 39
+		Images: slope11.lun, slope11a.lun, slope11b.lun, slope11c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 11
+				MinColor: A4A8B0
+				MaxColor: B8BBC1
+				ZOffset: -15
+				ZRamp: 0
+	Template@40:
+		Categories: Ramps
+		Id: 40
+		Images: slope12.lun, slope12a.lun, slope12b.lun, slope12c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 12
+				MinColor: A0A3AC
+				MaxColor: A4A8B1
+				ZOffset: -15
+				ZRamp: 0
+	Template@41:
+		Categories: Ramps
+		Id: 41
+		Images: slope13.lun, slope13a.lun, slope13b.lun, slope13c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 13
+				MinColor: 484C60
+				MaxColor: 484C60
+				ZOffset: -15
+				ZRamp: 0
+	Template@42:
+		Categories: Ramps
+		Id: 42
+		Images: slope14.lun, slope14a.lun, slope14b.lun, slope14c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 14
+				MinColor: 808490
+				MaxColor: 7A7F8B
+				ZOffset: -15
+				ZRamp: 0
+	Template@43:
+		Categories: Ramps
+		Id: 43
+		Images: slope15.lun, slope15a.lun, slope15b.lun, slope15c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 15
+				MinColor: A9ADB5
+				MaxColor: A9ADB5
+				ZOffset: -15
+				ZRamp: 0
+	Template@44:
+		Categories: Ramps
+		Id: 44
+		Images: slope16.lun, slope16a.lun, slope16b.lun, slope16c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 16
+				MinColor: A0A3AC
+				MaxColor: A7AAB3
+				ZOffset: -15
+				ZRamp: 0
+	Template@45:
+		Categories: Ramps
+		Id: 45
+		Images: slope17.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				RampType: 17
+				MinColor: 818691
+				MaxColor: A3A6AF
+				ZOffset: -15
+				ZRamp: 0
+	Template@46:
+		Categories: Ramps
+		Id: 46
+		Images: slope18.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				RampType: 20
+				MinColor: 9EA2AB
+				MaxColor: 7D818D
+				ZOffset: -15
+				ZRamp: 0
+	Template@47:
+		Categories: Ramps
+		Id: 47
+		Images: slope19.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				RampType: 17
+				MinColor: 818691
+				MaxColor: A3A6AF
+				ZOffset: -15
+				ZRamp: 0
+	Template@48:
+		Categories: Ramps
+		Id: 48
+		Images: slope20.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				RampType: 20
+				MinColor: 9EA2AB
+				MaxColor: 7D818D
+				ZOffset: -15
+				ZRamp: 0
+	Template@49:
+		Categories: LAT Moon Dirt Dark
+		Id: 49
+		Images: ruff01.lun, ruff01a.lun, ruff01b.lun, ruff01c.lun, ruff01d.lun, ruff01e.lun, ruff01f.lun, ruff01g.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 777B88
+				MaxColor: 7B7F8B
+				ZOffset: -15
+				ZRamp: 0
+	Template@50:
+		Categories: Moon Dirt Dark Individual
+		Id: 50
+		Images: clat01.lun, clat01a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 878B96
+				MaxColor: 838793
+				ZOffset: -15
+				ZRamp: 0
+	Template@51:
+		Categories: Moon Dirt Dark Individual
+		Id: 51
+		Images: clat02.lun, clat02a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 838793
+				MaxColor: 9A9EA7
+				ZOffset: -15
+				ZRamp: 0
+	Template@52:
+		Categories: Moon Dirt Dark Individual
+		Id: 52
+		Images: clat03.lun, clat03a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 818591
+				MaxColor: 8C909A
+				ZOffset: -15
+				ZRamp: 0
+	Template@53:
+		Categories: Moon Dirt Dark Individual
+		Id: 53
+		Images: clat04.lun, clat04a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 8A8E99
+				MaxColor: A6AAB2
+				ZOffset: -15
+				ZRamp: 0
+	Template@54:
+		Categories: Moon Dirt Dark Individual
+		Id: 54
+		Images: clat05.lun, clat05a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 888C97
+				MaxColor: 7C808C
+				ZOffset: -15
+				ZRamp: 0
+	Template@55:
+		Categories: Moon Dirt Dark Individual
+		Id: 55
+		Images: clat06.lun, clat06a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 828792
+				MaxColor: 9397A1
+				ZOffset: -15
+				ZRamp: 0
+	Template@56:
+		Categories: Moon Dirt Dark Individual
+		Id: 56
+		Images: clat07.lun, clat07a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 7B808C
+				MaxColor: 838793
+				ZOffset: -15
+				ZRamp: 0
+	Template@57:
+		Categories: Moon Dirt Dark Individual
+		Id: 57
+		Images: clat08.lun, clat08a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 828692
+				MaxColor: A4A8B1
+				ZOffset: -15
+				ZRamp: 0
+	Template@58:
+		Categories: Moon Dirt Dark Individual
+		Id: 58
+		Images: clat09.lun, clat09a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 9B9FA8
+				MaxColor: 848893
+				ZOffset: -15
+				ZRamp: 0
+	Template@59:
+		Categories: Moon Dirt Dark Individual
+		Id: 59
+		Images: clat10.lun, clat10a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 9DA1AA
+				MaxColor: 9A9EA7
+				ZOffset: -15
+				ZRamp: 0
+	Template@60:
+		Categories: Moon Dirt Dark Individual
+		Id: 60
+		Images: clat11.lun, clat11a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 989CA5
+				MaxColor: 8A8E99
+				ZOffset: -15
+				ZRamp: 0
+	Template@61:
+		Categories: Moon Dirt Dark Individual
+		Id: 61
+		Images: clat12.lun, clat12a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 9296A0
+				MaxColor: A5A9B1
+				ZOffset: -15
+				ZRamp: 0
+	Template@62:
+		Categories: Moon Dirt Dark Individual
+		Id: 62
+		Images: clat13.lun, clat13a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 9EA2AB
+				MaxColor: 838893
+				ZOffset: -15
+				ZRamp: 0
+	Template@63:
+		Categories: Moon Dirt Dark Individual
+		Id: 63
+		Images: clat14.lun, clat14a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 989CA6
+				MaxColor: 9397A1
+				ZOffset: -15
+				ZRamp: 0
+	Template@64:
+		Categories: Moon Dirt Dark Individual
+		Id: 64
+		Images: clat15.lun, clat15a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 989CA6
+				MaxColor: 838793
+				ZOffset: -15
+				ZRamp: 0
+	Template@65:
+		Categories: Moon Dirt Dark Individual
+		Id: 65
+		Images: clat16.lun, clat16a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 90949E
+				MaxColor: 9A9EA8
+				ZOffset: -15
+				ZRamp: 0
+	Template@76:
+		Categories: LAT Grass Rough
+		Id: 76
+		Images: sandy01.lun, sandy01a.lun, sandy01b.lun, sandy01c.lun, sandy01d.lun, sandy01e.lun, sandy01f.lun, sandy01g.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 9F974B
+				MaxColor: 9C9147
+				ZOffset: -15
+				ZRamp: 0
+	Template@77:
+		Categories: GrassRough Individual
+		Id: 77
+		Images: dlat01.lun, dlat01a.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: A59849
+				MaxColor: A09147
+				ZOffset: -15
+				ZRamp: 0
+	Template@78:
+		Categories: GrassRough Individual
+		Id: 78
+		Images: dlat02.lun, dlat02a.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 9F994B
+				MaxColor: A59846
+				ZOffset: -15
+				ZRamp: 0
+	Template@79:
+		Categories: GrassRough Individual
+		Id: 79
+		Images: dlat03.lun, dlat03a.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: B49F4A
+				MaxColor: A29647
+				ZOffset: -15
+				ZRamp: 0
+	Template@80:
+		Categories: GrassRough Individual
+		Id: 80
+		Images: dlat04.lun, dlat04a.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: BCA14B
+				MaxColor: A9A64F
+				ZOffset: -15
+				ZRamp: 0
+	Template@81:
+		Categories: GrassRough Individual
+		Id: 81
+		Images: dlat05.lun, dlat05a.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: A4994C
+				MaxColor: 9E8F49
+				ZOffset: -15
+				ZRamp: 0
+	Template@82:
+		Categories: GrassRough Individual
+		Id: 82
+		Images: dlat06.lun, dlat06a.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: AF9F49
+				MaxColor: AA9C4C
+				ZOffset: -15
+				ZRamp: 0
+	Template@83:
+		Categories: GrassRough Individual
+		Id: 83
+		Images: dlat07.lun, dlat07a.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 908D46
+				MaxColor: AD9A49
+				ZOffset: -15
+				ZRamp: 0
+	Template@84:
+		Categories: GrassRough Individual
+		Id: 84
+		Images: dlat08.lun, dlat08a.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: B19C4C
+				MaxColor: A59B4D
+				ZOffset: -15
+				ZRamp: 0
+	Template@85:
+		Categories: GrassRough Individual
+		Id: 85
+		Images: dlat09.lun, dlat09a.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: AC9E4F
+				MaxColor: A2944C
+				ZOffset: -15
+				ZRamp: 0
+	Template@86:
+		Categories: GrassRough Individual
+		Id: 86
+		Images: dlat10.lun, dlat10a.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: B9A954
+				MaxColor: AE9E4D
+				ZOffset: -15
+				ZRamp: 0
+	Template@87:
+		Categories: GrassRough Individual
+		Id: 87
+		Images: dlat11.lun, dlat11a.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: A8A14E
+				MaxColor: ADA14E
+				ZOffset: -15
+				ZRamp: 0
+	Template@88:
+		Categories: GrassRough Individual
+		Id: 88
+		Images: dlat12.lun, dlat12a.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: A79A4C
+				MaxColor: 9FA04E
+				ZOffset: -15
+				ZRamp: 0
+	Template@89:
+		Categories: GrassRough Individual
+		Id: 89
+		Images: dlat13.lun, dlat13a.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: A3A050
+				MaxColor: B5974A
+				ZOffset: -15
+				ZRamp: 0
+	Template@90:
+		Categories: GrassRough Individual
+		Id: 90
+		Images: dlat14.lun, dlat14a.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: ADA350
+				MaxColor: A49947
+				ZOffset: -15
+				ZRamp: 0
+	Template@91:
+		Categories: GrassRough Individual
+		Id: 91
+		Images: dlat15.lun, dlat15a.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 9DA148
+				MaxColor: A69A49
+				ZOffset: -15
+				ZRamp: 0
+	Template@92:
+		Categories: GrassRough Individual
+		Id: 92
+		Images: dlat16.lun, dlat16a.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: A69B4C
+				MaxColor: 9F994B
+				ZOffset: -15
+				ZRamp: 0
+	Template@93:
+		Categories: Pavement Individual
+		Id: 93
+		Images: plat01.lun, plat01a.lun
+		Size: 1, 1
+		Tiles:
+			0: Road
+				MinColor: AEAA92
+				MaxColor: ABA78E
+				ZOffset: -15
+				ZRamp: 0
+	Template@94:
+		Categories: Pavement Individual
+		Id: 94
+		Images: plat02.lun, plat02a.lun
+		Size: 1, 1
+		Tiles:
+			0: Road
+				MinColor: BBB4A8
+				MaxColor: B8B59D
+				ZOffset: -15
+				ZRamp: 0
+	Template@95:
+		Categories: Pavement Individual
+		Id: 95
+		Images: plat03.lun, plat03a.lun
+		Size: 1, 1
+		Tiles:
+			0: Road
+				MinColor: B7AE9D
+				MaxColor: B4AE90
+				ZOffset: -15
+				ZRamp: 0
+	Template@96:
+		Categories: Pavement Individual
+		Id: 96
+		Images: plat04.lun, plat04a.lun
+		Size: 1, 1
+		Tiles:
+			0: Road
+				MinColor: B2AA9E
+				MaxColor: 9FA45F
+				ZOffset: -15
+				ZRamp: 0
+	Template@97:
+		Categories: Pavement Individual
+		Id: 97
+		Images: plat05.lun, plat05a.lun
+		Size: 1, 1
+		Tiles:
+			0: Road
+				MinColor: ACA58C
+				MaxColor: B5AC9D
+				ZOffset: -15
+				ZRamp: 0
+	Template@98:
+		Categories: Pavement Individual
+		Id: 98
+		Images: plat06.lun, plat06a.lun
+		Size: 1, 1
+		Tiles:
+			0: Road
+				MinColor: ABA58A
+				MaxColor: B7B096
+				ZOffset: -15
+				ZRamp: 0
+	Template@99:
+		Categories: Pavement Individual
+		Id: 99
+		Images: plat07.lun, plat07a.lun
+		Size: 1, 1
+		Tiles:
+			0: Road
+				MinColor: A2A179
+				MaxColor: ABA986
+				ZOffset: -15
+				ZRamp: 0
+	Template@100:
+		Categories: Pavement Individual
+		Id: 100
+		Images: plat08.lun, plat08a.lun
+		Size: 1, 1
+		Tiles:
+			0: Road
+				MinColor: B4ADA2
+				MaxColor: B1AD90
+				ZOffset: -15
+				ZRamp: 0
+	Template@101:
+		Categories: Pavement Individual
+		Id: 101
+		Images: plat09.lun, plat09a.lun
+		Size: 1, 1
+		Tiles:
+			0: Road
+				MinColor: B9B49E
+				MaxColor: B8B1A4
+				ZOffset: -15
+				ZRamp: 0
+	Template@102:
+		Categories: Pavement Individual
+		Id: 102
+		Images: plat10.lun, plat10a.lun
+		Size: 1, 1
+		Tiles:
+			0: Road
+				MinColor: ACAA7B
+				MaxColor: ACAB80
+				ZOffset: -15
+				ZRamp: 0
+	Template@103:
+		Categories: Pavement Individual
+		Id: 103
+		Images: plat11.lun, plat11a.lun
+		Size: 1, 1
+		Tiles:
+			0: Road
+				MinColor: B6B19D
+				MaxColor: B2AC98
+				ZOffset: -15
+				ZRamp: 0
+	Template@104:
+		Categories: Pavement Individual
+		Id: 104
+		Images: plat12.lun, plat12a.lun
+		Size: 1, 1
+		Tiles:
+			0: Road
+				MinColor: B9B19C
+				MaxColor: B1AC81
+				ZOffset: -15
+				ZRamp: 0
+	Template@105:
+		Categories: Pavement Individual
+		Id: 105
+		Images: plat13.lun, plat13a.lun
+		Size: 1, 1
+		Tiles:
+			0: Road
+				MinColor: 9AA355
+				MaxColor: B1AC9E
+				ZOffset: -15
+				ZRamp: 0
+	Template@106:
+		Categories: Pavement Individual
+		Id: 106
+		Images: plat14.lun, plat14a.lun
+		Size: 1, 1
+		Tiles:
+			0: Road
+				MinColor: AAAA7C
+				MaxColor: B8B395
+				ZOffset: -15
+				ZRamp: 0
+	Template@107:
+		Categories: Pavement Individual
+		Id: 107
+		Images: plat15.lun, plat15a.lun
+		Size: 1, 1
+		Tiles:
+			0: Road
+				MinColor: A9AA76
+				MaxColor: ADA88A
+				ZOffset: -15
+				ZRamp: 0
+	Template@108:
+		Categories: Pavement Individual
+		Id: 108
+		Images: plat16.lun, plat16a.lun
+		Size: 1, 1
+		Tiles:
+			0: Road
+				MinColor: ADAC82
+				MaxColor: B2B08A
+				ZOffset: -15
+				ZRamp: 0
+	Template@109:
+		Categories: LAT Moon Dirt Light
+		Id: 109
+		Images: green01.lun, green01a.lun, green01b.lun, green01c.lun, green01d.lun, green01e.lun, green01f.lun, green01g.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 989BA5
+				MaxColor: A0A3AC
+				ZOffset: -15
+				ZRamp: 0
+	Template@110:
+		Categories: Moon Dirt Light Individual
+		Id: 110
+		Images: glat01.lun, glat01a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 9296A0
+				MaxColor: A2A5AE
+				ZOffset: -15
+				ZRamp: 0
+	Template@111:
+		Categories: Moon Dirt Light Individual
+		Id: 111
+		Images: glat02.lun, glat02a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 9599A3
+				MaxColor: 9599A3
+				ZOffset: -15
+				ZRamp: 0
+	Template@112:
+		Categories: Moon Dirt Light Individual
+		Id: 112
+		Images: glat03.lun, glat03a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 9A9DA7
+				MaxColor: A4A7B0
+				ZOffset: -15
+				ZRamp: 0
+	Template@113:
+		Categories: Moon Dirt Light Individual
+		Id: 113
+		Images: glat04.lun, glat04a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 90949E
+				MaxColor: A3A7B0
+				ZOffset: -15
+				ZRamp: 0
+	Template@114:
+		Categories: Moon Dirt Light Individual
+		Id: 114
+		Images: glat05.lun, glat05a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: A6A9B1
+				MaxColor: A3A6AF
+				ZOffset: -15
+				ZRamp: 0
+	Template@115:
+		Categories: Moon Dirt Light Individual
+		Id: 115
+		Images: glat06.lun, glat06a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: A1A5AD
+				MaxColor: 90949E
+				ZOffset: -15
+				ZRamp: 0
+	Template@116:
+		Categories: Moon Dirt Light Individual
+		Id: 116
+		Images: glat07.lun, glat07a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: A6A9B1
+				MaxColor: A8ABB3
+				ZOffset: -15
+				ZRamp: 0
+	Template@117:
+		Categories: Moon Dirt Light Individual
+		Id: 117
+		Images: glat08.lun, glat08a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: A4A7B0
+				MaxColor: 9B9FA8
+				ZOffset: -15
+				ZRamp: 0
+	Template@118:
+		Categories: Moon Dirt Light Individual
+		Id: 118
+		Images: glat09.lun, glat09a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 9599A3
+				MaxColor: A2A5AE
+				ZOffset: -15
+				ZRamp: 0
+	Template@119:
+		Categories: Moon Dirt Light Individual
+		Id: 119
+		Images: glat10.lun, glat10a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 9599A3
+				MaxColor: 9195A0
+				ZOffset: -15
+				ZRamp: 0
+	Template@120:
+		Categories: Moon Dirt Light Individual
+		Id: 120
+		Images: glat11.lun, glat11a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 989CA5
+				MaxColor: 9FA3AC
+				ZOffset: -15
+				ZRamp: 0
+	Template@121:
+		Categories: Moon Dirt Light Individual
+		Id: 121
+		Images: glat12.lun, glat12a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 9397A1
+				MaxColor: 999DA6
+				ZOffset: -15
+				ZRamp: 0
+	Template@122:
+		Categories: Moon Dirt Light Individual
+		Id: 122
+		Images: glat13.lun, glat13a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: A3A7AF
+				MaxColor: A1A4AD
+				ZOffset: -15
+				ZRamp: 0
+	Template@123:
+		Categories: Moon Dirt Light Individual
+		Id: 123
+		Images: glat14.lun, glat14a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: A5A8B1
+				MaxColor: 9396A1
+				ZOffset: -15
+				ZRamp: 0
+	Template@124:
+		Categories: Moon Dirt Light Individual
+		Id: 124
+		Images: glat15.lun, glat15a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: A4A8B0
+				MaxColor: A6A9B2
+				ZOffset: -15
+				ZRamp: 0
+	Template@125:
+		Categories: Moon Dirt Light Individual
+		Id: 125
+		Images: glat16.lun, glat16a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: A0A3AC
+				MaxColor: 9599A3
+				ZOffset: -15
+				ZRamp: 0
+	Template@126:
+		Categories: Ramp edge fixup
+		Id: 126
+		Images: rmpfx01.lun, rmpfx01a.lun, rmpfx01b.lun, rmpfx01c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 1
+				MinColor: 8C909B
+				MaxColor: 838893
+				ZOffset: -15
+				ZRamp: 0
+	Template@127:
+		Categories: Ramp edge fixup
+		Id: 127
+		Images: rmpfx02.lun, rmpfx02a.lun, rmpfx02b.lun, rmpfx02c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 1
+				MinColor: 848894
+				MaxColor: 8A8E99
+				ZOffset: -15
+				ZRamp: 0
+	Template@128:
+		Categories: Ramp edge fixup
+		Id: 128
+		Images: rmpfx03.lun, rmpfx03a.lun, rmpfx03b.lun, rmpfx03c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 1
+				MinColor: 8C909B
+				MaxColor: 8A8F99
+				ZOffset: -15
+				ZRamp: 0
+	Template@129:
+		Categories: Ramp edge fixup
+		Id: 129
+		Images: rmpfx04.lun, rmpfx04a.lun, rmpfx04b.lun, rmpfx04c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 2
+				MinColor: 7C808C
+				MaxColor: 878B96
+				ZOffset: -15
+				ZRamp: 0
+	Template@130:
+		Categories: Ramp edge fixup
+		Id: 130
+		Images: rmpfx05.lun, rmpfx05a.lun, rmpfx05b.lun, rmpfx05c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 2
+				MinColor: 858995
+				MaxColor: 787D89
+				ZOffset: -15
+				ZRamp: 0
+	Template@131:
+		Categories: Ramp edge fixup
+		Id: 131
+		Images: rmpfx06.lun, rmpfx06a.lun, rmpfx06b.lun, rmpfx06c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 2
+				MinColor: 868A95
+				MaxColor: 878B96
+				ZOffset: -15
+				ZRamp: 0
+	Template@132:
+		Categories: Ramp edge fixup
+		Id: 132
+		Images: rmpfx07.lun, rmpfx07a.lun, rmpfx07b.lun, rmpfx07c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 3
+				MinColor: A2A6AE
+				MaxColor: A3A6AF
+				ZOffset: -15
+				ZRamp: 0
+	Template@133:
+		Categories: Ramp edge fixup
+		Id: 133
+		Images: rmpfx08.lun, rmpfx08a.lun, rmpfx08b.lun, rmpfx08c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 3
+				MinColor: A1A5AE
+				MaxColor: A2A6AE
+				ZOffset: -15
+				ZRamp: 0
+	Template@134:
+		Categories: Ramp edge fixup
+		Id: 134
+		Images: rmpfx09.lun, rmpfx09a.lun, rmpfx09b.lun, rmpfx09c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 3
+				MinColor: A1A5AE
+				MaxColor: A3A6AF
+				ZOffset: -15
+				ZRamp: 0
+	Template@135:
+		Categories: Ramp edge fixup
+		Id: 135
+		Images: rmpfx10.lun, rmpfx10a.lun, rmpfx10b.lun, rmpfx10c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 4
+				MinColor: BCBEC4
+				MaxColor: C5C7CC
+				ZOffset: -15
+				ZRamp: 0
+	Template@136:
+		Categories: Ramp edge fixup
+		Id: 136
+		Images: rmpfx11.lun, rmpfx11a.lun, rmpfx11b.lun, rmpfx11c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 4
+				MinColor: C1C3C9
+				MaxColor: C3C4CA
+				ZOffset: -15
+				ZRamp: 0
+	Template@137:
+		Categories: Ramp edge fixup
+		Id: 137
+		Images: rmpfx12.lun, rmpfx12a.lun, rmpfx12b.lun, rmpfx12c.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				RampType: 4
+				MinColor: BCBFC5
+				MaxColor: C2C4CA
+				ZOffset: -15
+				ZRamp: 0
+	Template@150:
+		Categories: LAT Pavement
+		Id: 150
+		Images: pvclr01.lun, pvclr01a.lun, pvclr01b.lun, pvclr01c.lun, pvclr01d.lun, pvclr01e.lun, pvclr01f.lun, pvclr01g.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: B7B09F
+				MaxColor: B2AA9B
+				ZOffset: -15
+				ZRamp: 0
+	Template@166:
+		Categories: Sand (beach)
+		Id: 166
+		Images: green01.lun, green01a.lun, green01b.lun, green01c.lun, green01d.lun, green01e.lun, green01f.lun, green01g.lun
+		Size: 1, 1
+		Tiles:
+			0: Rough
+				MinColor: 989BA5
+				MaxColor: A0A3AC
+				ZOffset: -15
+				ZRamp: 0
+	Template@167:
+		Categories: Sand (beach) Transitions
+		Id: 167
+		Images: glat01.lun, glat01a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 9296A0
+				MaxColor: A2A5AE
+				ZOffset: -15
+				ZRamp: 0
+	Template@168:
+		Categories: Sand (beach) Transitions
+		Id: 168
+		Images: glat02.lun, glat02a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 9599A3
+				MaxColor: 9599A3
+				ZOffset: -15
+				ZRamp: 0
+	Template@169:
+		Categories: Sand (beach) Transitions
+		Id: 169
+		Images: glat03.lun, glat03a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 9A9DA7
+				MaxColor: A4A7B0
+				ZOffset: -15
+				ZRamp: 0
+	Template@170:
+		Categories: Sand (beach) Transitions
+		Id: 170
+		Images: glat04.lun, glat04a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 90949E
+				MaxColor: A3A7B0
+				ZOffset: -15
+				ZRamp: 0
+	Template@171:
+		Categories: Sand (beach) Transitions
+		Id: 171
+		Images: glat05.lun, glat05a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: A6A9B1
+				MaxColor: A3A6AF
+				ZOffset: -15
+				ZRamp: 0
+	Template@172:
+		Categories: Sand (beach) Transitions
+		Id: 172
+		Images: glat06.lun, glat06a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: A1A5AD
+				MaxColor: 90949E
+				ZOffset: -15
+				ZRamp: 0
+	Template@173:
+		Categories: Sand (beach) Transitions
+		Id: 173
+		Images: glat07.lun, glat07a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: A6A9B1
+				MaxColor: A8ABB3
+				ZOffset: -15
+				ZRamp: 0
+	Template@174:
+		Categories: Sand (beach) Transitions
+		Id: 174
+		Images: glat08.lun, glat08a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: A4A7B0
+				MaxColor: 9B9FA8
+				ZOffset: -15
+				ZRamp: 0
+	Template@175:
+		Categories: Sand (beach) Transitions
+		Id: 175
+		Images: glat09.lun, glat09a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 9599A3
+				MaxColor: A2A5AE
+				ZOffset: -15
+				ZRamp: 0
+	Template@176:
+		Categories: Sand (beach) Transitions
+		Id: 176
+		Images: glat10.lun, glat10a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 9599A3
+				MaxColor: 9195A0
+				ZOffset: -15
+				ZRamp: 0
+	Template@177:
+		Categories: Sand (beach) Transitions
+		Id: 177
+		Images: glat11.lun, glat11a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 989CA5
+				MaxColor: 9FA3AC
+				ZOffset: -15
+				ZRamp: 0
+	Template@178:
+		Categories: Sand (beach) Transitions
+		Id: 178
+		Images: glat12.lun, glat12a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: 9397A1
+				MaxColor: 999DA6
+				ZOffset: -15
+				ZRamp: 0
+	Template@179:
+		Categories: Sand (beach) Transitions
+		Id: 179
+		Images: glat13.lun, glat13a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: A3A7AF
+				MaxColor: A1A4AD
+				ZOffset: -15
+				ZRamp: 0
+	Template@180:
+		Categories: Sand (beach) Transitions
+		Id: 180
+		Images: glat14.lun, glat14a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: A5A8B1
+				MaxColor: 9396A1
+				ZOffset: -15
+				ZRamp: 0
+	Template@181:
+		Categories: Sand (beach) Transitions
+		Id: 181
+		Images: glat15.lun, glat15a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: A4A8B0
+				MaxColor: A6A9B2
+				ZOffset: -15
+				ZRamp: 0
+	Template@182:
+		Categories: Sand (beach) Transitions
+		Id: 182
+		Images: glat16.lun, glat16a.lun
+		Size: 1, 1
+		Tiles:
+			0: Clear
+				MinColor: A0A3AC
+				MaxColor: 9599A3
+				ZOffset: -15
+				ZRamp: 0
+	Template@183:
+		Categories: Craters
+		Id: 183
+		Images: crtr01.lun
+		Size: 2, 2
+		Tiles:
+			0: Clear
+				MinColor: 8F929D
+				MaxColor: A3A6AE
+				ZOffset: -15
+				ZRamp: 0
+			1: Clear
+				MinColor: A9ABB3
+				MaxColor: A5A8B0
+				ZOffset: -15
+				ZRamp: 0
+			2: Clear
+				MinColor: A6A9B1
+				MaxColor: 989BA5
+				ZOffset: -15
+				ZRamp: 0
+			3: Clear
+				MinColor: A0A3AC
+				MaxColor: 9EA1AA
+				ZOffset: -15
+				ZRamp: 0
+	Template@184:
+		Categories: Craters
+		Id: 184
+		Images: crtr02.lun
+		Size: 2, 2
+		Tiles:
+			0: Clear
+				MinColor: 858994
+				MaxColor: 848793
+				ZOffset: -15
+				ZRamp: 0
+			1: Clear
+				MinColor: 636877
+				MaxColor: A0A3AC
+				ZOffset: -15
+				ZRamp: 0
+			2: Clear
+				MinColor: A2A4AD
+				MaxColor: 7E828E
+				ZOffset: -15
+				ZRamp: 0
+			3: Clear
+				MinColor: 9396A0
+				MaxColor: 878A96
+				ZOffset: -15
+				ZRamp: 0
+	Template@185:
+		Categories: Craters
+		Id: 185
+		Images: crtr03.lun
+		Size: 3, 3
+		Tiles:
+			0: Clear
+				MinColor: 747885
+				MaxColor: 8F929D
+				ZOffset: -15
+				ZRamp: 0
+			1: Clear
+				MinColor: A7AAB2
+				MaxColor: A3A6AE
+				ZOffset: -15
+				ZRamp: 0
+			2: Clear
+				MinColor: 8E919C
+				MaxColor: B1B3BB
+				ZOffset: -15
+				ZRamp: 0
+			3: Clear
+				MinColor: 999DA6
+				MaxColor: 888C97
+				ZOffset: -15
+				ZRamp: 0
+			4: Clear
+				MinColor: 9295A0
+				MaxColor: 9FA1AB
+				ZOffset: -15
+				ZRamp: 0
+			5: Clear
+				MinColor: 9295A0
+				MaxColor: A5A8B0
+				ZOffset: -15
+				ZRamp: 0
+			6: Clear
+				MinColor: 8E919C
+				MaxColor: 7A7E8B
+				ZOffset: -15
+				ZRamp: 0
+			7: Clear
+				MinColor: A5A8B0
+				MaxColor: 7D818D
+				ZOffset: -15
+				ZRamp: 0
+			8: Clear
+				MinColor: A5A8B0
+				MaxColor: A4A6AF
+				ZOffset: -15
+				ZRamp: 0
+	Template@186:
+		Categories: Craters
+		Id: 186
+		Images: crtr04.lun
+		Size: 3, 3
+		Tiles:
+			0: Clear
+				MinColor: 8E919C
+				MaxColor: 9B9EA8
+				ZOffset: -15
+				ZRamp: 0
+			1: Clear
+				MinColor: 9497A1
+				MaxColor: 979AA4
+				ZOffset: -15
+				ZRamp: 0
+			2: Clear
+				MinColor: 979AA4
+				MaxColor: A8ABB3
+				ZOffset: -15
+				ZRamp: 0
+			3: Clear
+				MinColor: 979AA4
+				MaxColor: 858894
+				ZOffset: -15
+				ZRamp: 0
+			4: Clear
+				MinColor: 838793
+				MaxColor: 6B6F7D
+				ZOffset: -15
+				ZRamp: 0
+			5: Clear
+				MinColor: 9699A3
+				MaxColor: 9FA2AB
+				ZOffset: -15
+				ZRamp: 0
+			6: Clear
+				MinColor: A1A4AD
+				MaxColor: 797D8A
+				ZOffset: -15
+				ZRamp: 0
+			7: Clear
+				MinColor: 9EA1AA
+				MaxColor: 8D919C
+				ZOffset: -15
+				ZRamp: 0
+			8: Clear
+				MinColor: A1A4AD
+				MaxColor: A5A8B0
+				ZOffset: -15
+				ZRamp: 0
+	Template@187:
+		Categories: Craters
+		Id: 187
+		Images: crtr05.lun
+		Size: 4, 4
+		Tiles:
+			0: Clear
+				MinColor: 989BA5
+				MaxColor: 92959F
+				ZOffset: -15
+				ZRamp: 0
+			1: Clear
+				MinColor: 555A6A
+				MaxColor: 747885
+				ZOffset: -15
+				ZRamp: 0
+			2: Clear
+				MinColor: 626776
+				MaxColor: 848793
+				ZOffset: -15
+				ZRamp: 0
+			3: Clear
+				MinColor: 979AA4
+				MaxColor: A8AAB3
+				ZOffset: -15
+				ZRamp: 0
+			4: Clear
+				MinColor: 757A87
+				MaxColor: 525767
+				ZOffset: -15
+				ZRamp: 0
+			5: Clear
+				MinColor: 565C6C
+				MaxColor: 606574
+				ZOffset: -15
+				ZRamp: 0
+			6: Clear
+				MinColor: 595E6D
+				MaxColor: 787C89
+				ZOffset: -15
+				ZRamp: 0
+			7: Clear
+				MinColor: 9C9FA9
+				MaxColor: 999CA6
+				ZOffset: -15
+				ZRamp: 0
+			8: Clear
+				MinColor: 818591
+				MaxColor: 575C6C
+				ZOffset: -15
+				ZRamp: 0
+			9: Clear
+				MinColor: 8A8E99
+				MaxColor: 858994
+				ZOffset: -15
+				ZRamp: 0
+			10: Clear
+				MinColor: 7D818D
+				MaxColor: 606574
+				ZOffset: -15
+				ZRamp: 0
+			11: Clear
+				MinColor: ACAEB6
+				MaxColor: A5A7B0
+				ZOffset: -15
+				ZRamp: 0
+			12: Clear
+				MinColor: A6A8B1
+				MaxColor: 8D919B
+				ZOffset: -15
+				ZRamp: 0
+			13: Clear
+				MinColor: 7C808D
+				MaxColor: 969AA3
+				ZOffset: -15
+				ZRamp: 0
+			14: Clear
+				MinColor: A3A6AF
+				MaxColor: A7AAB2
+				ZOffset: -15
+				ZRamp: 0
+			15: Clear
+				MinColor: 9FA2AB
+				MaxColor: A3A6AF
+				ZOffset: -15
+				ZRamp: 0
+	Template@188:
+		Categories: Craters
+		Id: 188
+		Images: crtr06.lun
+		Size: 4, 4
+		Tiles:
+			0: Clear
+				MinColor: 989BA5
+				MaxColor: A5A7B0
+				ZOffset: -15
+				ZRamp: 0
+			1: Clear
+				MinColor: 787D89
+				MaxColor: A4A7AF
+				ZOffset: -15
+				ZRamp: 0
+			2: Clear
+				MinColor: A3A5AE
+				MaxColor: A7A9B1
+				ZOffset: -15
+				ZRamp: 0
+			3: Clear
+				MinColor: A4A6AF
+				MaxColor: A9ABB3
+				ZOffset: -15
+				ZRamp: 0
+			4: Clear
+				MinColor: 686D7B
+				MaxColor: 565B6B
+				ZOffset: -15
+				ZRamp: 0
+			5: Clear
+				MinColor: 828692
+				MaxColor: 868A95
+				ZOffset: -15
+				ZRamp: 0
+			6: Clear
+				MinColor: 9295A0
+				MaxColor: A6A8B1
+				ZOffset: -15
+				ZRamp: 0
+			7: Clear
+				MinColor: BBBDC3
+				MaxColor: A5A8B0
+				ZOffset: -15
+				ZRamp: 0
+			8: Clear
+				MinColor: 9FA2AB
+				MaxColor: 6A6F7D
+				ZOffset: -15
+				ZRamp: 0
+			9: Clear
+				MinColor: 737784
+				MaxColor: 8F939D
+				ZOffset: -15
+				ZRamp: 0
+			10: Clear
+				MinColor: 9396A1
+				MaxColor: 8F929D
+				ZOffset: -15
+				ZRamp: 0
+			11: Clear
+				MinColor: BBBDC3
+				MaxColor: B9BBC2
+				ZOffset: -15
+				ZRamp: 0
+			12: Clear
+				MinColor: A6A9B1
+				MaxColor: A6A9B1
+				ZOffset: -15
+				ZRamp: 0
+			13: Clear
+				MinColor: A0A3AC
+				MaxColor: 9B9EA7
+				ZOffset: -15
+				ZRamp: 0
+			14: Clear
+				MinColor: A4A7AF
+				MaxColor: B1B3BA
+				ZOffset: -15
+				ZRamp: 0
+			15: Clear
+				MinColor: A3A6AF
+				MaxColor: A2A5AD
+				ZOffset: -15
+				ZRamp: 0
+	Template@189:
+		Categories: Craters
+		Id: 189
+		Images: crtr07.lun
+		Size: 5, 5
+		Tiles:
+			0: Clear
+				MinColor: A5A7B0
+				MaxColor: A4A7B0
+				ZOffset: -15
+				ZRamp: 0
+			1: Clear
+				MinColor: 7F838F
+				MaxColor: A2A5AD
+				ZOffset: -15
+				ZRamp: 0
+			2: Clear
+				MinColor: 989BA5
+				MaxColor: A4A6AF
+				ZOffset: -15
+				ZRamp: 0
+			3: Clear
+				MinColor: 9C9FA8
+				MaxColor: 9EA1AA
+				ZOffset: -15
+				ZRamp: 0
+			4: Clear
+				MinColor: A3A5AE
+				MaxColor: A8ABB3
+				ZOffset: -15
+				ZRamp: 0
+			5: Clear
+				MinColor: A2A5AE
+				MaxColor: A9ABB3
+				ZOffset: -15
+				ZRamp: 0
+			6: Clear
+				MinColor: 6D727F
+				MaxColor: 6C717F
+				ZOffset: -15
+				ZRamp: 0
+			7: Clear
+				MinColor: 6D717F
+				MaxColor: 626776
+				ZOffset: -15
+				ZRamp: 0
+			8: Clear
+				MinColor: 7C808C
+				MaxColor: 848893
+				ZOffset: -15
+				ZRamp: 0
+			9: Clear
+				MinColor: 9A9DA6
+				MaxColor: A5A7B0
+				ZOffset: -15
+				ZRamp: 0
+			10: Clear
+				MinColor: A0A3AC
+				MaxColor: 9FA2AB
+				ZOffset: -15
+				ZRamp: 0
+			11: Clear
+				MinColor: 9C9FA8
+				MaxColor: 989BA5
+				ZOffset: -15
+				ZRamp: 0
+			12: Clear
+				MinColor: 7A7E8B
+				MaxColor: 7E828E
+				ZOffset: -15
+				ZRamp: 0
+			13: Clear
+				MinColor: 8E919C
+				MaxColor: 797D8A
+				ZOffset: -15
+				ZRamp: 0
+			14: Clear
+				MinColor: 7E828E
+				MaxColor: A3A6AE
+				ZOffset: -15
+				ZRamp: 0
+			15: Clear
+				MinColor: 9EA1AA
+				MaxColor: 777B88
+				ZOffset: -15
+				ZRamp: 0
+			16: Clear
+				MinColor: 747986
+				MaxColor: 898D98
+				ZOffset: -15
+				ZRamp: 0
+			17: Clear
+				MinColor: 545969
+				MaxColor: A1A4AC
+				ZOffset: -15
+				ZRamp: 0
+			18: Clear
+				MinColor: 888C97
+				MaxColor: 9497A1
+				ZOffset: -15
+				ZRamp: 0
+			19: Clear
+				MinColor: A5A7B0
+				MaxColor: A1A4AD
+				ZOffset: -15
+				ZRamp: 0
+			20: Clear
+				MinColor: A8ABB3
+				MaxColor: A7AAB2
+				ZOffset: -15
+				ZRamp: 0
+			21: Clear
+				MinColor: A3A6AF
+				MaxColor: 9FA1AA
+				ZOffset: -15
+				ZRamp: 0
+			22: Clear
+				MinColor: 9B9EA7
+				MaxColor: 8C909A
+				ZOffset: -15
+				ZRamp: 0
+			23: Clear
+				MinColor: 9A9EA7
+				MaxColor: 9DA0A9
+				ZOffset: -15
+				ZRamp: 0
+			24: Clear
+				MinColor: A6A9B1
+				MaxColor: A9ABB3
+				ZOffset: -15
+				ZRamp: 0
+	Template@190:
+		Categories: Craters
+		Id: 190
+		Images: crtr08.lun
+		Size: 5, 5
+		Tiles:
+			0: Clear
+				MinColor: 878B96
+				MaxColor: 848793
+				ZOffset: -15
+				ZRamp: 0
+			1: Clear
+				MinColor: 7E828E
+				MaxColor: 9EA1AA
+				ZOffset: -15
+				ZRamp: 0
+			2: Clear
+				MinColor: 9EA1AA
+				MaxColor: A5A8B0
+				ZOffset: -15
+				ZRamp: 0
+			3: Clear
+				MinColor: 9C9FA8
+				MaxColor: A4A7AF
+				ZOffset: -15
+				ZRamp: 0
+			4: Clear
+				MinColor: A7AAB2
+				MaxColor: A8AAB3
+				ZOffset: -15
+				ZRamp: 0
+			5: Clear
+				MinColor: A6A9B1
+				MaxColor: 9B9EA8
+				ZOffset: -15
+				ZRamp: 0
+			6: Clear
+				MinColor: B6B8BF
+				MaxColor: 999CA6
+				ZOffset: -15
+				ZRamp: 0
+			7: Clear
+				MinColor: 9699A2
+				MaxColor: 9EA1AA
+				ZOffset: -15
+				ZRamp: 0
+			8: Clear
+				MinColor: 7A7E8B
+				MaxColor: A0A2AB
+				ZOffset: -15
+				ZRamp: 0
+			9: Clear
+				MinColor: A8ABB3
+				MaxColor: A6A9B1
+				ZOffset: -15
+				ZRamp: 0
+			10: Clear
+				MinColor: A6A9B1
+				MaxColor: A3A5AE
+				ZOffset: -15
+				ZRamp: 0
+			11: Clear
+				MinColor: 898C97
+				MaxColor: 90949E
+				ZOffset: -15
+				ZRamp: 0
+			12: Clear
+				MinColor: 9EA1AA
+				MaxColor: 8F939D
+				ZOffset: -15
+				ZRamp: 0
+			13: Clear
+				MinColor: 6E7380
+				MaxColor: 676B7A
+				ZOffset: -15
+				ZRamp: 0
+			14: Clear
+				MinColor: 9DA0A9
+				MaxColor: A4A7AF
+				ZOffset: -15
+				ZRamp: 0
+			15: Clear
+				MinColor: 9699A3
+				MaxColor: 7F828E
+				ZOffset: -15
+				ZRamp: 0
+			16: Clear
+				MinColor: 585E6D
+				MaxColor: 636877
+				ZOffset: -15
+				ZRamp: 0
+			17: Clear
+				MinColor: 888C97
+				MaxColor: 8E919C
+				ZOffset: -15
+				ZRamp: 0
+			18: Clear
+				MinColor: 575C6C
+				MaxColor: 696E7C
+				ZOffset: -15
+				ZRamp: 0
+			19: Clear
+				MinColor: 9396A0
+				MaxColor: A5A7B0
+				ZOffset: -15
+				ZRamp: 0
+			20: Clear
+				MinColor: A9ACB4
+				MaxColor: 8E929C
+				ZOffset: -15
+				ZRamp: 0
+			21: Clear
+				MinColor: 8F929C
+				MaxColor: 7B7F8C
+				ZOffset: -15
+				ZRamp: 0
+			22: Clear
+				MinColor: 91949E
+				MaxColor: 666B7A
+				ZOffset: -15
+				ZRamp: 0
+			23: Clear
+				MinColor: 8A8D98
+				MaxColor: 9295A0
+				ZOffset: -15
+				ZRamp: 0
+			24: Clear
+				MinColor: 979AA4
+				MaxColor: 9699A3
+				ZOffset: -15
+				ZRamp: 0
+	Template@191:
+		Categories: LunarLander
+		Id: 191
+		Images: eagle01.lun
+		Size: 4, 4
+		Tiles:
+			0: Cliff
+				MinColor: A8AAB1
+				MaxColor: A7A9B0
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: A9A29F
+				MaxColor: A3A6AE
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 9A9DA7
+				MaxColor: A6A9B1
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: ABAEB6
+				MaxColor: A9ABB3
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				MinColor: 9EA1AA
+				MaxColor: 9E9EA3
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 84766C
+				MaxColor: 928274
+				ZOffset: -15
+				ZRamp: 0
+			6: Cliff
+				MinColor: 5B473D
+				MaxColor: 676C7A
+				ZOffset: -15
+				ZRamp: 0
+			7: Cliff
+				MinColor: 838792
+				MaxColor: AAACB4
+				ZOffset: -15
+				ZRamp: 0
+			8: Cliff
+				MinColor: A6A8B1
+				MaxColor: 91949E
+				ZOffset: -15
+				ZRamp: 0
+			9: Cliff
+				MinColor: 9A9DA6
+				MaxColor: 90837C
+				ZOffset: -15
+				ZRamp: 0
+			10: Cliff
+				MinColor: 7B6E69
+				MaxColor: 464752
+				ZOffset: -15
+				ZRamp: 0
+			11: Cliff
+				MinColor: AFB1B7
+				MaxColor: ADABAE
+				ZOffset: -15
+				ZRamp: 0
+			12: Cliff
+				MinColor: A6A9B1
+				MaxColor: A9ABB4
+				ZOffset: -15
+				ZRamp: 0
+			13: Cliff
+				MinColor: A1A4AD
+				MaxColor: 9C9FA9
+				ZOffset: -15
+				ZRamp: 0
+			14: Cliff
+				MinColor: ABAEB6
+				MaxColor: A7A5A7
+				ZOffset: -15
+				ZRamp: 0
+			15: Cliff
+				MinColor: A4A7AF
+				MaxColor: ABADB5
+				ZOffset: -15
+				ZRamp: 0
+	Template@192:
+		Categories: Lunar Crevas
+		Id: 192
+		Images: crevas01.lun
+		Size: 3, 2
+		Tiles:
+			0: Cliff
+				MinColor: 7D818D
+				MaxColor: 999CA5
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 6A6F7C
+				MaxColor: 8A8E99
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 5A5F6F
+				MaxColor: 9296A0
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: A3A5AE
+				MaxColor: 737784
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				MinColor: 4D5364
+				MaxColor: 242B40
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 8A8E99
+				MaxColor: 989BA5
+				ZOffset: -15
+				ZRamp: 0
+	Template@193:
+		Categories: Lunar Crevas
+		Id: 193
+		Images: crevas02.lun
+		Size: 2, 3
+		Tiles:
+			0: Cliff
+				MinColor: 7A7E8A
+				MaxColor: 999CA5
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 797D8A
+				MaxColor: 9396A0
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 7C808C
+				MaxColor: 666B79
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: 252C41
+				MaxColor: 717583
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				MinColor: 9DA0A9
+				MaxColor: 6C717F
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 6D717F
+				MaxColor: 9699A3
+				ZOffset: -15
+				ZRamp: 0
+	Template@194:
+		Categories: Lunar Crevas
+		Id: 194
+		Images: crevas03.lun
+		Size: 2, 4
+		Tiles:
+			0: Cliff
+				MinColor: 90939E
+				MaxColor: 9EA1AA
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 8D909B
+				MaxColor: 979AA4
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 878A96
+				MaxColor: 6B6F7D
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: 4F5565
+				MaxColor: 737785
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				MinColor: A3A5AE
+				MaxColor: 818591
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 464B5D
+				MaxColor: 777B88
+				ZOffset: -15
+				ZRamp: 0
+			6: Cliff
+				MinColor: A1A4AD
+				MaxColor: 7F828F
+				ZOffset: -15
+				ZRamp: 0
+			7: Cliff
+				MinColor: 838692
+				MaxColor: 656A78
+				ZOffset: -15
+				ZRamp: 0
+	Template@195:
+		Categories: Lunar Crevas
+		Id: 195
+		Images: crevas04.lun
+		Size: 4, 2
+		Tiles:
+			0: Cliff
+				MinColor: 767A87
+				MaxColor: 7E828F
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 6B707E
+				MaxColor: 8A8D98
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 6C707E
+				MaxColor: 7C808C
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: 7C808D
+				MaxColor: A0A2AB
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				MinColor: A2A4AD
+				MaxColor: 7D808D
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 828692
+				MaxColor: 626675
+				ZOffset: -15
+				ZRamp: 0
+			6: Cliff
+				MinColor: 8A8D99
+				MaxColor: 616675
+				ZOffset: -15
+				ZRamp: 0
+			7: Cliff
+				MinColor: 9EA1AA
+				MaxColor: 777B88
+				ZOffset: -15
+				ZRamp: 0
+	Template@196:
+		Categories: Lunar Crevas
+		Id: 196
+		Images: crevas05.lun
+		Size: 5, 2
+		Tiles:
+			0: Cliff
+				MinColor: 8A8E99
+				MaxColor: A1A3AC
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 696E7C
+				MaxColor: A8ABB3
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 7D818D
+				MaxColor: 8F939D
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: 636877
+				MaxColor: A1A4AD
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				MinColor: 7B7F8B
+				MaxColor: 9B9DA7
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 91959F
+				MaxColor: 636877
+				ZOffset: -15
+				ZRamp: 0
+			6: Cliff
+				MinColor: 91949E
+				MaxColor: 4D5364
+				ZOffset: -15
+				ZRamp: 0
+			7: Cliff
+				MinColor: 696D7C
+				MaxColor: 3B4154
+				ZOffset: -15
+				ZRamp: 0
+			8: Cliff
+				MinColor: 8E929C
+				MaxColor: 404658
+				ZOffset: -15
+				ZRamp: 0
+			9: Cliff
+				MinColor: 757986
+				MaxColor: A4A7AF
+				ZOffset: -15
+				ZRamp: 0
+	Template@197:
+		Categories: Lunar Crevas
+		Id: 197
+		Images: crevas06.lun
+		Size: 2, 5
+		Tiles:
+			0: Cliff
+				MinColor: 838692
+				MaxColor: 717583
+				ZOffset: -15
+				ZRamp: 0
+			1: Cliff
+				MinColor: 6F7381
+				MaxColor: 9A9DA7
+				ZOffset: -15
+				ZRamp: 0
+			2: Cliff
+				MinColor: 666B79
+				MaxColor: 626776
+				ZOffset: -15
+				ZRamp: 0
+			3: Cliff
+				MinColor: 42485A
+				MaxColor: 636877
+				ZOffset: -15
+				ZRamp: 0
+			4: Cliff
+				MinColor: 888C97
+				MaxColor: 737785
+				ZOffset: -15
+				ZRamp: 0
+			5: Cliff
+				MinColor: 343B4E
+				MaxColor: 888C97
+				ZOffset: -15
+				ZRamp: 0
+			6: Cliff
+				MinColor: 8E919C
+				MaxColor: 7A7E8B
+				ZOffset: -15
+				ZRamp: 0
+			7: Cliff
+				MinColor: 22283E
+				MaxColor: 4A5061
+				ZOffset: -15
+				ZRamp: 0
+			8: Cliff
+				MinColor: 8C909B
+				MaxColor: 454B5D
+				ZOffset: -15
+				ZRamp: 0
+			9: Cliff
+				MinColor: 868A95
+				MaxColor: 5E6372
+				ZOffset: -15
+				ZRamp: 0
