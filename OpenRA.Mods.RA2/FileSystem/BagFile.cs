@@ -58,7 +58,7 @@ namespace OpenRA.Mods.Cnc.FileSystem
 					waveHeaderMemoryStream.Write(BitConverter.GetBytes((short)1));
 					waveHeaderMemoryStream.Write(BitConverter.GetBytes((short)channels));
 					waveHeaderMemoryStream.Write(BitConverter.GetBytes(entry.SampleRate));
-					waveHeaderMemoryStream.Write(BitConverter.GetBytes(2 * channels * entry.SampleRate));
+					waveHeaderMemoryStream.Write(BitConverter.GetBytes((uint)(2 * channels) * entry.SampleRate));
 					waveHeaderMemoryStream.Write(BitConverter.GetBytes((short)(2 * channels)));
 					waveHeaderMemoryStream.Write(BitConverter.GetBytes((short)16));
 					waveHeaderMemoryStream.Write(Encoding.ASCII.GetBytes("data"));
