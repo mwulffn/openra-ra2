@@ -232,12 +232,10 @@ garefn:
 	RevealsShroud:
 		Range: 6c0
 	Refinery:
-		DockOffset: 3,1
 		ShowTicks: True
 		TickLifetime: 30
 		TickVelocity: 1
 		TickRate: 10
-		DockAngle: 640
 		UseStorage: false
 	CustomSellValue:
 		Value: 300
@@ -265,6 +263,10 @@ garefn:
 	SpawnSurvivors:
 		DeathTypes: ExplosionDeath, BulletDeath
 		Actors: e1, e1
+	DockHost:
+		Type: Unload
+		DockAngle: 640
+		DockOffset: 1086,1086,0
 
 gaairc:
 	Inherits: ^BaseBuilding

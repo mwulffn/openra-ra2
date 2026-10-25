@@ -10,7 +10,7 @@ camisc01:
 		DamagedSounds: bmetdama.wav, bmetdamb.wav, bmetdamc.wav
 	MapEditorData:
 		Categories: Decoration
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: LargeBarrelExplode
 
 camisc02:
@@ -25,7 +25,7 @@ camisc02:
 		DamagedSounds: bmetdama.wav, bmetdamb.wav, bmetdamc.wav
 	MapEditorData:
 		Categories: Decoration
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: SmallBarrelExplode
 
 camisc03:
@@ -86,7 +86,7 @@ camisc06:
 		HP: 10
 	Armor:
 		Type: Concrete
-	Explodes:
+	FireWarheadsOnDeath:
 		Type: Footprint
 		Weapon: V3AmmunitionExplode
 	SoundOnDamageTransition:

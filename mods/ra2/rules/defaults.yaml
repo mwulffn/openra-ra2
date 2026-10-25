@@ -355,7 +355,7 @@
 		DamagedSounds: gdamag1a.wav, gdamag1b.wav, gdamag1c.wav, gdamag1d.wav, gdamag1e.wav
 		DestroyedSounds: bgendiea.wav, bgendieb.wav, bgendiec.wav, bgendied.wav, bgendiee.wav, bgendief.wav
 	WithSpriteBody:
-	Explodes:
+	FireWarheadsOnDeath:
 		Type: Footprint
 		Weapon: BuildingExplode
 	RepairableBuilding:
@@ -868,7 +868,7 @@
 		QuantizedFacings: 0
 		CameraPitch: 85
 		UseClassicPerspectiveFudge: false
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
 	RenderVoxels:
@@ -1082,7 +1082,7 @@
 		UseClassicPerspectiveFudge: false
 	Tooltip:
 		GenericName: Ship
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
 	RenderVoxels:

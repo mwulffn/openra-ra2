@@ -60,13 +60,11 @@ harv:
 		Priority: 7
 		Bounds: 1544, 2509, 0, -289
 	Harvester:
-		Capacity: 40
 		Resources: Ore, Gems
 		BaleUnloadDelay: 1
 		SearchFromProcRadius: 24
 		SearchFromHarvesterRadius: 12
 		HarvestVoice: Move
-		DeliverVoice: Move
 	Health:
 		HP: 1000
 	Armor:
@@ -106,7 +104,7 @@ harv:
 	Voiced:
 		VoiceSet: SovietVehicleVoice
 	HitShape:
-	WithHarvesterPipsDecoration:
+	WithStoresResourcesPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
 		PipCount: 7
@@ -114,6 +112,11 @@ harv:
 		ResourceSequences:
 			Ore: pip-yellow
 			Gems: pip-red
+	StoresResources:
+		Capacity: 40
+		Resources: Ore, Gems
+	DockClientManager:
+		Voice: Move
 
 dron:
 	Inherits: ^Vehicle
@@ -337,7 +340,7 @@ apoc:
 	WithVoxelBody:
 	WithVoxelTurret:
 	WithVoxelBarrel:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: ApocExplode
 		EmptyWeapon: ApocExplode
 	Voiced:
@@ -421,7 +424,7 @@ dtruck:
 		Locomotor: heavytracked
 	RevealsShroud:
 		Range: 4c0
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: demobomb
 		EmptyWeapon: demobomb
 	AttackFrontal:

@@ -25,7 +25,7 @@ caoild:
 		Offset: 1000,0,0
 	GivesCashOnCapture:
 		Amount: 1000
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: DerrickExplode
 	SpawnActorOnDeath:
 		Actor: caoild.rubble

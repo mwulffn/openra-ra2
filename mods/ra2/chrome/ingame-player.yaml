@@ -43,7 +43,7 @@ Container@PLAYER_WIDGETS:
 		Image@COMMAND_BAR_BACKGROUND:
 			Logic: AddFactionSuffixLogic
 			X: 5
-			Y: WINDOW_BOTTOM - HEIGHT - 5
+			Y: WINDOW_HEIGHT - HEIGHT - 5
 			Width: 459
 			Height: 31
 			ImageCollection: sidebar
@@ -53,7 +53,7 @@ Container@PLAYER_WIDGETS:
 			Logic: CommandBarLogic
 				HighlightOnButtonPress: True
 			X: 36
-			Y: WINDOW_BOTTOM - HEIGHT - 10
+			Y: WINDOW_HEIGHT - HEIGHT - 10
 			Width: 270
 			Height: 26
 			Children:
@@ -208,7 +208,7 @@ Container@PLAYER_WIDGETS:
 		Container@STANCE_BAR:
 			Logic: StanceSelectorLogic
 			X: 324
-			Y: WINDOW_BOTTOM - HEIGHT - 10
+			Y: WINDOW_HEIGHT - HEIGHT - 10
 			Width: 101
 			Height: 21
 			Children:
@@ -289,7 +289,7 @@ Container@PLAYER_WIDGETS:
 							ImageName: hold-fire
 		Image@SIDEBAR_BACKGROUND_TOP:
 			Logic: AddFactionSuffixLogic
-			X: WINDOW_RIGHT - 234
+			X: WINDOW_WIDTH - 234
 			Y: 0
 			Width: 234
 			Height: 275
@@ -406,7 +406,7 @@ Container@PLAYER_WIDGETS:
 					Logic: GameTimerLogic
 					X: 0
 					Y: 0
-					Width: PARENT_RIGHT
+					Width: PARENT_WIDTH
 					Height: 23
 					Align: Center
 					Font: TinyBold
@@ -429,7 +429,7 @@ Container@PLAYER_WIDGETS:
 							ImageName: cash-normal
 				LabelWithTooltip@POWER:
 					Logic: IngamePowerCounterLogic
-					X: PARENT_RIGHT - WIDTH - 34
+					X: PARENT_WIDTH - WIDTH - 34
 					Y: 0
 					Width: 50
 					Height: 23
@@ -441,13 +441,13 @@ Container@PLAYER_WIDGETS:
 					Children:
 						Image@POWER_ICON:
 							Logic: AddFactionSuffixLogic
-							X: PARENT_RIGHT + 3
+							X: PARENT_WIDTH + 3
 							Y: 3
 							ImageCollection: power-icons
 							ImageName: power-normal
 		Container@SIDEBAR_PRODUCTION:
 			Logic: ClassicProductionLogic
-			X: WINDOW_RIGHT - 234
+			X: WINDOW_WIDTH - 234
 			Y: 275
 			Width: 234
 			Height: 250
@@ -469,7 +469,7 @@ Container@PLAYER_WIDGETS:
 							ImageCollection: sidebar
 							ImageName: background-bottom
 				PowerMeter:
-					X: WINDOW_RIGHT - 230
+					X: WINDOW_WIDTH - 230
 					Y: 270
 					MeterAlongside: ROW_TEMPLATE
 					ParentContainer: PALETTE_BACKGROUND
@@ -606,7 +606,7 @@ Container@PLAYER_WIDGETS:
 						Button@SCROLL_UP_BUTTON:
 							Logic: AddFactionSuffixLogic
 							X: 89
-							Y: PARENT_BOTTOM + 305
+							Y: PARENT_HEIGHT + 305
 							Width: 77
 							Height: 27
 							VisualHeight: 0
@@ -616,7 +616,7 @@ Container@PLAYER_WIDGETS:
 						Button@SCROLL_DOWN_BUTTON:
 							Logic: AddFactionSuffixLogic
 							X: 12
-							Y: PARENT_BOTTOM + 305
+							Y: PARENT_HEIGHT + 305
 							Width: 77
 							Height: 27
 							VisualHeight: 0
@@ -625,20 +625,19 @@ Container@PLAYER_WIDGETS:
 							TooltipContainer: TOOLTIP_CONTAINER
 		Container@HPF_OVERLAY:
 			Logic: HierarchicalPathFinderOverlayLogic
-			X: WINDOW_RIGHT - WIDTH - 260
+			X: WINDOW_WIDTH - WIDTH - 260
 			Y: 40
 			Width: 175
 			Height: 60
 			Children:
 				DropDownButton@HPF_OVERLAY_LOCOMOTOR:
-					Y: PARENT_TOP
-					Width: PARENT_RIGHT
+					Width: PARENT_WIDTH
 					Height: 25
 					Text: Select Locomotor
 					Font: Regular
 				DropDownButton@HPF_OVERLAY_CHECK:
-					Y: PARENT_TOP + 35
-					Width: PARENT_RIGHT
+					Y: 0 + 35
+					Width: PARENT_WIDTH
 					Height: 25
 					Text: Select BlockedByActor
 					Font: Regular

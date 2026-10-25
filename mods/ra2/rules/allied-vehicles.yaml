@@ -57,13 +57,11 @@ cmin:
 		Priority: 7
 		Bounds: 1544, 2509, 0, -289
 	Harvester:
-		Capacity: 20
 		Resources: Ore, Gems
 		BaleUnloadDelay: 1
 		SearchFromProcRadius: 24
 		SearchFromHarvesterRadius: 12
 		HarvestVoice: Move
-		DeliverVoice: Move
 	ChronoResourceDelivery:
 		WarpInSequence: warpout
 		WarpInSound: vchrtele.wav
@@ -91,7 +89,7 @@ cmin:
 	Voiced:
 		VoiceSet: ChronoMinerVoice
 	HitShape:
-	WithHarvesterPipsDecoration:
+	WithStoresResourcesPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
 		PipCount: 7
@@ -99,6 +97,11 @@ cmin:
 		ResourceSequences:
 			Ore: pip-yellow
 			Gems: pip-red
+	StoresResources:
+		Capacity: 20
+		Resources: Ore, Gems
+	DockClientManager:
+		Voice: Move
 
 mtnk:
 	Inherits: ^Vehicle
@@ -325,9 +328,9 @@ fv:
 	RenderSprites:
 	RenderVoxels:
 	WithVoxelBody:
-	Explodes:
+	FireWarheadsOnDeath:
 		RequiresCondition: !ifv-demo
-	Explodes@demo:
+	FireWarheadsOnDeath@demo:
 		Weapon: CRNuke
 		EmptyWeapon: CRNuke
 		RequiresCondition: ifv-demo
@@ -399,7 +402,7 @@ sref:
 	AttackTurreted:
 		Voice: Attack
 	AutoTarget:
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
 	RenderSprites:
@@ -485,7 +488,7 @@ mgtk:
 	WithMuzzleOverlay:
 	AutoTarget:
 		AllowMovement: false
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
 	RenderSprites:

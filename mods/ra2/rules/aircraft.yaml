@@ -130,7 +130,7 @@ zep:
 	WithVoxelBody:
 	Hovers:
 		BobDistance: -10
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: UnitExplode
 		Chance: 75
 	VoiceAnnouncement:

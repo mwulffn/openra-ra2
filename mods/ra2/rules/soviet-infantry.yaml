@@ -201,7 +201,7 @@ terror:
 		Type: Flak
 	Passenger:
 		CustomPipType: red
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: TerrorBomb
 		EmptyWeapon: TerrorBomb
 	AttackFrontal:
@@ -328,7 +328,7 @@ ivan:
 		Type: None
 	Passenger:
 		CustomPipType: red
-	Explodes:
+	FireWarheadsOnDeath:
 		Weapon: IvanDeath
 		EmptyWeapon: IvanDeath
 	Armament@primary:
@@ -374,7 +374,7 @@ civan:
 		Voice: Move
 		ChargeDelay: 300
 		TargetCursor: chronosphere
-	-Explodes:
+	-FireWarheadsOnDeath:
 
 yuri:
 	Inherits: ^Infantry

@@ -400,3 +400,4 @@ EditorWorld:
 	EditorActionManager:
 	BuildableTerrainOverlay:
 		AllowedTerrainTypes: Clear, Rough, Road
+	MarkerLayerOverlay:

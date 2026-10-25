@@ -247,12 +247,10 @@ narefn:
 	RevealsShroud:
 		Range: 6c0
 	Refinery:
-		DockOffset: 3, 1
 		ShowTicks: True
 		TickLifetime: 30
 		TickVelocity: 1
 		TickRate: 10
-		DockAngle: 640
 		UseStorage: false
 	CustomSellValue:
 		Value: 300
@@ -280,6 +278,10 @@ narefn:
 	SpawnSurvivors:
 		DeathTypes: ExplosionDeath, BulletDeath
 		Actors: e2, e2, e2
+	DockHost:
+		Type: Unload
+		DockAngle: 640
+		DockOffset: 1086,1086,0
 
 naradr:
 	Inherits: ^BaseBuilding
@@ -637,7 +639,7 @@ nanrct:
 	WithIdleOverlay@lights:
 		Sequence: idle-lights
 		RequiresCondition: !build-incomplete
-	Explodes:
+	FireWarheadsOnDeath:
 		Type: CenterPosition
 		Weapon: NukePayload
 		EmptyWeapon: NukePayload
@@ -857,6 +859,7 @@ nairon:
 		PauseOnCondition: lowpower
 		Dimensions: 3, 3
 		Footprint: xxx xxx xxx
+		BlockedCursor: move-blocked
 	SupportPowerChargeBar:
 	InfiltrateForSupportPowerReset:
 		Types: SpyInfiltrate
