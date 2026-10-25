@@ -281,8 +281,11 @@ V3Launcher:
 	Warhead@1Dam: TargetDamage
 		ValidTargets: Ground, Water
 
+# Its second missile is put up 20 frames after the first, on the other side of the deck.
+# The reload has to outlast that, or the burst would start over on the first side.
 DredLauncher:
 	Inherits: V3Launcher
+	ReloadDelay: 30
 	Range: 25c0
 	MinRange: 8c0
 	Burst: 2

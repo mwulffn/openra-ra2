@@ -25,8 +25,13 @@ namespace OpenRA.Mods.RA2.Traits
 		[Desc("Condition granted once for every missile in store.")]
 		public readonly string LoadedCondition = null;
 
-		[Desc("Offset from the muzzle at which a missile is put up.")]
-		public readonly WVec LaunchOffset = new(0, 0, 40);
+		[GrantedConditionReference]
+		[Desc("Condition granted while a missile is readying on the launcher or taking off.",
+			"The original's launchers do not start a move then; use it to pause Mobile.")]
+		public readonly string LaunchingCondition = null;
+
+		[Desc("Offset from the muzzle at which a missile is put up: the original's ten leptons up.")]
+		public readonly WVec LaunchOffset = new(0, 0, 70);
 
 		public override object Create(ActorInitializer init) { return new MissileSpawnerParent(init, this); }
 	}
@@ -45,6 +50,7 @@ namespace OpenRA.Mods.RA2.Traits
 		readonly MissileSpawnerParentInfo info;
 		readonly Stack<int> loadedTokens = new();
 		GainsExperience experience;
+		int launchingToken = Actor.InvalidConditionToken;
 
 		public MissileSpawnerParent(ActorInitializer init, MissileSpawnerParentInfo info)
 			: base(init, info)
@@ -104,7 +110,8 @@ namespace OpenRA.Mods.RA2.Traits
 			var position = self.CenterPosition + a.MuzzleOffset(self, barrel) + info.LaunchOffset;
 			var child = entry.Actor;
 			var facing = self.TraitOrDefault<IFacing>()?.Facing ?? WAngle.Zero;
-			var salvoTarget = target;
+			var missileTarget = target;
+			var elite = experience != null && experience.MaxLevel > 0 && experience.Level >= experience.MaxLevel;
 			self.World.AddFrameEndTask(w =>
 			{
 				if (self.IsDead || child.IsDead)
@@ -114,23 +121,23 @@ namespace OpenRA.Mods.RA2.Traits
 				child.Trait<IFacing>().Facing = facing;
 				w.Add(child);
 
-				// With nothing left in store, the whole salvo takes off.
+				// It is sent to where the target is now and begins its pause and tilt at once.
+				child.Trait<Rocket>().Launch(self, missileTarget, elite);
+
+				// With nothing left in store, the salvo is handed over: its slots begin to count their takeoff.
 				if (!ChildEntries.Cast<MissileChildEntry>().Any(e => e.Stored && e.IsValid))
-					Release(self, salvoTarget);
+					Release();
 			});
 		}
 
-		void Release(Actor self, in Target target)
+		void Release()
 		{
-			var elite = experience != null && experience.MaxLevel > 0 && experience.Level >= experience.MaxLevel;
 			foreach (var entry in ChildEntries.Cast<MissileChildEntry>())
 			{
 				if (!entry.Readied || !entry.IsValid)
 					continue;
 
-				var rocket = entry.Actor.Trait<Rocket>();
 				var rocketInfo = entry.Actor.Info.TraitInfo<RocketInfo>();
-				rocket.Launch(self, target, elite);
 				entry.Readied = false;
 				entry.TakeoffTicks = rocketInfo.PauseTicks + rocketInfo.TiltTicks;
 			}
@@ -138,6 +145,12 @@ namespace OpenRA.Mods.RA2.Traits
 
 		void ITick.Tick(Actor self)
 		{
+			var launching = ChildEntries.Cast<MissileChildEntry>().Any(e => e.IsValid && (e.Readied || e.TakeoffTicks > 0));
+			if (launching && launchingToken == Actor.InvalidConditionToken && info.LaunchingCondition != null)
+				launchingToken = self.GrantCondition(info.LaunchingCondition);
+			else if (!launching && launchingToken != Actor.InvalidConditionToken)
+				launchingToken = self.RevokeCondition(launchingToken);
+
 			foreach (var entry in ChildEntries.Cast<MissileChildEntry>())
 			{
 				if (entry.Stored && entry.IsValid)
