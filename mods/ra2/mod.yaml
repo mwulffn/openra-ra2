@@ -189,7 +189,6 @@ TileSets:
 
 MapGrid:
 	Type: RectangularIsometric
-	TileSize: 60,30
 	EnableDepthBuffer: true
 	SubCellsOffsets: 0,0,0, -256,128,0, 0,-128,0, 256,128,0
 	DefaultSubCell: 2
