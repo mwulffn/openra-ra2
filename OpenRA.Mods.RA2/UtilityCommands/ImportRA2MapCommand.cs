@@ -361,6 +361,9 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 			"INYELWLAMP", "PURPLAMP", "INPURPLAMP", "INORANLAMP", "INGRNLMP", "INREDLMP", "INBLULMP"
 		};
 
+		// Unfinished maps left in maps01.mix that no campaign plays; they predate the final tilesets
+		static readonly string[] LeftoverMaps = ["e31", "e32", "sov1u"];
+
 		static readonly Dictionary<string, string> ReplaceActors = new()
 		{
 			{ "adog", "dog" }
@@ -373,6 +376,12 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 			Game.ModData = utility.ModData;
 
 			var filename = args[1];
+			if (LeftoverMaps.Contains(Path.GetFileNameWithoutExtension(filename).ToLowerInvariant()))
+			{
+				Console.WriteLine($"{filename} skipped: an unfinished map no campaign plays");
+				return;
+			}
+
 			var file = new IniFile(File.Open(args[1], FileMode.Open));
 			var basic = file.GetSection("Basic");
 			var mapSection = file.GetSection("Map");
