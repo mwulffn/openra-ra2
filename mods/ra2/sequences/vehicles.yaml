@@ -46,9 +46,11 @@ cmin:
 		Facings: 8
 	warpin:
 		Filename: warpin.shp
+		Offset: 0, 0, 16
 	warpout:
 		Filename: warpout.shp
 		Length: 20
+		Offset: 0, 0, 16
 	icon:
 		Filename: ahrvicon.shp
 
