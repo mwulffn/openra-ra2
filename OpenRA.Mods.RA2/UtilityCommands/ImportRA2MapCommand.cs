@@ -407,6 +407,19 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 
 		static void AddActor(Map map, ActorReference ar)
 		{
+			// The original keeps things on high ground at the map's top edge that project above it and are never
+			// drawn. The engine refuses an actor that freezes under fog with no cell on the map to freeze on.
+			var location = ar.Get<LocationInit>().Value;
+			var info = map.Rules.Actors.GetValueOrDefault(ar.Type);
+			var size = info?.TraitInfoOrDefault<BuildingInfo>()?.Dimensions ?? new CVec(1, 1);
+			var cells = Enumerable.Range(0, size.X * size.Y).Select(i => location + new CVec(i % size.X, i / size.X));
+			if (info != null && info.HasTraitInfo<FrozenUnderFogInfo>() &&
+				cells.All(c => map.ProjectedCellsCovering(c.ToMPos(map)).Length == 0))
+			{
+				Console.WriteLine($"{location} skipped {ar.Type}: it projects outside the map");
+				return;
+			}
+
 			var node = new MiniYamlNode("Actor" + map.ActorDefinitions.Count, ar.Save());
 			map.ActorDefinitions = map.ActorDefinitions.Append(node).ToArray();
 		}
