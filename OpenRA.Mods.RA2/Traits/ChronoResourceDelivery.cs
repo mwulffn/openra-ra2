@@ -46,12 +46,13 @@ namespace OpenRA.Mods.RA2.Traits
 		public override object Create(ActorInitializer init) { return new ChronoResourceDelivery(this); }
 	}
 
-	public class ChronoResourceDelivery : INotifyHarvesterAction, ITick
+	public class ChronoResourceDelivery : INotifyHarvestAction, INotifyDockClientMoving, ITick
 	{
 		readonly ChronoResourceDeliveryInfo info;
 
 		CPos? destination;
 		Actor refinery;
+		IDockHost dockHost;
 		int ticksTillCheck;
 
 		// TODO: Rewrite this entire thing, possible to be a subclass of harvester
@@ -76,30 +77,33 @@ namespace OpenRA.Mods.RA2.Traits
 				ticksTillCheck--;
 		}
 
-		void INotifyHarvesterAction.MovingToResources(Actor self, CPos targetCell)
+		void INotifyHarvestAction.MovingToResources(Actor self, CPos targetCell)
 		{
 			Reset();
 		}
 
-		void INotifyHarvesterAction.MovingToRefinery(Actor self, Actor refineryActor)
+		void INotifyDockClientMoving.MovingToDock(Actor self, Actor hostActor, IDockHost host)
 		{
-			var iao = refineryActor.Trait<IAcceptResources>();
-			var targetCell = self.World.Map.CellContaining(iao.DeliveryPosition);
+			var targetCell = self.World.Map.CellContaining(host.DockPosition);
 			if (destination != null && destination.Value != targetCell)
 				ticksTillCheck = 0;
 
-			refinery = refineryActor;
+			refinery = hostActor;
+			dockHost = host;
 			destination = targetCell;
 		}
 
-		public void MovementCancelled(Actor self)
+		void INotifyHarvestAction.MovementCancelled(Actor self)
 		{
 			Reset();
 		}
 
-		public void Harvested(Actor self, string resourceType) { }
-		public void Docked() { }
-		public void Undocked() { }
+		void INotifyDockClientMoving.MovementCancelled(Actor self)
+		{
+			Reset();
+		}
+
+		void INotifyHarvestAction.Harvested(Actor self, string resourceType) { }
 
 		void TeleportIfPossible(Actor self)
 		{
@@ -112,6 +116,8 @@ namespace OpenRA.Mods.RA2.Traits
 
 			// HACK: Cancelling the current activity will call Reset, so cache the destination here
 			var dest = destination.Value;
+			var host = refinery;
+			var hostDock = dockHost;
 			var pos = self.Trait<IPositionable>();
 			if (pos.CanEnterCell(dest))
 			{
@@ -119,8 +125,8 @@ namespace OpenRA.Mods.RA2.Traits
 				self.QueueActivity(new ChronoResourceTeleport(dest, info));
 
 				// HACK: Manually queue a delivery and new find since we just cancelled all activities
-				self.QueueActivity(new DeliverResources(self, refinery));
-				self.QueueActivity(new FindAndDeliverResources(self, refinery));
+				self.QueueActivity(new MoveToDock(self, host, hostDock));
+				self.QueueActivity(new FindAndDeliverResources(self));
 				Reset();
 			}
 		}
@@ -130,6 +136,7 @@ namespace OpenRA.Mods.RA2.Traits
 			ticksTillCheck = 0;
 			destination = null;
 			refinery = null;
+			dockHost = null;
 		}
 	}
 }

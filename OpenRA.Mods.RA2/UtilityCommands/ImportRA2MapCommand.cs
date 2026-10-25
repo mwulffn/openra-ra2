@@ -393,6 +393,12 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 			Console.WriteLine(dest + " saved.");
 		}
 
+		static void AddActor(Map map, ActorReference ar)
+		{
+			var node = new MiniYamlNode("Actor" + map.ActorDefinitions.Count, ar.Save());
+			map.ActorDefinitions = map.ActorDefinitions.Append(node).ToArray();
+		}
+
 		static void UnpackLZO(byte[] src, byte[] dest)
 		{
 			var srcOffset = 0U;
@@ -544,7 +550,7 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 							ar.Add(new HealthInit(health));
 					}
 
-					map.ActorDefinitions.Add(new MiniYamlNode("Actor" + map.ActorDefinitions.Count, ar.Save()));
+					AddActor(map, ar);
 
 					continue;
 				}
@@ -582,7 +588,7 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 					new OwnerInit("Neutral")
 				};
 
-				map.ActorDefinitions.Add(new MiniYamlNode("Actor" + map.ActorDefinitions.Count, ar.Save()));
+				AddActor(map, ar);
 			}
 		}
 
@@ -611,7 +617,7 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 				if (!map.Rules.Actors.ContainsKey(name))
 					Console.WriteLine($"Ignoring unknown actor type: `{name}`");
 				else
-					map.ActorDefinitions.Add(new MiniYamlNode("Actor" + map.ActorDefinitions.Count, ar.Save()));
+					AddActor(map, ar);
 			}
 		}
 
@@ -665,7 +671,7 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 				if (!map.Rules.Actors.ContainsKey(name))
 					Console.WriteLine($"Ignoring unknown actor type: `{name}`");
 				else
-					map.ActorDefinitions.Add(new MiniYamlNode("Actor" + map.ActorDefinitions.Count, ar.Save()));
+					AddActor(map, ar);
 			}
 		}
 
