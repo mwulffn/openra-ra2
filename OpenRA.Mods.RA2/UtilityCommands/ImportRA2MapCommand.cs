@@ -715,10 +715,13 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 
 			if (lightingNodes.Count > 0)
 			{
-				map.RuleDefinitions.Nodes.Add(new MiniYamlNode("^BaseWorld", new MiniYaml("", new List<MiniYamlNode>()
+				map.RuleDefinitions = map.RuleDefinitions.WithNodesAppended(new[]
 				{
-					new("TerrainLighting", new MiniYaml("", lightingNodes))
-				})));
+					new MiniYamlNode("^BaseWorld", new MiniYaml("", new[]
+					{
+						new MiniYamlNode("TerrainLighting", new MiniYaml("", lightingNodes))
+					}))
+				});
 			}
 		}
 
@@ -755,10 +758,13 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 
 				if (lightingNodes.Count > 0)
 				{
-					map.RuleDefinitions.Nodes.Add(new MiniYamlNode(lamp, new MiniYaml("", new List<MiniYamlNode>()
+					map.RuleDefinitions = map.RuleDefinitions.WithNodesAppended(new[]
 					{
-						new("TerrainLightSource", new MiniYaml("", lightingNodes))
-					})));
+						new MiniYamlNode(lamp, new MiniYaml("", new[]
+						{
+							new MiniYamlNode("TerrainLightSource", new MiniYaml("", lightingNodes))
+						}))
+					});
 				}
 			}
 		}
