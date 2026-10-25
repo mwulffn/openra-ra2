@@ -842,6 +842,11 @@ srock01:
 			SNOW: srock01.sno
 			URBAN: srock01.urb
 
+rubble:
+	Inherits: srock01
+	idle:
+		ZRamp: 1
+
 srock02:
 	Inherits: ^Rock
 	idle:

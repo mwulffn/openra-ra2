@@ -104,6 +104,7 @@ Rules:
 	ra2|rules/animals.yaml
 	ra2|rules/allied-structures.yaml
 	ra2|rules/soviet-structures.yaml
+	ra2|rules/yuri-structures.yaml
 	ra2|rules/civilian-structures.yaml
 	ra2|rules/tech-structures.yaml
 	ra2|rules/allied-vehicles.yaml
@@ -132,6 +133,7 @@ Sequences:
 	ra2|sequences/tech-structures.yaml
 	ra2|sequences/trees.yaml
 	ra2|sequences/vehicles.yaml
+	ra2|sequences/yuri-structures.yaml
 
 ModelSequences:
 	ra2|sequences/voxels.yaml

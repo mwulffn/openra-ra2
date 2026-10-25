@@ -1,0 +1,6 @@
+gafwll:
+	Inherits: ^Wall
+	Defaults:
+		Filename: gafwll.shp
+	icon:
+		Filename: citwicon.shp

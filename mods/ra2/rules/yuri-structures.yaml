@@ -1,0 +1,4 @@
+gafwll:
+	Inherits: ^Wall
+	Tooltip:
+		Name: actor-gafwll.name

@@ -1212,6 +1212,21 @@
 		Categories: Rock
 	Interactable:
 
+^RubbleOverlay:
+	Inherits@1: ^SpriteActor
+	WithSpriteBody:
+	HiddenUnderShroud:
+		Type: CenterPosition
+	Immobile:
+		OccupiesSpace: false
+	RenderSprites:
+		Palette: terrain
+	EditorOnlyTooltip:
+		Name: meta-rubble-name
+	MapEditorData:
+		Categories: Rock
+	Interactable:
+
 ^Crate:
 	Inherits@1: ^SpriteActor
 	HiddenUnderFog:

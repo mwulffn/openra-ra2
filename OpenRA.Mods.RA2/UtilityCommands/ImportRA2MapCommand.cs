@@ -31,8 +31,8 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 
 		static readonly Dictionary<byte, string> OverlayToActor = new()
 		{
-			{ 0x01, "gasand" },
-			{ 0x03, "gawall" },
+			{ 0x00, "gasand" },
+			{ 0x02, "gawall" },
 			{ 0x18, "bridge1" },
 			{ 0x19, "bridge2" },
 			{ 0x1A, "nawall" },
@@ -151,9 +151,11 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 			// Others
 			{ 0xED, "bridgb1" }, // wooden high bridge
 			{ 0xEE, "bridgb2" },
+			{ 0xEF, "rubble" }, // left by a building with LeaveRubble
 			{ 0xF0, "cakrmw" }, // Kremlin walls
 			{ 0xF1, "cafncp" }, // prison camp fence
 			{ 0xF2, "crate" }, // wcrate (water crate)
+			{ 0xF3, "gafwll" }, // Yuri citadel wall
 		};
 
 		// The decks of high bridges: one overlay a cell along the bridge's middle
