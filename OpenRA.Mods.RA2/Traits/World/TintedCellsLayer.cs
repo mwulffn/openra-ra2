@@ -64,13 +64,13 @@ namespace OpenRA.Mods.RA2.Traits
 		// In the following, I think dictionary is better than array, as radioactivity has similar affecting area as smudges.
 
 		// Tiles without considering fog of war.
-		readonly Dictionary<CPos, TintedCell> tiles = new();
+		readonly Dictionary<CPos, TintedCell> tiles = [];
 
 		// What's visible to the player.
-		readonly Dictionary<CPos, TintedCell> renderedTiles = new();
+		readonly Dictionary<CPos, TintedCell> renderedTiles = [];
 
 		// Dirty, as in cache dirty bits.
-		readonly HashSet<CPos> dirty = new();
+		readonly HashSet<CPos> dirty = [];
 
 		// There's LERP function but the problem is, it is better to reuse these constants than computing
 		// related constants (in LERP) every time.

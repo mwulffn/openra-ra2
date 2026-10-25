@@ -365,7 +365,7 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 			if (!utility.ModData.DefaultTerrainInfo.TryGetValue(tileset, out var terrainInfo))
 				throw new InvalidDataException($"Unknown tileset {tileset}");
 
-			var map = new Map(Game.ModData, terrainInfo, size.Width, size.Height)
+			var map = new Map(Game.ModData, terrainInfo, size)
 			{
 				Title = basic.GetValue("Name", Path.GetFileNameWithoutExtension(filename)),
 				Author = "Westwood Studios",

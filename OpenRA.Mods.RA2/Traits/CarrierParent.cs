@@ -51,7 +51,7 @@ namespace OpenRA.Mods.RA2.Traits
 			public new CarrierChild SpawnerChild;
 		}
 
-		readonly Dictionary<string, Stack<int>> spawnContainTokens = new();
+		readonly Dictionary<string, Stack<int>> spawnContainTokens = [];
 		readonly CarrierParentInfo info;
 		readonly Stack<int> loadedTokens = new();
 

@@ -99,7 +99,7 @@ namespace OpenRA.Mods.RA2.Traits
 	{
 		readonly Actor self;
 
-		[Sync]
+		[VerifySync]
 		int remainingTime;
 
 		CPos? lastPos;
