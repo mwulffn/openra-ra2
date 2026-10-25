@@ -7,6 +7,8 @@
 	ActorMap:
 	ScreenMap:
 	TerrainGeometryOverlay:
+	VoxelCache:
+	ModelRenderer:
 	TerrainRenderer:
 	ResourceRenderer:
 		ResourceTypes:
