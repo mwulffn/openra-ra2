@@ -104,7 +104,7 @@ Player:
 	FrozenActorLayer:
 	DamageNotifier:
 		AllyNotification: OurAllyIsUnderAttack
-		ValidTargets: BaseBuilding
+		ValidTargets: Structure
 		Notification: BaseAttack
 	HarvesterAttackNotifier:
 		Notification: OreMinerUnderAttack
