@@ -3438,9 +3438,6 @@ Actors:
 	Actor1096: waypoint
 		Location: 140,-15
 		Owner: Neutral
-	Actor1097: srock03
-		Location: 46,-45
-		Owner: Neutral
 	Actor1098: srock05
 		Location: 89,-86
 		Owner: Neutral
