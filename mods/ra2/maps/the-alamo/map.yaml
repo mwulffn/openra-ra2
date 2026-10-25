@@ -1257,15 +1257,6 @@ Actors:
 	Actor371: waypoint
 		Location: 59,0
 		Owner: Neutral
-	Actor372: cafncp
-		Location: 27,-27
-		Owner: Neutral
-	Actor373: cafncp
-		Location: 27,-26
-		Owner: Neutral
-	Actor374: cafncp
-		Location: 35,-34
-		Owner: Neutral
 	Actor375: cafncp
 		Location: 27,-25
 		Owner: Neutral
