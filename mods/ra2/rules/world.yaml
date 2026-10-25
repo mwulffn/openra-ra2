@@ -251,6 +251,7 @@ World:
 				MaxDensity: 12
 	ResourceClaimLayer:
 	BridgeLayer:
+	MapSnapshot:
 	WarheadDebugOverlay:
 	CustomTerrainDebugOverlay:
 	TintedCellsLayer@radiation:

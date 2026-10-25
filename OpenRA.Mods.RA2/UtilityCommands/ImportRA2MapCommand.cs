@@ -149,6 +149,8 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 			{ 0xEC, "lobrdb_r_sw" }, // lobrdb4
 
 			// Others
+			{ 0xED, "bridgb1" }, // wooden high bridge
+			{ 0xEE, "bridgb2" },
 			{ 0xF0, "cakrmw" }, // Kremlin walls
 			{ 0xF1, "cafncp" }, // prison camp fence
 			{ 0xF2, "crate" }, // wcrate (water crate)
@@ -515,24 +517,21 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 					if (string.IsNullOrEmpty(actorType))
 						continue;
 
-					var shape = new Size(1, 1);
-					if (OverlayShapes.TryGetValue(overlayType, out shape))
+					var location = cell;
+					if (OverlayShapes.TryGetValue(overlayType, out var shape))
 					{
-						// Only import the top-left cell of multi-celled overlays
-						var aboveType = overlayPack[overlayIndex[cell - new CVec(1, 0)]];
-						if (shape.Width > 1 && aboveType != 0xFF)
-							if (OverlayToActor.TryGetValue(aboveType, out var a) && a == actorType)
-								continue;
+						// A low bridge piece is its overlay on three cells across the bridge, numbered 0 to 2 by the
+						// overlay data. Only the middle one is drawn (its art is frame 1; frames 0 and 2 are empty), so
+						// import the piece there and ignore cells left without a middle, which the original shows nothing for.
+						if (overlayDataPack[overlayIndex[cell]] != 1)
+							continue;
 
-						var leftType = overlayPack[overlayIndex[cell - new CVec(0, 1)]];
-						if (shape.Height > 1 && leftType != 0xFF)
-							if (OverlayToActor.TryGetValue(leftType, out var a) && a == actorType)
-								continue;
+						location -= new CVec(shape.Width / 2, shape.Height / 2);
 					}
 
 					var ar = new ActorReference(actorType)
 					{
-						new LocationInit(cell),
+						new LocationInit(location),
 						new OwnerInit("Neutral")
 					};
 
