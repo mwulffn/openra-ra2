@@ -451,6 +451,7 @@ dtruck:
 	HitShape:
 
 # [V3] of rulesmd.ini. It does not pick targets itself (CanPassiveAquire=no).
+# Its rocket is put up at PrimaryFireFLH -160,0,75 (leptons: x4 across, x724/104 up).
 v3:
 	Inherits: ^Vehicle
 	Inherits@MC: ^MindControllable
@@ -469,6 +470,7 @@ v3:
 		Speed: 60
 		TurnSpeed: 20
 		Locomotor: tracked
+		PauseOnCondition: chronodisable || launching
 	Health:
 		HP: 150
 	Armor:
@@ -477,7 +479,7 @@ v3:
 		Range: 7c0
 	Armament@primary:
 		Weapon: V3Launcher
-		LocalOffset: -819,0,384
+		LocalOffset: -640,0,522
 	AttackFrontal:
 		Voice: Attack
 		FacingTolerance: 0
@@ -485,11 +487,11 @@ v3:
 		Actors: v3rocket
 		RespawnTicks: 400
 		LoadedCondition: loaded
+		LaunchingCondition: launching
 	RenderSprites:
 	Selectable:
 		Bounds: 1544, 2509, 0, -289
 	RenderVoxels:
-		NormalsPalette: ts-normals
 	WithVoxelBody:
 		RequiresCondition: loaded
 	WithVoxelBody@EMPTY:
@@ -501,8 +503,8 @@ v3:
 		Prerequisites: warfactory.infiltrated
 	HitShape:
 
-# [V3ROCKET] of rulesmd.ini, flown with [General] V3Rocket*: speed 15% is 38 leptons a frame (x4), Altitude 768 and
-# BodyLength 256 leptons (x4), Acceleration 0.4 leptons a frame (x4), ROT 3 (x4).
+# [V3ROCKET] of rulesmd.ini, flown with [General] V3Rocket* in leptons: its Speed of 15 is 38 leptons a frame
+# (Speed * 256 / 100), its ROT of 3 a TurnSpeed of 12.
 v3rocket:
 	Interactable:
 	AppearsOnRadar:
@@ -527,10 +529,10 @@ v3rocket:
 		PitchInitial: 0.21
 		PitchFinal: 0.5
 		TurnRate: 0.05
-		Acceleration: 1.6
-		Speed: 152
-		CruiseAltitude: 3c0
-		BodyLength: 1c0
+		Acceleration: 0.4
+		Speed: 38
+		CruiseAltitude: 768
+		BodyLength: 256
 		LazyCurve: true
 		TurnSpeed: 12
 		Weapon: V3Rocket
@@ -550,4 +552,5 @@ v3rocket:
 		LightAmbientColor: -0.5,-0.5,-0.5
 		LightDiffuseColor: 1.4,1.4,1.4
 	WithVoxelBody:
+		ShowShadow: false
 	RenderSprites:

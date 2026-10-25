@@ -11,17 +11,20 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using OpenRA.GameRules;
-using OpenRA.Mods.Common;
+using OpenRA.Graphics;
 using OpenRA.Mods.Common.Effects;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.RA2.Traits
 {
 	[Desc("Flies a missile launched by a MissileSpawnerParent like the original game's rocket locomotor:",
 		"a pause and a tilt on the launcher, a climb to the cruise altitude, the cruise and a dive onto the target.",
-		"The rules mirror the [General] V3Rocket* and DMisl* values of the original game, converted from leptons (x4).")]
+		"Its flight is worked out in the original's leptons, with the [General] V3Rocket* and DMisl* values unconverted:",
+		"256 leptons are a cell (1024 world units across) and 104 a level of height (724 world units up).")]
 	public class RocketInfo : TraitInfo, IPositionableInfo, IFacingInfo, IRulesetLoaded
 	{
 		[Desc("Ticks the missile waits on the launcher before it tilts (PauseFrames).")]
@@ -39,20 +42,25 @@ namespace OpenRA.Mods.RA2.Traits
 		[Desc("How fast the pitch changes while cruising level and diving, in radians per tick (TurnRate).")]
 		public readonly float TurnRate = 0.05f;
 
-		[Desc("Speed gained each tick while climbing and cruising, in world units (Acceleration x4).")]
-		public readonly float Acceleration = 1.6f;
+		[Desc("Speed gained each tick while climbing and cruising, in leptons (Acceleration).")]
+		public readonly float Acceleration = 0.4f;
 
-		[Desc("Top speed, in world units per tick (the missile type's Speed, converted).")]
-		public readonly int Speed = 152;
+		[Desc("Top speed, in leptons per tick: the missile type's Speed as the original converts it, Speed * 256 / 100.")]
+		public readonly int Speed = 38;
 
-		[Desc("Height above the ground at which the climb ends (Altitude).")]
-		public readonly WDist CruiseAltitude = new(3072);
+		[Desc("Height above the ground at which the climb ends, in leptons (Altitude).")]
+		public readonly int CruiseAltitude = 768;
 
-		[Desc("Distance from the missile's centre to its nose, where it explodes (BodyLength).")]
-		public readonly WDist BodyLength = new(1024);
+		[Desc("Distance from the missile's centre to its nose, where it explodes, in leptons (BodyLength).")]
+		public readonly int BodyLength = 256;
 
 		[Desc("Fly a big, lazy curve onto the target instead of levelling off and diving (LazyCurve).")]
 		public readonly bool LazyCurve = false;
+
+		[Desc("Draw the missile this much nearer the camera, without moving it on the screen, while it waits and tilts",
+			"on the launcher. The original draws it over the launcher; here the launcher's model would otherwise hide it.",
+			"Once it flies, the offset shrinks by half the distance it has gone from the launcher.")]
+		public readonly WDist LauncherDepthOffset = new(512);
 
 		[Desc("How fast the heading turns toward the target while cruising (the missile type's ROT).")]
 		public readonly WAngle TurnSpeed = new(12);
@@ -116,14 +124,20 @@ namespace OpenRA.Mods.RA2.Traits
 
 	// See docs/original/aircraft.md ("Missiles: the spawn manager and the rocket locomotor")
 	// and crates/ra2-sim/src/movement/rocket.rs of the ra2-engine port for the original's behaviour.
-	public class Rocket : ISync, IPositionable, IFacing, ITick, INotifyAddedToWorld, INotifyRemovedFromWorld, INotifyKilled
+	public class Rocket : ISync, IPositionable, IFacing, ITick, INotifyAddedToWorld, INotifyRemovedFromWorld, INotifyKilled,
+		IRenderModifier
 	{
 		enum State { Waiting, Pause, Tilt, Climb, Cruise, Dive }
 
-		// Pitches are kept in thousandths of a WAngle unit and speeds in thousandths of a world unit,
+		// Pitches are kept in thousandths of a WAngle unit and speeds in thousandths of a lepton,
 		// so that the original's fractional rates survive the integer arithmetic.
 		const int Fraction = 1000;
 		const int QuarterTurn = 256 * Fraction;
+
+		// A lepton is 4 world units across, and a level of height (104 leptons) is 724 world units.
+		const int LeptonsAcross = 4;
+		const int WorldPerLevel = 724;
+		const int LeptonsPerLevel = 104;
 
 		readonly Actor self;
 		readonly RocketInfo info;
@@ -150,7 +164,12 @@ namespace OpenRA.Mods.RA2.Traits
 		[VerifySync]
 		int speed;
 
-		WPos destination;
+		// Where it is and where it is going, in leptons.
+		[VerifySync]
+		WVec position;
+
+		WVec destination;
+		WPos launchPosition;
 		int timer;
 		int timerLength;
 		int trailTicks;
@@ -187,7 +206,8 @@ namespace OpenRA.Mods.RA2.Traits
 
 			this.launcher = launcher;
 			this.elite = elite;
-			destination = target.CenterPosition;
+			destination = ToLeptons(target.CenterPosition);
+			launchPosition = CenterPosition;
 			pitch = pitchInitial;
 			StartTimer(info.PauseTicks > 0 ? State.Pause : State.Tilt, info.PauseTicks > 0 ? info.PauseTicks : info.TiltTicks);
 		}
@@ -204,7 +224,8 @@ namespace OpenRA.Mods.RA2.Traits
 			if (exploded || state == State.Waiting)
 				return;
 
-			var height = self.World.Map.DistanceAboveTerrain(CenterPosition).Length;
+			var groundZ = CenterPosition.Z - self.World.Map.DistanceAboveTerrain(CenterPosition).Length;
+			var height = position.Z - groundZ * LeptonsPerLevel / WorldPerLevel;
 
 			// The heading turns toward the target while cruising, but the move this tick goes the way it faced before.
 			var heading = Facing;
@@ -234,10 +255,10 @@ namespace OpenRA.Mods.RA2.Traits
 
 				case State.Climb:
 					SpeedUp();
-					if (height >= info.CruiseAltitude.Length)
+					if (height >= info.CruiseAltitude)
 					{
 						state = State.Cruise;
-						firstDistance = (destination - CenterPosition).HorizontalLength;
+						firstDistance = (destination - position).HorizontalLength;
 					}
 
 					break;
@@ -256,7 +277,7 @@ namespace OpenRA.Mods.RA2.Traits
 							return;
 
 						// A blend of the final pitch and the slope down to the target, the more the nearer.
-						var distance = (destination - CenterPosition).HorizontalLength;
+						var distance = (destination - position).HorizontalLength;
 						var down = (long)SlopeToDestination();
 						pitch = (int)((down * (firstDistance - distance) + (long)pitchFinal * distance) / firstDistance);
 					}
@@ -266,13 +287,13 @@ namespace OpenRA.Mods.RA2.Traits
 							pitch = Math.Max(0, pitch - turnRate);
 
 						// It dives once it is no further across the ground from the target than it is above it.
-						var offset = CenterPosition - destination;
+						var offset = position - destination;
 						if (offset.HorizontalLength <= offset.Z)
 							state = State.Dive;
 					}
 
-					var desired = (destination - CenterPosition).Yaw;
-					Facing = Util.TickFacing(Facing, desired, info.TurnSpeed);
+					var desired = (destination - position).Yaw;
+					Facing = Common.Util.TickFacing(Facing, desired, info.TurnSpeed);
 					break;
 
 				case State.Dive:
@@ -292,7 +313,25 @@ namespace OpenRA.Mods.RA2.Traits
 
 			// Each tick it moves its speed, cut to a whole number, along its pitch and heading.
 			if (speed > 0)
-				SetPosition(self, CenterPosition + Step(speed / Fraction, heading));
+				MoveTo(self, position + Step(speed / Fraction, heading));
+		}
+
+		static WVec ToLeptons(WPos pos)
+		{
+			return new WVec(pos.X / LeptonsAcross, pos.Y / LeptonsAcross, pos.Z * LeptonsPerLevel / WorldPerLevel);
+		}
+
+		static WPos ToWorld(WVec leptons)
+		{
+			return new WPos(leptons.X * LeptonsAcross, leptons.Y * LeptonsAcross, leptons.Z * WorldPerLevel / LeptonsPerLevel);
+		}
+
+		void MoveTo(Actor self, WVec leptons)
+		{
+			position = leptons;
+			CenterPosition = ToWorld(leptons);
+			if (self.IsInWorld)
+				self.World.UpdateMaps(self, this);
 		}
 
 		void SpeedUp()
@@ -311,7 +350,7 @@ namespace OpenRA.Mods.RA2.Traits
 		/// <summary>The slope down from the missile to the target, as a pitch; a quarter turn down when right above it.</summary>
 		int SlopeToDestination()
 		{
-			var delta = destination - CenterPosition;
+			var delta = destination - position;
 			var across = delta.HorizontalLength;
 			if (across == 0)
 				return -QuarterTurn;
@@ -323,7 +362,7 @@ namespace OpenRA.Mods.RA2.Traits
 		/// <summary>It explodes once its nose comes down to the target's height, or it reaches the ground.</summary>
 		bool NoseDown(Actor self, int height)
 		{
-			var nose = CenterPosition.Z + info.BodyLength.Length * new WAngle(pitch / Fraction).Sin() / 1024;
+			var nose = position.Z + info.BodyLength * new WAngle(pitch / Fraction).Sin() / 1024;
 			if (nose > destination.Z && height > 0)
 				return false;
 
@@ -343,7 +382,7 @@ namespace OpenRA.Mods.RA2.Traits
 				return;
 
 			exploded = true;
-			var nose = CenterPosition + Step(info.BodyLength.Length, Facing);
+			var nose = ToWorld(position + Step(info.BodyLength, Facing));
 			var weapon = elite && info.EliteWeaponInfo != null ? info.EliteWeaponInfo : info.WeaponInfo;
 			var source = launcher != null && !launcher.IsDead ? launcher : self;
 			weapon.Impact(Target.FromPos(nose), new WarheadArgs
@@ -372,6 +411,29 @@ namespace OpenRA.Mods.RA2.Traits
 			self.World.AddFrameEndTask(w => w.Add(new SpriteEffect(pos, w, info.EffectImage, sequence, info.EffectPalette)));
 		}
 
+		// Depth follows the world's Y and the screen's height Y less Z: moving both by the same distance brings the
+		// missile nearer the camera without moving it on the screen.
+		IEnumerable<IRenderable> IRenderModifier.ModifyRender(Actor self, WorldRenderer wr, IEnumerable<IRenderable> r)
+		{
+			if (state == State.Waiting || info.LauncherDepthOffset.Length == 0)
+				return r;
+
+			var depth = info.LauncherDepthOffset.Length;
+			if (state > State.Tilt)
+				depth -= (CenterPosition - launchPosition).Length / 2;
+
+			if (depth <= 0)
+				return r;
+
+			var offset = new WVec(0, depth, depth);
+			return r.Select(renderable => renderable.OffsetBy(offset));
+		}
+
+		IEnumerable<Rectangle> IRenderModifier.ModifyScreenBounds(Actor self, WorldRenderer wr, IEnumerable<Rectangle> r)
+		{
+			return r;
+		}
+
 		public bool CanExistInCell(CPos location) { return true; }
 		public bool IsLeavingCell(CPos location, SubCell subCell = SubCell.Any) { return false; }
 		public bool CanEnterCell(CPos location, Actor ignoreActor = null, BlockedByActor check = BlockedByActor.All) { return true; }
@@ -390,6 +452,7 @@ namespace OpenRA.Mods.RA2.Traits
 
 		public void SetPosition(Actor self, WPos pos)
 		{
+			position = ToLeptons(pos);
 			CenterPosition = pos;
 			if (self.IsInWorld)
 				self.World.UpdateMaps(self, this);

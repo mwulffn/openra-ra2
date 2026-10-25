@@ -252,7 +252,8 @@ sqd:
 		Action: Kill
 
 # [DRED] of rulesmd.ini. It does not pick targets itself (CanPassiveAquire=no) and fires in any direction (OmniFire).
-# Its missiles leave from PrimaryFireFLH 30,43,92, the second as far to the other side.
+# Its missiles leave from PrimaryFireFLH 30,43,92 (leptons: x4 across, x724/104 up), the second as far to the other side.
+# The first is put up on the left (oracle, sov02t: at facing 160 the first missile is at +9,+51 leptons, the second at -51,-9).
 dred:
 	Inherits: ^Ship
 	Inherits@MC: ^MindControllable
@@ -276,11 +277,12 @@ dred:
 	Mobile:
 		TurnSpeed: 4
 		Speed: 60
+		PauseOnCondition: chronodisable || launching
 	RevealsShroud:
 		Range: 7c0
 	Armament@primary:
 		Weapon: DredLauncher
-		LocalOffset: 154,220,471, 154,-220,471
+		LocalOffset: 120,-172,640, 120,172,640
 	AttackFrontal:
 		Voice: Attack
 		FacingTolerance: 512
@@ -288,6 +290,7 @@ dred:
 		Actors: dmisl, dmisl
 		RespawnTicks: 80
 		LoadedCondition: loaded
+		LaunchingCondition: launching
 	FireWarheadsOnDeath:
 		Weapon: UnitExplode
 		EmptyWeapon: UnitExplode
@@ -301,8 +304,8 @@ dred:
 	RenderSprites:
 	HitShape:
 
-# [DMISL] of rulesmd.ini, flown with [General] DMisl*: speed 18% is 46 leptons a frame (x4), Altitude 768 and
-# BodyLength 128 leptons (x4), Acceleration 0.8 leptons a frame (x4), ROT 4 (x4).
+# [DMISL] of rulesmd.ini, flown with [General] DMisl* in leptons: its Speed of 18 is 46 leptons a frame
+# (Speed * 256 / 100), its ROT of 4 a TurnSpeed of 16.
 dmisl:
 	Inherits: v3rocket
 	Tooltip:
@@ -313,11 +316,13 @@ dmisl:
 		PitchInitial: 0
 		PitchFinal: 0.5
 		TurnRate: 0.08
-		Acceleration: 3.2
-		Speed: 184
-		CruiseAltitude: 3c0
-		BodyLength: 512
+		Acceleration: 0.8
+		Speed: 46
+		CruiseAltitude: 768
+		BodyLength: 128
 		LazyCurve: false
+		# OpenRA draws each model at one depth, pushed forward by its own extent; the Dreadnought is 133 voxels long.
+		LauncherDepthOffset: 2c0
 		TurnSpeed: 16
 		Weapon: DredMissile
 		EliteWeapon: DredMissileE
