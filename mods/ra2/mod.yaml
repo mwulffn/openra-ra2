@@ -190,7 +190,7 @@ TileSets:
 MapGrid:
 	Type: RectangularIsometric
 	EnableDepthBuffer: true
-	SubCellsOffsets: 0,0,0, -256,128,0, 0,-128,0, 256,128,0
+	SubCellOffsets: 0,0,0, -256,128,0, 0,-128,0, 256,128,0
 	DefaultSubCell: 2
 	MaximumTerrainHeight: 16
 
