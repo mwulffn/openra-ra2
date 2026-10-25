@@ -43,6 +43,40 @@ FileSystem: ContentInstallerFileSystem
 		~urb.mix
 		~urban.mix
 		~audio.bag
+		# Yuri's Revenge, mounted after Red Alert 2 so that its files take precedence.
+		content|ra2md.mix
+		content|langmd.mix
+		# The packages below are nested inside ra2md.mix / langmd.mix or are optional extras.
+		~cachemd.mix
+		~cameomd.mix
+		~conqmd.mix
+		~genermd.mix
+		~isogenmd.mix
+		~isosnomd.mix
+		~isotemmd.mix
+		~isourbmd.mix
+		~isodes.mix
+		~isodesmd.mix
+		~isolun.mix
+		~isolunmd.mix
+		~isoubn.mix
+		~isoubnmd.mix
+		~des.mix
+		~desert.mix
+		~lun.mix
+		~lunar.mix
+		~ubn.mix
+		~urbann.mix
+		~loadmd.mix
+		~localmd.mix
+		~ntrlmd.mix
+		~sidec02md.mix
+		~snowmd.mix
+		~content|thememd.mix
+		# Yuri's Revenge contains its own audio.bag; Red Alert 2's one stays mounted for the few sounds it lacks.
+		~audiomd.mix: audiomd
+		~audiomd|audio.bag
+		~content|expandmd01.mix
 		# Below are mod-provided (system) packages that need to be loaded after the content packages so they can override content assets.
 		ra2|bits
 		ra2|bits/cameos

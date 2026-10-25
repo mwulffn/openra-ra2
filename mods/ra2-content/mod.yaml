@@ -81,6 +81,17 @@ ModContent:
 			Identifier: music
 			TestFiles: ^SupportDir|Content/ra2/theme.mix
 			Sources: ra2, origin, tfd
+		ContentPackage@yr:
+			Title: modcontent-package-yrfiles
+			Identifier: yr
+			TestFiles: ^SupportDir|Content/ra2/ra2md.mix, ^SupportDir|Content/ra2/langmd.mix
+			Sources: origin
+			Required: true
+		ContentPackage@yr-music:
+			Title: modcontent-package-yrmusic
+			Identifier: yr-music
+			TestFiles: ^SupportDir|Content/ra2/thememd.mix
+			Sources: origin
 	Sources:
 		ra2content|installer/ra2.yaml
 		ra2content|installer/origin.yaml

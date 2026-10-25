@@ -19,3 +19,17 @@ origin: C&C The Ultimate Collection (Origin version, English)
 			Actions:
 				Copy: .
 					^SupportDir|Content/ra2/theme.mix: theme.mix
+		# Yuri's Revenge files (installed into the same directory):
+		ContentPackage@yr:
+			Name: yr
+			Actions:
+				Copy: .
+					^SupportDir|Content/ra2/ra2md.mix: ra2md.mix
+					^SupportDir|Content/ra2/langmd.mix: langmd.mix
+					^SupportDir|Content/ra2/expandmd01.mix: expandmd01.mix
+		# Yuri's Revenge music (optional):
+		ContentPackage@yr-music:
+			Name: yr-music
+			Actions:
+				Copy: .
+					^SupportDir|Content/ra2/thememd.mix: thememd.mix
