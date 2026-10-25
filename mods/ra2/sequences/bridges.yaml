@@ -375,7 +375,7 @@ bridge1:
 		# Disabled to avoid glitches until shadow rendering is fixed
 		# ShadowStart: 18
 		ZRamp: 1
-		Offset: 0, -16, 12
+		Offset: 0, -16, 62
 
 bridge2:
 	idle:
@@ -387,7 +387,7 @@ bridge2:
 		# Disabled to avoid glitches until shadow rendering is fixed
 		# ShadowStart: 27
 		ZRamp: 1
-		Offset: 0, -31, 12
+		Offset: 0, -31, 62
 
 bridgb1:
 	idle:
@@ -398,7 +398,7 @@ bridgb1:
 		# Disabled to avoid glitches until shadow rendering is fixed
 		# ShadowStart: 18
 		ZRamp: 1
-		Offset: 0, -16, 12
+		Offset: 0, -16, 62
 
 bridgb2:
 	idle:
@@ -410,4 +410,4 @@ bridgb2:
 		# Disabled to avoid glitches until shadow rendering is fixed
 		# ShadowStart: 27
 		ZRamp: 1
-		Offset: 0, -31, 12
+		Offset: 0, -31, 62
