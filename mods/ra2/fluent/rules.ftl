@@ -635,6 +635,15 @@ actor-yuripr =
     .name = Yuri Prime
 
 ## soviet-naval.yaml
+actor-dred =
+    .name = Dreadnought
+    .description =
+    Long-range missile battleship.
+    Its missiles can be shot down.
+      Strong vs Buildings, Ground units
+      Weak vs Aircraft, Submarines
+actor-dmisl-name = Dreadnought Missile
+
 actor-sapc =
     .description = 
     General-purpose naval transport.
@@ -762,6 +771,15 @@ actor-nalasr =
     .name = Sentry Gun
 
 ## soviet-vehicles.yaml
+actor-v3 =
+    .name = V3 Launcher
+    .description =
+    Long-range rocket artillery.
+    Its rockets can be shot down.
+      Strong vs Buildings, Infantry
+      Weak vs Vehicles, Aircraft
+actor-v3rocket-name = V3 Rocket
+
 actor-smcv =
     .description = Deploys into a Construction Yard.
     .name = Mobile Construction Vehicle

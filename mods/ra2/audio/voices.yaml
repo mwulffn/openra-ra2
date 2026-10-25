@@ -270,6 +270,13 @@ DemolitionTruckVoice:
 		Attack: vdemata, vdematb, vdematc, vdematd, vdemate
 		Die: vdemdiea
 
+V3Voice:
+	DefaultVariant: .wav
+	Voices:
+		Select: vv3lsea, vv3lseb, vv3lsec, vv3lsed, vv3lsee
+		Move: vv3lmob, vv3lmoc, vv3lmod, vv3lmoe
+		Attack: vv3lata, vv3latb, vv3latc, vv3latd, vv3late
+
 TerrorDroneVoice:
 	DefaultVariant: .wav
 	Voices:

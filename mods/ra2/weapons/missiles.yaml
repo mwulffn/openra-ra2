@@ -269,3 +269,92 @@ ASWBombE:
 		ContrailStartColor: EA0000
 	Warhead@1Dam: SpreadDamage
 		Damage: 80
+
+# V3 Launcher and Dreadnought: the armament only launches a stored missile (MissileSpawnerParent).
+# The original's spawner weapon fires nothing; its spawn manager takes its turn every tenth frame.
+V3Launcher:
+	ReloadDelay: 10
+	Range: 18c0
+	MinRange: 5c0
+	ValidTargets: Ground, Water
+	Projectile: InstantHit
+	Warhead@1Dam: TargetDamage
+		ValidTargets: Ground, Water
+
+DredLauncher:
+	Inherits: V3Launcher
+	Range: 25c0
+	MinRange: 8c0
+	Burst: 2
+	BurstDelays: 20
+
+# The missiles' warheads (V3WH, V3EWH, DMISLWH, DMISLEWH) with the damage of [General] V3Rocket* and DMisl*.
+# The original's damage falls linearly to PercentAtMax at CellSpread: Spread is CellSpread, Falloff 100 to PercentAtMax.
+# Its explosion is AnimList's entry for the damage, one for every 25 points (the last for these).
+V3Rocket:
+	ValidTargets: Ground, Water, Air
+	Warhead@1Dam: SpreadDamage
+		Damage: 200
+		Spread: 1c0
+		Falloff: 100, 25
+		Versus:
+			None: 100
+			Flak: 90
+			Plate: 80
+			Light: 90
+			Medium: 70
+			Heavy: 70
+			Wood: 100
+			Steel: 100
+			Concrete: 50
+			Drone: 80
+			Rocket: 0
+		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
+		ValidTargets: Ground, Water, Air
+	Warhead@2Eff: CreateEffect
+		Explosions: large_twlt
+		ValidTargets: Ground, Air
+	Warhead@3EffWater: CreateEffect
+		Explosions: huge_watersplash
+		ImpactSounds: gexpwasa.wav
+		ValidTargets: Water
+
+V3RocketE:
+	Inherits: V3Rocket
+	Warhead@1Dam: SpreadDamage
+		Damage: 400
+		Spread: 2c0
+		Falloff: 100, 50
+		Versus:
+			Light: 80
+			Steel: 75
+	Warhead@2Eff: CreateEffect
+		Explosions: terrorist_explosion
+
+DredMissile:
+	Inherits: V3Rocket
+	Warhead@1Dam: SpreadDamage
+		Damage: 300
+		Spread: 1c512
+		Falloff: 100, 25
+		Versus:
+			None: 100
+			Flak: 90
+			Plate: 80
+			Light: 100
+			Medium: 80
+			Heavy: 80
+			Wood: 85
+			Steel: 65
+			Concrete: 28
+			Drone: 80
+			Rocket: 0
+
+DredMissileE:
+	Inherits: DredMissile
+	Warhead@1Dam: SpreadDamage
+		Damage: 600
+		Spread: 3c0
+		Falloff: 100, 50
+	Warhead@2Eff: CreateEffect
+		Explosions: terrorist_explosion

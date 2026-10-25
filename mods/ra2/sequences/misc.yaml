@@ -892,3 +892,15 @@ flameguy:
 		Start: 44
 		Facings: 1
 		Length: 104
+
+# V3TAKOFF and V3TRAIL: the original's Rate is 900 / Rate frames per image (4 and 2), 40 ms each.
+v3effects:
+	takeoff:
+		Filename: v3takoff.shp
+		Length: *
+		Tick: 160
+		Alpha: 0.5
+	trail:
+		Filename: v3trail.shp
+		Length: *
+		Tick: 80
