@@ -474,8 +474,6 @@
 	Building:
 		Footprint: x
 		Dimensions: 1, 1
-	Tooltip:
-		Name: meta-flag-name
 	Health:
 		HP: 20
 	Armor:
@@ -1186,8 +1184,6 @@
 
 ^TelephonePole:
 	Inherits: ^Tree
-	Tooltip:
-		Name: meta-telephonepole-name
 	Health:
 		HP: 20
 	Armor:

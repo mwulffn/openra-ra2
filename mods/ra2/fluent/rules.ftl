@@ -16,8 +16,7 @@ options-starting-units =
     .medium = Medium
     .heavy = Heavy
 
-options-difficulty =
-    .normal = Normal
+resource-minerals = Valuable Minerals
 
 ## ai.yaml
 actor-player-modularbot-testai-name = Test AI
@@ -538,7 +537,6 @@ actor-pres-name = President
 
 ## defaults.yaml
 meta-civbuilding-name = Civilian Building
-meta-flag-name = Flag
 
 meta-civilianinfantry =
     .name = Civilian
@@ -552,7 +550,6 @@ meta-tree-name = Tree
 meta-streetsign-name = Street Sign
 meta-trafficlight-name = Traffic Light
 meta-streetlight-name = Street Light
-meta-telephonepole-name = Utility Pole
 meta-rock-name = Rock
 
 meta-crate =
