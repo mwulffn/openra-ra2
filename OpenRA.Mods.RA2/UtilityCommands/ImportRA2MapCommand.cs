@@ -386,6 +386,12 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 
 			var fullSize = new int2(iniSize[2], iniSize[3]);
 			ReadTiles(map, file, fullSize);
+
+			// Some maps' bounds reach below the last row their cells project to (dustbowl, trn01t), which leaves
+			// no valid boundary to save the preview with. Bring the bottom up until it is valid, as the engine's
+			// importer for Tiberian Sun does.
+			while (map.GetCellSpaceBounds() is var (top, bottom) && (top == int.MaxValue || bottom == int.MinValue))
+				map.SetBounds(new PPos(map.Bounds.Left, map.Bounds.Top), new PPos(map.Bounds.Right - 1, map.Bounds.Bottom - 2));
 			ReadActors(map, file, "Structures", fullSize);
 			ReadActors(map, file, "Units", fullSize);
 			ReadActors(map, file, "Infantry", fullSize);
