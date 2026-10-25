@@ -156,6 +156,12 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 			{ 0xF1, "cafncp" }, // prison camp fence
 			{ 0xF2, "crate" }, // wcrate (water crate)
 			{ 0xF3, "gafwll" }, // Yuri citadel wall
+			{ 0xF4, "lunrk1" },
+			{ 0xF5, "lunrk2" },
+			{ 0xF6, "lunrk3" },
+			{ 0xF7, "lunrk4" },
+			{ 0xF8, "lunrk5" },
+			{ 0xF9, "lunrk6" },
 		};
 
 		// The decks of high bridges: one overlay a cell along the bridge's middle
@@ -494,8 +500,14 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 
 				if (map.Tiles.Contains(cell))
 				{
-					if (!terrainInfo.Templates.ContainsKey(tilenum))
+					// Tiles the tileset does not have become clear ground
+					if (!terrainInfo.Templates.TryGetValue(tilenum, out var template) || !template.Contains(subtile) || template[subtile] == null)
+					{
+						if (tilenum != ushort.MaxValue)
+							Console.WriteLine($"{cell} unknown tile {tilenum}.{subtile}");
+
 						tilenum = subtile = 0;
+					}
 
 					map.Tiles[cell] = new TerrainTile(tilenum, subtile);
 					map.Height[cell] = z;
@@ -624,7 +636,15 @@ namespace OpenRA.Mods.RA2.UtilityCommands
 				while (decks.TryGetValue(cell + along * length, out o) && o == orientation)
 					length++;
 
+				// The engine's layer covers every cell of the bridge's footprint, which must all be on the map
 				var end = cell - along;
+				var footprint = Enumerable.Range(0, length + 2).SelectMany(i => new[] { -1, 0, 1 }.Select(j => end + along * i + across * j));
+				if (!footprint.All(map.Height.Contains))
+				{
+					Console.WriteLine($"{cell} skipped elevated bridge: it reaches past the map's edge");
+					continue;
+				}
+
 				nodes.Add(new MiniYamlNode($"ElevatedBridgePlaceholder@{nodes.Count + 1}", new MiniYaml("",
 				[
 					new MiniYamlNode("Location", FieldSaver.FormatValue(end - across)),

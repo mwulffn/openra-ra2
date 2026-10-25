@@ -94,6 +94,9 @@ crate:
 			TEMPERATE: crate.tem
 			SNOW: crate.sno
 			URBAN: crate.urb
+			NEWURBAN: crate.ubn
+			DESERT: crate.des
+			LUNAR: crate.lun
 		Offset: 0, -12, 12
 		ShadowStart: 1
 	idle:
@@ -103,6 +106,9 @@ crate:
 			TEMPERATE: wcrate.tem
 			SNOW: wcrate.sno
 			URBAN: wcrate.urb
+			NEWURBAN: wcrate.ubn
+			DESERT: wcrate.des
+			LUNAR: wcrate.lun
 
 rank:
 	veteran:
@@ -448,163 +454,259 @@ resources:
 			TEMPERATE: tib01.tem
 			SNOW: tib01.sno
 			URBAN: tib01.urb
+			NEWURBAN: tib01.ubn
+			DESERT: tib01.des
+			LUNAR: tib01.lun
 	tib02:
 		TilesetFilenames:
 			TEMPERATE: tib02.tem
 			SNOW: tib02.sno
 			URBAN: tib02.urb
+			NEWURBAN: tib02.ubn
+			DESERT: tib02.des
+			LUNAR: tib02.lun
 		#Frames: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0
 	tib03:
 		TilesetFilenames:
 			TEMPERATE: tib03.tem
 			SNOW: tib03.sno
 			URBAN: tib03.urb
+			NEWURBAN: tib03.ubn
+			DESERT: tib03.des
+			LUNAR: tib03.lun
 	tib04:
 		TilesetFilenames:
 			TEMPERATE: tib04.tem
 			SNOW: tib04.sno
 			URBAN: tib04.urb
+			NEWURBAN: tib04.ubn
+			DESERT: tib04.des
+			LUNAR: tib04.lun
 	tib05:
 		TilesetFilenames:
 			TEMPERATE: tib05.tem
 			SNOW: tib05.sno
 			URBAN: tib05.urb
+			NEWURBAN: tib05.ubn
+			DESERT: tib05.des
+			LUNAR: tib05.lun
 	tib06:
 		TilesetFilenames:
 			TEMPERATE: tib06.tem
 			SNOW: tib06.sno
 			URBAN: tib06.urb
+			NEWURBAN: tib06.ubn
+			DESERT: tib06.des
+			LUNAR: tib06.lun
 	tib07:
 		TilesetFilenames:
 			TEMPERATE: tib07.tem
 			SNOW: tib07.sno
 			URBAN: tib07.urb
+			NEWURBAN: tib07.ubn
+			DESERT: tib07.des
+			LUNAR: tib07.lun
 	tib08:
 		TilesetFilenames:
 			TEMPERATE: tib08.tem
 			SNOW: tib08.sno
 			URBAN: tib08.urb
+			NEWURBAN: tib08.ubn
+			DESERT: tib08.des
+			LUNAR: tib08.lun
 	tib09:
 		TilesetFilenames:
 			TEMPERATE: tib09.tem
 			SNOW: tib09.sno
 			URBAN: tib09.urb
+			NEWURBAN: tib09.ubn
+			DESERT: tib09.des
+			LUNAR: tib09.lun
 	tib10:
 		TilesetFilenames:
 			TEMPERATE: tib10.tem
 			SNOW: tib10.sno
 			URBAN: tib10.urb
+			NEWURBAN: tib10.ubn
+			DESERT: tib10.des
+			LUNAR: tib10.lun
 	tib11:
 		TilesetFilenames:
 			TEMPERATE: tib11.tem
 			SNOW: tib11.sno
 			URBAN: tib11.urb
+			NEWURBAN: tib11.ubn
+			DESERT: tib11.des
+			LUNAR: tib11.lun
 	tib12:
 		TilesetFilenames:
 			TEMPERATE: tib12.tem
 			SNOW: tib12.sno
 			URBAN: tib12.urb
+			NEWURBAN: tib12.ubn
+			DESERT: tib12.des
+			LUNAR: tib12.lun
 	tib13:
 		TilesetFilenames:
 			TEMPERATE: tib13.tem
 			SNOW: tib13.sno
 			URBAN: tib13.urb
+			NEWURBAN: tib13.ubn
+			DESERT: tib13.des
+			LUNAR: tib13.lun
 	tib14:
 		TilesetFilenames:
 			TEMPERATE: tib14.tem
 			SNOW: tib14.sno
 			URBAN: tib14.urb
+			NEWURBAN: tib14.ubn
+			DESERT: tib14.des
+			LUNAR: tib14.lun
 		#Frames: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 0
 	tib15:
 		TilesetFilenames:
 			TEMPERATE: tib15.tem
 			SNOW: tib15.sno
 			URBAN: tib15.urb
+			NEWURBAN: tib15.ubn
+			DESERT: tib15.des
+			LUNAR: tib15.lun
 	tib16:
 		TilesetFilenames:
 			TEMPERATE: tib16.tem
 			SNOW: tib16.sno
 			URBAN: tib16.urb
+			NEWURBAN: tib16.ubn
+			DESERT: tib16.des
+			LUNAR: tib16.lun
 	tib17:
 		TilesetFilenames:
 			TEMPERATE: tib17.tem
 			SNOW: tib17.sno
 			URBAN: tib17.urb
+			NEWURBAN: tib17.ubn
+			DESERT: tib17.des
+			LUNAR: tib17.lun
 	tib18:
 		TilesetFilenames:
 			TEMPERATE: tib18.tem
 			SNOW: tib18.sno
 			URBAN: tib18.urb
+			NEWURBAN: tib18.ubn
+			DESERT: tib18.des
+			LUNAR: tib18.lun
 	tib19:
 		TilesetFilenames:
 			TEMPERATE: tib19.tem
 			SNOW: tib19.sno
 			URBAN: tib19.urb
+			NEWURBAN: tib19.ubn
+			DESERT: tib19.des
+			LUNAR: tib19.lun
 	tib20:
 		TilesetFilenames:
 			TEMPERATE: tib20.tem
 			SNOW: tib20.sno
 			URBAN: tib20.urb
+			NEWURBAN: tib20.ubn
+			DESERT: tib20.des
+			LUNAR: tib20.lun
 	gem01:
 		TilesetFilenames:
 			TEMPERATE: gem01.tem
 			SNOW: gem01.sno
 			URBAN: gem01.urb
+			NEWURBAN: gem01.ubn
+			DESERT: gem01.des
+			LUNAR: gem01.lun
 	gem02:
 		TilesetFilenames:
 			TEMPERATE: gem02.tem
 			SNOW: gem02.sno
 			URBAN: gem02.urb
+			NEWURBAN: gem02.ubn
+			DESERT: gem02.des
+			LUNAR: gem02.lun
 	gem03:
 		TilesetFilenames:
 			TEMPERATE: gem03.tem
 			SNOW: gem03.sno
 			URBAN: gem03.urb
+			NEWURBAN: gem03.ubn
+			DESERT: gem03.des
+			LUNAR: gem03.lun
 	gem04:
 		TilesetFilenames:
 			TEMPERATE: gem04.tem
 			SNOW: gem04.sno
 			URBAN: gem04.urb
+			NEWURBAN: gem04.ubn
+			DESERT: gem04.des
+			LUNAR: gem04.lun
 	gem05:
 		TilesetFilenames:
 			TEMPERATE: gem05.tem
 			SNOW: gem05.sno
 			URBAN: gem05.urb
+			NEWURBAN: gem05.ubn
+			DESERT: gem05.des
+			LUNAR: gem05.lun
 	gem06:
 		TilesetFilenames:
 			TEMPERATE: gem06.tem
 			SNOW: gem06.sno
 			URBAN: gem06.urb
+			NEWURBAN: gem06.ubn
+			DESERT: gem06.des
+			LUNAR: gem06.lun
 	gem07:
 		TilesetFilenames:
 			TEMPERATE: gem07.tem
 			SNOW: gem07.sno
 			URBAN: gem07.urb
+			NEWURBAN: gem07.ubn
+			DESERT: gem07.des
+			LUNAR: gem07.lun
 	gem08:
 		TilesetFilenames:
 			TEMPERATE: gem08.tem
 			SNOW: gem08.sno
 			URBAN: gem08.urb
+			NEWURBAN: gem08.ubn
+			DESERT: gem08.des
+			LUNAR: gem08.lun
 	gem09:
 		TilesetFilenames:
 			TEMPERATE: gem09.tem
 			SNOW: gem09.sno
 			URBAN: gem09.urb
+			NEWURBAN: gem09.ubn
+			DESERT: gem09.des
+			LUNAR: gem09.lun
 	gem10:
 		TilesetFilenames:
 			TEMPERATE: gem10.tem
 			SNOW: gem10.sno
 			URBAN: gem10.urb
+			NEWURBAN: gem10.ubn
+			DESERT: gem10.des
+			LUNAR: gem10.lun
 	gem11:
 		TilesetFilenames:
 			TEMPERATE: gem11.tem
 			SNOW: gem11.sno
 			URBAN: gem11.urb
+			NEWURBAN: gem11.ubn
+			DESERT: gem11.des
+			LUNAR: gem11.lun
 	gem12:
 		TilesetFilenames:
 			TEMPERATE: gem12.tem
 			SNOW: gem12.sno
 			URBAN: gem12.urb
+			NEWURBAN: gem12.ubn
+			DESERT: gem12.des
+			LUNAR: gem12.lun
 
 shroud:
 	Defaults:
@@ -624,31 +726,49 @@ smallscorches:
 			TEMPERATE: burnt01.tem
 			SNOW: burnt01.sno
 			URBAN: burnt01.urb
+			NEWURBAN: burnt01.ubn
+			DESERT: burnt01.des
+			LUNAR: burnt01.lun
 	sc2:
 		TilesetFilenames:
 			TEMPERATE: burnt02.tem
 			SNOW: burnt02.sno
 			URBAN: burnt02.urb
+			NEWURBAN: burnt02.ubn
+			DESERT: burnt02.des
+			LUNAR: burnt02.lun
 	sc3:
 		TilesetFilenames:
 			TEMPERATE: burnt03.tem
 			SNOW: burnt03.sno
 			URBAN: burnt03.urb
+			NEWURBAN: burnt03.ubn
+			DESERT: burnt03.des
+			LUNAR: burnt03.lun
 	sc4:
 		TilesetFilenames:
 			TEMPERATE: burnt04.tem
 			SNOW: burnt04.sno
 			URBAN: burnt04.urb
+			NEWURBAN: burnt04.ubn
+			DESERT: burnt04.des
+			LUNAR: burnt04.lun
 	sc5:
 		TilesetFilenames:
 			TEMPERATE: burnt05.tem
 			SNOW: burnt05.sno
 			URBAN: burnt05.urb
+			NEWURBAN: burnt05.ubn
+			DESERT: burnt05.des
+			LUNAR: burnt05.lun
 	sc6:
 		TilesetFilenames:
 			TEMPERATE: burnt06.tem
 			SNOW: burnt06.sno
 			URBAN: burnt06.urb
+			NEWURBAN: burnt06.ubn
+			DESERT: burnt06.des
+			LUNAR: burnt06.lun
 
 mediumscorches:
 	Defaults:
@@ -659,21 +779,33 @@ mediumscorches:
 			TEMPERATE: burnt07.tem
 			SNOW: burnt07.sno
 			URBAN: burnt07.urb
+			NEWURBAN: burnt07.ubn
+			DESERT: burnt07.des
+			LUNAR: burnt07.lun
 	sc8:
 		TilesetFilenames:
 			TEMPERATE: burnt08.tem
 			SNOW: burnt08.sno
 			URBAN: burnt08.urb
+			NEWURBAN: burnt08.ubn
+			DESERT: burnt08.des
+			LUNAR: burnt08.lun
 	sc9:
 		TilesetFilenames:
 			TEMPERATE: burnt09.tem
 			SNOW: burnt09.sno
 			URBAN: burnt09.urb
+			NEWURBAN: burnt09.ubn
+			DESERT: burnt09.des
+			LUNAR: burnt09.lun
 	sc10:
 		TilesetFilenames:
 			TEMPERATE: burnt10.tem
 			SNOW: burnt10.sno
 			URBAN: burnt10.urb
+			NEWURBAN: burnt10.ubn
+			DESERT: burnt10.des
+			LUNAR: burnt10.lun
 
 largescorches:
 	Defaults:
@@ -684,11 +816,17 @@ largescorches:
 			TEMPERATE: burnt11.tem
 			SNOW: burnt11.sno
 			URBAN: burnt11.urb
+			NEWURBAN: burnt11.ubn
+			DESERT: burnt11.des
+			LUNAR: burnt11.lun
 	sc12:
 		TilesetFilenames:
 			TEMPERATE: burnt12.tem
 			SNOW: burnt12.sno
 			URBAN: burnt12.urb
+			NEWURBAN: burnt12.ubn
+			DESERT: burnt12.des
+			LUNAR: burnt12.lun
 
 smallcraters:
 	Defaults:
@@ -699,31 +837,49 @@ smallcraters:
 			TEMPERATE: crater01.tem
 			SNOW: crater01.sno
 			URBAN: crater01.urb
+			NEWURBAN: crater01.ubn
+			DESERT: crater01.des
+			LUNAR: crater01.lun
 	cr2:
 		TilesetFilenames:
 			TEMPERATE: crater02.tem
 			SNOW: crater02.sno
 			URBAN: crater02.urb
+			NEWURBAN: crater02.ubn
+			DESERT: crater02.des
+			LUNAR: crater02.lun
 	cr3:
 		TilesetFilenames:
 			TEMPERATE: crater03.tem
 			SNOW: crater03.sno
 			URBAN: crater03.urb
+			NEWURBAN: crater03.ubn
+			DESERT: crater03.des
+			LUNAR: crater03.lun
 	cr4:
 		TilesetFilenames:
 			TEMPERATE: crater04.tem
 			SNOW: crater04.sno
 			URBAN: crater04.urb
+			NEWURBAN: crater04.ubn
+			DESERT: crater04.des
+			LUNAR: crater04.lun
 	cr5:
 		TilesetFilenames:
 			TEMPERATE: crater05.tem
 			SNOW: crater05.sno
 			URBAN: crater05.urb
+			NEWURBAN: crater05.ubn
+			DESERT: crater05.des
+			LUNAR: crater05.lun
 	cr6:
 		TilesetFilenames:
 			TEMPERATE: crater06.tem
 			SNOW: crater06.sno
 			URBAN: crater06.urb
+			NEWURBAN: crater06.ubn
+			DESERT: crater06.des
+			LUNAR: crater06.lun
 
 mediumcraters:
 	Defaults:
@@ -734,21 +890,33 @@ mediumcraters:
 			TEMPERATE: crater07.tem
 			SNOW: crater07.sno
 			URBAN: crater07.urb
+			NEWURBAN: crater07.ubn
+			DESERT: crater07.des
+			LUNAR: crater07.lun
 	cr8:
 		TilesetFilenames:
 			TEMPERATE: crater08.tem
 			SNOW: crater08.sno
 			URBAN: crater08.urb
+			NEWURBAN: crater08.ubn
+			DESERT: crater08.des
+			LUNAR: crater08.lun
 	cr9:
 		TilesetFilenames:
 			TEMPERATE: crater09.tem
 			SNOW: crater09.sno
 			URBAN: crater09.urb
+			NEWURBAN: crater09.ubn
+			DESERT: crater09.des
+			LUNAR: crater09.lun
 	cr10:
 		TilesetFilenames:
 			TEMPERATE: crater10.tem
 			SNOW: crater10.sno
 			URBAN: crater10.urb
+			NEWURBAN: crater10.ubn
+			DESERT: crater10.des
+			LUNAR: crater10.lun
 
 largecraters:
 	Defaults:
@@ -759,11 +927,17 @@ largecraters:
 			TEMPERATE: crater11.tem
 			SNOW: crater11.sno
 			URBAN: crater11.urb
+			NEWURBAN: crater11.ubn
+			DESERT: crater11.des
+			LUNAR: crater11.lun
 	cr12:
 		TilesetFilenames:
 			TEMPERATE: crater12.tem
 			SNOW: crater12.sno
 			URBAN: crater12.urb
+			NEWURBAN: crater12.ubn
+			DESERT: crater12.des
+			LUNAR: crater12.lun
 
 icon:
 	gps:
@@ -801,6 +975,9 @@ trock01:
 			TEMPERATE: trock01.tem
 			SNOW: trock01.sno
 			URBAN: trock01.urb
+			NEWURBAN: trock01.ubn
+			DESERT: trock01.des
+			LUNAR: trock01.lun
 
 trock02:
 	Inherits: ^Rock
@@ -809,6 +986,9 @@ trock02:
 			TEMPERATE: trock02.tem
 			SNOW: trock02.sno
 			URBAN: trock02.urb
+			NEWURBAN: trock02.ubn
+			DESERT: trock02.des
+			LUNAR: trock02.lun
 
 trock03:
 	Inherits: ^Rock
@@ -817,6 +997,9 @@ trock03:
 			TEMPERATE: trock03.tem
 			SNOW: trock03.sno
 			URBAN: trock03.urb
+			NEWURBAN: trock03.ubn
+			DESERT: trock03.des
+			LUNAR: trock03.lun
 
 trock04:
 	Inherits: ^Rock
@@ -825,6 +1008,9 @@ trock04:
 			TEMPERATE: trock04.tem
 			SNOW: trock04.sno
 			URBAN: trock04.urb
+			NEWURBAN: trock04.ubn
+			DESERT: trock04.des
+			LUNAR: trock04.lun
 
 trock05:
 	Inherits: ^Rock
@@ -833,6 +1019,75 @@ trock05:
 			TEMPERATE: trock05.tem
 			SNOW: trock05.sno
 			URBAN: trock05.urb
+			NEWURBAN: trock05.ubn
+			DESERT: trock05.des
+			LUNAR: trock05.lun
+
+lunrk1:
+	Inherits: ^Rock
+	idle:
+		TilesetFilenames:
+			TEMPERATE: lunrk1.lun
+			SNOW: lunrk1.lun
+			URBAN: lunrk1.lun
+			NEWURBAN: lunrk1.ubn
+			DESERT: lunrk1.des
+			LUNAR: lunrk1.lun
+
+lunrk2:
+	Inherits: ^Rock
+	idle:
+		TilesetFilenames:
+			TEMPERATE: lunrk2.lun
+			SNOW: lunrk2.lun
+			URBAN: lunrk2.lun
+			NEWURBAN: lunrk2.ubn
+			DESERT: lunrk2.des
+			LUNAR: lunrk2.lun
+
+lunrk3:
+	Inherits: ^Rock
+	idle:
+		TilesetFilenames:
+			TEMPERATE: lunrk3.lun
+			SNOW: lunrk3.lun
+			URBAN: lunrk3.lun
+			NEWURBAN: lunrk3.ubn
+			DESERT: lunrk3.des
+			LUNAR: lunrk3.lun
+
+lunrk4:
+	Inherits: ^Rock
+	idle:
+		TilesetFilenames:
+			TEMPERATE: lunrk4.lun
+			SNOW: lunrk4.lun
+			URBAN: lunrk4.lun
+			NEWURBAN: lunrk4.ubn
+			DESERT: lunrk4.des
+			LUNAR: lunrk4.lun
+
+lunrk5:
+	Inherits: ^Rock
+	idle:
+		TilesetFilenames:
+			TEMPERATE: lunrk5.lun
+			SNOW: lunrk5.lun
+			URBAN: lunrk5.lun
+			NEWURBAN: lunrk5.ubn
+			DESERT: lunrk5.des
+			LUNAR: lunrk5.lun
+
+lunrk6:
+	Inherits: ^Rock
+	idle:
+		TilesetFilenames:
+			TEMPERATE: lunrk6.lun
+			SNOW: lunrk6.lun
+			URBAN: lunrk6.lun
+			NEWURBAN: lunrk6.ubn
+			DESERT: lunrk6.des
+			LUNAR: lunrk6.lun
 
 srock01:
 	Inherits: ^Rock
@@ -841,6 +1096,9 @@ srock01:
 			TEMPERATE: srock01.tem
 			SNOW: srock01.sno
 			URBAN: srock01.urb
+			NEWURBAN: srock01.ubn
+			DESERT: srock01.des
+			LUNAR: srock01.lun
 
 rubble:
 	Inherits: srock01
@@ -854,6 +1112,9 @@ srock02:
 			TEMPERATE: srock02.tem
 			SNOW: srock02.sno
 			URBAN: srock02.urb
+			NEWURBAN: srock02.ubn
+			DESERT: srock02.des
+			LUNAR: srock02.lun
 
 srock03:
 	Inherits: ^Rock
@@ -862,6 +1123,9 @@ srock03:
 			TEMPERATE: srock03.tem
 			SNOW: srock03.sno
 			URBAN: srock03.urb
+			NEWURBAN: srock03.ubn
+			DESERT: srock03.des
+			LUNAR: srock03.lun
 
 srock04:
 	Inherits: ^Rock
@@ -870,6 +1134,9 @@ srock04:
 			TEMPERATE: srock04.tem
 			SNOW: srock04.sno
 			URBAN: srock04.urb
+			NEWURBAN: srock04.ubn
+			DESERT: srock04.des
+			LUNAR: srock04.lun
 
 srock05:
 	Inherits: ^Rock
@@ -878,6 +1145,9 @@ srock05:
 			TEMPERATE: srock05.tem
 			SNOW: srock05.sno
 			URBAN: srock05.urb
+			NEWURBAN: srock05.ubn
+			DESERT: srock05.des
+			LUNAR: srock05.lun
 
 camera:
 	idle:

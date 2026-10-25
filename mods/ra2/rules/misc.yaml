@@ -84,6 +84,24 @@ SROCK05:
 RUBBLE:
 	Inherits: ^RubbleOverlay
 
+LUNRK1:
+	Inherits: ^Rock
+
+LUNRK2:
+	Inherits: ^Rock
+
+LUNRK3:
+	Inherits: ^Rock
+
+LUNRK4:
+	Inherits: ^Rock
+
+LUNRK5:
+	Inherits: ^Rock
+
+LUNRK6:
+	Inherits: ^Rock
+
 TROCK01:
 	Inherits: ^Rock
 

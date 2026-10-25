@@ -222,6 +222,9 @@ TileSets:
 	ra2|tilesets/temperat.yaml
 	ra2|tilesets/snow.yaml
 	ra2|tilesets/urban.yaml
+	ra2|tilesets/newurban.yaml
+	ra2|tilesets/desert.yaml
+	ra2|tilesets/lunar.yaml
 
 MapGrid:
 	Type: RectangularIsometric

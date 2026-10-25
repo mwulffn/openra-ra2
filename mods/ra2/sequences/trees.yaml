@@ -5,6 +5,9 @@ tibtre01:
 			TEMPERATE: tibtre01.tem
 			SNOW: tibtre01.sno
 			URBAN: tibtre01.urb
+			NEWURBAN: tibtre01.ubn
+			DESERT: tibtre01.des
+			LUNAR: tibtre01.lun
 
 tibtre02:
 	Inherits: ^Drill
@@ -13,6 +16,9 @@ tibtre02:
 			TEMPERATE: tibtre02.tem
 			SNOW: tibtre02.sno
 			URBAN: tibtre02.urb
+			NEWURBAN: tibtre02.ubn
+			DESERT: tibtre02.des
+			LUNAR: tibtre02.lun
 
 tibtre03:
 	Inherits: ^Drill
@@ -21,6 +27,9 @@ tibtre03:
 			TEMPERATE: tibtre03.tem
 			SNOW: tibtre03.sno
 			URBAN: tibtre03.urb
+			NEWURBAN: tibtre03.ubn
+			DESERT: tibtre03.des
+			LUNAR: tibtre03.lun
 
 tree01:
 	Inherits: ^Tree
@@ -29,6 +38,9 @@ tree01:
 			TEMPERATE: tree01.tem
 			SNOW: tree01.sno
 			URBAN: tree01.urb
+			NEWURBAN: tree01.ubn
+			DESERT: tree01.des
+			LUNAR: tree01.lun
 
 tree02:
 	Inherits: ^Tree
@@ -37,6 +49,9 @@ tree02:
 			TEMPERATE: tree02.tem
 			SNOW: tree02.sno
 			URBAN: tree02.urb
+			NEWURBAN: tree02.ubn
+			DESERT: tree02.des
+			LUNAR: tree02.lun
 
 tree03:
 	Inherits: ^Tree
@@ -45,6 +60,9 @@ tree03:
 			TEMPERATE: tree03.tem
 			SNOW: tree03.sno
 			URBAN: tree03.urb
+			NEWURBAN: tree03.ubn
+			DESERT: tree03.des
+			LUNAR: tree03.lun
 
 tree04:
 	Inherits: ^Tree
@@ -53,6 +71,9 @@ tree04:
 			TEMPERATE: tree04.tem
 			SNOW: tree04.sno
 			URBAN: tree04.urb
+			NEWURBAN: tree04.ubn
+			DESERT: tree04.des
+			LUNAR: tree04.lun
 
 tree05:
 	Inherits: ^Tree
@@ -61,6 +82,9 @@ tree05:
 			TEMPERATE: tree05.tem
 			SNOW: tree05.sno
 			URBAN: tree05.urb
+			NEWURBAN: tree05.ubn
+			DESERT: tree05.des
+			LUNAR: tree05.lun
 
 tree06:
 	Inherits: ^Tree
@@ -69,6 +93,9 @@ tree06:
 			TEMPERATE: tree06.tem
 			SNOW: tree06.sno
 			URBAN: tree06.urb
+			NEWURBAN: tree06.ubn
+			DESERT: tree06.des
+			LUNAR: tree06.lun
 
 tree07:
 	Inherits: ^Tree
@@ -77,6 +104,9 @@ tree07:
 			TEMPERATE: tree07.tem
 			SNOW: tree07.sno
 			URBAN: tree07.urb
+			NEWURBAN: tree07.ubn
+			DESERT: tree07.des
+			LUNAR: tree07.lun
 
 tree08:
 	Inherits: ^Tree
@@ -85,6 +115,9 @@ tree08:
 			TEMPERATE: tree08.tem
 			SNOW: tree08.sno
 			URBAN: tree08.urb
+			NEWURBAN: tree08.ubn
+			DESERT: tree08.des
+			LUNAR: tree08.lun
 
 tree09:
 	Inherits: ^Tree
@@ -93,6 +126,9 @@ tree09:
 			TEMPERATE: tree09.tem
 			SNOW: tree09.sno
 			URBAN: tree09.urb
+			NEWURBAN: tree09.ubn
+			DESERT: tree09.des
+			LUNAR: tree09.lun
 
 tree10:
 	Inherits: ^Tree
@@ -101,6 +137,9 @@ tree10:
 			TEMPERATE: tree10.tem
 			SNOW: tree10.sno
 			URBAN: tree10.urb
+			NEWURBAN: tree10.ubn
+			DESERT: tree10.des
+			LUNAR: tree10.lun
 
 tree11:
 	Inherits: ^Tree
@@ -109,6 +148,9 @@ tree11:
 			TEMPERATE: tree11.tem
 			SNOW: tree11.sno
 			URBAN: tree11.urb
+			NEWURBAN: tree11.ubn
+			DESERT: tree11.des
+			LUNAR: tree11.lun
 
 tree12:
 	Inherits: ^Tree
@@ -117,6 +159,9 @@ tree12:
 			TEMPERATE: tree12.tem
 			SNOW: tree12.sno
 			URBAN: tree12.urb
+			NEWURBAN: tree12.ubn
+			DESERT: tree12.des
+			LUNAR: tree12.lun
 
 tree13:
 	Inherits: ^Tree
@@ -125,6 +170,9 @@ tree13:
 			TEMPERATE: tree13.tem
 			SNOW: tree13.sno
 			URBAN: tree13.urb
+			NEWURBAN: tree13.ubn
+			DESERT: tree13.des
+			LUNAR: tree13.lun
 
 tree14:
 	Inherits: ^Tree
@@ -133,6 +181,9 @@ tree14:
 			TEMPERATE: tree14.tem
 			SNOW: tree14.sno
 			URBAN: tree14.urb
+			NEWURBAN: tree14.ubn
+			DESERT: tree14.des
+			LUNAR: tree14.lun
 
 tree15:
 	Inherits: ^Tree
@@ -141,6 +192,9 @@ tree15:
 			TEMPERATE: tree15.tem
 			SNOW: tree15.sno
 			URBAN: tree15.urb
+			NEWURBAN: tree15.ubn
+			DESERT: tree15.des
+			LUNAR: tree15.lun
 
 tree16:
 	Inherits: ^Tree
@@ -149,6 +203,9 @@ tree16:
 			TEMPERATE: tree16.tem
 			SNOW: tree16.sno
 			URBAN: tree16.urb
+			NEWURBAN: tree16.ubn
+			DESERT: tree16.des
+			LUNAR: tree16.lun
 
 tree17:
 	Inherits: ^Tree
@@ -157,6 +214,9 @@ tree17:
 			TEMPERATE: tree17.tem
 			SNOW: tree17.sno
 			URBAN: tree17.urb
+			NEWURBAN: tree17.ubn
+			DESERT: tree17.des
+			LUNAR: tree17.lun
 
 tree18:
 	Inherits: ^Tree
@@ -165,6 +225,9 @@ tree18:
 			TEMPERATE: tree18.tem
 			SNOW: tree18.sno
 			URBAN: tree18.urb
+			NEWURBAN: tree18.ubn
+			DESERT: tree18.des
+			LUNAR: tree18.lun
 
 tree19:
 	Inherits: ^Tree
@@ -173,6 +236,9 @@ tree19:
 			TEMPERATE: tree19.tem
 			SNOW: tree19.sno
 			URBAN: tree19.urb
+			NEWURBAN: tree19.ubn
+			DESERT: tree19.des
+			LUNAR: tree19.lun
 
 tree20:
 	Inherits: ^Tree
@@ -181,6 +247,9 @@ tree20:
 			TEMPERATE: tree20.tem
 			SNOW: tree20.sno
 			URBAN: tree20.urb
+			NEWURBAN: tree20.ubn
+			DESERT: tree20.des
+			LUNAR: tree20.lun
 
 tree21:
 	Inherits: ^Tree
@@ -189,6 +258,9 @@ tree21:
 			TEMPERATE: tree21.tem
 			SNOW: tree21.sno
 			URBAN: tree21.urb
+			NEWURBAN: tree21.ubn
+			DESERT: tree21.des
+			LUNAR: tree21.lun
 
 tree22:
 	Inherits: ^Tree
@@ -197,6 +269,9 @@ tree22:
 			TEMPERATE: tree22.tem
 			SNOW: tree22.sno
 			URBAN: tree22.urb
+			NEWURBAN: tree22.ubn
+			DESERT: tree22.des
+			LUNAR: tree22.lun
 
 tree23:
 	Inherits: ^Tree
@@ -205,6 +280,9 @@ tree23:
 			TEMPERATE: tree23.tem
 			SNOW: tree23.sno
 			URBAN: tree23.urb
+			NEWURBAN: tree23.ubn
+			DESERT: tree23.des
+			LUNAR: tree23.lun
 
 tree24:
 	Inherits: ^Tree
@@ -213,6 +291,9 @@ tree24:
 			TEMPERATE: tree24.tem
 			SNOW: tree24.sno
 			URBAN: tree24.urb
+			NEWURBAN: tree24.ubn
+			DESERT: tree24.des
+			LUNAR: tree24.lun
 
 tree25:
 	Inherits: ^Tree
@@ -221,6 +302,9 @@ tree25:
 			TEMPERATE: tree25.tem
 			SNOW: tree25.sno
 			URBAN: tree25.urb
+			NEWURBAN: tree25.ubn
+			DESERT: tree25.des
+			LUNAR: tree25.lun
 
 tree26:
 	Inherits: ^Tree
@@ -229,6 +313,9 @@ tree26:
 			TEMPERATE: tree26.tem
 			SNOW: tree26.sno
 			URBAN: tree26.urb
+			NEWURBAN: tree26.ubn
+			DESERT: tree26.des
+			LUNAR: tree26.lun
 
 tree27:
 	Inherits: ^Tree
@@ -237,6 +324,9 @@ tree27:
 			TEMPERATE: tree27.tem
 			SNOW: tree27.sno
 			URBAN: tree27.urb
+			NEWURBAN: tree27.ubn
+			DESERT: tree27.des
+			LUNAR: tree27.lun
 
 tree28:
 	Inherits: ^Tree
@@ -245,3 +335,6 @@ tree28:
 			TEMPERATE: tree28.tem
 			SNOW: tree28.sno
 			URBAN: tree28.urb
+			NEWURBAN: tree28.ubn
+			DESERT: tree28.des
+			LUNAR: tree28.lun

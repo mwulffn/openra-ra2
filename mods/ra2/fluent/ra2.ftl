@@ -6,6 +6,9 @@ mod-windowtitle = OpenRA - Red Alert 2
 tileset-snow = Snow
 tileset-temperate = Temperate
 tileset-urban = Urban
+tileset-newurban = New Urban
+tileset-desert = Desert
+tileset-lunar = Lunar
 
 ## SupportPowerTimerWidget
 support-power-timer = { $player }'s { $support-power }: { $time }
